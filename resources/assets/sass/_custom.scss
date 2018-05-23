@@ -1,0 +1,485 @@
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ccc6c6; 
+       border-radius: 5px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(168, 168, 168); 
+    border-radius: 5px;
+    
+}
+
+
+.costum-header
+{
+    /* background-color: #283e4a; */
+    background-color:white;
+    border-bottom: 1px #bfbfbf solid;
+}
+.f-brand{
+    color:rgb(251, 80, 59);
+    font-size: 30px;
+    position: relative;
+    bottom: 5px;
+}
+.f-color1 a,.f-color2 a
+{
+    color:#66757f;
+    font-weight: bold;
+}
+.f-color1 li a:hover
+{
+    color:rgb(251, 80, 59);
+    background-color: transparent;
+    height: 50px;
+    position: relative;
+    bottom: 1px;
+}
+.f-color2 li a:hover
+{
+    color:rgb(251, 80, 59);
+    
+}
+// f-color1 nav navbar-nav active-menu  
+.f-color1.nav.navbar-nav.active-menu>li.current-page{
+  color:rgb(251, 80, 59);
+    background-color: transparent;
+    border-bottom: 2px rgb(251, 80, 59) solid;
+    height: 50px;
+    position: relative;
+    bottom: 1px;
+}
+li.current-page{
+color:rgb(251, 80, 59);
+}
+
+/* form-search-header */
+.custom-search
+{
+    float: left;
+}
+.custom-search>input[type=text] {
+    width: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color:transparent;
+    background-image: url('/images/search-icon.png');
+    background-size: 18px 18px;
+    background-position: 10px 8px; 
+    background-repeat: no-repeat;
+    padding: 2px 2px 5px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border: none;
+    cursor:default;
+    left: 20px;
+    position: relative;
+    float: right;
+    outline: none;
+    border-radius: none;
+}
+
+.custom-search>input[type=text]:focus {
+    width: 118%;
+    background-color:white;
+    cursor: text;
+    position: relative;
+    float: right;
+    border-bottom: 2px rgb(251, 80, 59) solid;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border-radius: none;
+    border-radius: 0px;
+    
+}
+.fa-size-15
+{
+    font-size: 18px;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    border-color: rgb(251, 80, 59)
+}
+
+//menu buttom
+.icon-bar.nav.active-menu>li.current-page
+{
+	border-bottom:3px rgb(251, 80, 59) solid;
+  	position: relative;
+      bottom: 0px;
+       font-size: 30px;
+      color:rgb(251, 80, 59);
+     
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+  height: auto;
+}
+
+.icon-bar li {
+  float: left;
+  width: 20%;
+  text-align: center;
+  transition: all 0.3s ease;
+
+}
+.icon-bar li a
+{
+  color:#66757f;
+    font-size: 25px;
+    height: 40px;
+    position: relative;
+    bottom: 8px;
+}
+.icon-bar li a:hover
+{
+  color: rgba(200,200,200,0.7);
+}
+
+.bottom
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+//disablenavbar
+.navbar-collapse.collapse {
+display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+float: left !important;
+}
+
+
+.navbar-nav.navbar-right:last-child {
+margin-right: -15px !important;
+}
+
+.navbar-right {
+float: right!important;
+}
+
+.container-custom
+{
+    padding-top: 65px;
+    // background: red;
+
+}
+
+h1{
+    background-color: blue;
+}
+
+.ganjalbottom
+{
+    height: 90px;
+}
+
+
+.box
+{
+    border-top: none; 
+}
+
+//alert custom
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    opacity: 0.7;
+    /* background: orange; */
+}
+
+.widget-user .widget-user-username {
+
+    font-size: 18px;
+}
+
+.widget-user .widget-user-image > img {
+    width: 110px;
+    height: 100px;
+}
+.widget-user .widget-user-image {
+    top: 60px;
+    left: 70%;
+}
+.widget-user .box-footer {
+    padding-top: 40px;
+}
+.sosmed
+{
+    position: absolute;
+    top: 135px;
+    left: 20px;
+}
+.sosmed a
+{
+    color:grey;
+    margin: 5px;
+    font-size: 18px;
+}
+.box-footer hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hr-tentang hr
+{
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+.btn-primary-outline {
+  background-color: transparent;
+  border:none;
+}
+.custom-curret
+{
+    position: relative;
+    top: -22px;
+}
+.attachment
+{
+    border-radius: 5px;
+    position: relative;
+    padding: 5px 10px;
+    background: #eeeeee;
+    border: 1px solid #eeeeee;
+}
+.icon-change-foto{
+    position: absolute;
+    color: #f4efef;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.icon-change-foto:hover{
+    color:#fb503b;
+
+}
+
+.custom-margin
+{
+    margin-left:25px;
+}
+.custom-img-icon
+{
+    width:25px;
+    height: 25px;
+    position: absolute;
+    left: -15px;
+        top: 12px;
+}
+.custom-img-icon-hp
+{
+    width:25px;
+    height: 25px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+    color: #fb503b;
+}
+
+//inputfile
+// input[type="file"] {
+//     display: none;
+// }
+// .custom-file-upload {
+//     border: 1px solid #ccc;
+//     display: inline-block;
+//     padding: 6px 12px;
+//     cursor: pointer;
+// }
+
+//media screen HP custom nav atas kanan
+//5inckebawah
+@media (max-width: 320px)
+{
+.custom-search > input[type=text]:focus {
+    width: 200px;
+    // background:orange;
+}
+
+}
+
+//6inc
+@media (max-width: 414px){
+.navbar-collapse.pull-left + .navbar-custom-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+
+.custom-search > input[type=text]{
+    position: relative;
+    
+    left: 0px; 
+        bottom: 12px;
+       
+
+}
+.custom-search>input[type=text]:focus {
+     width: 119%;
+
+}
+}
+
+//navbar user
+@media (max-width: 991px){
+.navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto;
+    width: 200px;
+    top: 50px;
+    // width: 120%;
+}
+}
+
+//custom fullcalendar
+
+  #calendar {
+    max-width: 900px;
+    padding: 0px 5px;
+    background: #00a65a;
+    color: white;
+    text-align: center;
+  }
+  .fc .fc-row {
+    background: #00a65a;
+}
+
+  .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    text-align: center;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    margin:auto;
+    float: none;
+  }
+  .fc td, .fc th {
+    border-style: none !important;
+   
+  }
+
+  .fc-unthemed td.fc-today {
+    background: none;
+    color: seagreen;
+  }
+
+.fc-sun { 
+	color:#d94533; 
+}
+.fc-sat 
+{ color:#d94533;  
+}
+
+  .fc-day-grid-event .fc-content {
+    font-size: 8px;
+  }
+  .fc-scroller ,.fc-day-grid-container
+  {
+    overflow-x: hidden; overflow-y: hidden; height: 403px;
+  }
+  .fc-scroller > .fc-day-grid, .fc-scroller > .fc-time-grid {
+    position: relative;
+    width: 100%;
+    margin-top: 7px;
+}
+
+  .fc-day-grid-container.fc-scroller {
+    height: auto!important;
+    overflow-y: auto;
+  }
+  #calendar a.fc-event {
+    color: #fff; /* bootstrap default styles make it black. undo */
+    position: relative;
+    top: -5px;
+  }
+
+  .fc-toolbar {
+    text-align: center;
+    // background: seagreen;
+    padding-bottom: 10px;
+}
+
+  .fc-toolbar h2 {
+    margin: 0;
+    font-size: 18px;
+    padding-top: 13px;
+  }
+
+	.fc th {
+    border-style: none !important;
+    padding-bottom: 20px;
+    color: white;
+}
+
+	.fc-row .fc-widget-header
+	{
+		padding-bottom: 13px;		
+	    background: transparent;
+	   
+	}
+
+  .fc .fc-button-group>:first-child {
+    margin-left: 0;
+    background: transparent;
+    border-style: none;
+    color: white;
+  }
+  .fc-next-button ,.fc-state-default,.fc-corner-right
+  {
+   background: transparent;
+   border: none;
+   color: white;
+
+ }
+ .fc .fc-button-group>:hover {
+   /*color: red;*/
+   opacity: 0.5;
+
+ }
+
+ .fc-toolbar .fc-state-hover, .fc-toolbar .ui-state-hover {
+  z-index: 2;
+  opacity: 0.5;
+}
+.fc-toolbar .fc-right {
+  float: right;
+  padding-top: 8px;
+}
+.fc-toolbar .fc-left {
+  float: left;
+}
+
+.fc .fc-row .fc-content-skeleton table, .fc .fc-row .fc-content-skeleton td, .fc .fc-row .fc-helper-skeleton td {
+    background: 0 0;
+    border-color: transparent;
+    position: relative;
+    margin-top: -12px;
+}
