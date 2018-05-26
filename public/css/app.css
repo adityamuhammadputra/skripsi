@@ -19097,45 +19097,29 @@ h1 {
 }
 
 #calendar {
+  background: white;
+  min-height: 420px;
   max-width: 900px;
   padding: 0px 5px;
-  background: #00a65a;
-  color: white;
   text-align: center;
 }
 
-.fc .fc-row {
-  background: #00a65a;
+@media (min-width: 400px) {
+  .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    text-align: center;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    margin: auto;
+    float: none;
+    position: relative;
+    right: -17px;
+    top: 10px;
+  }
 }
 
-.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
-  text-align: center;
-  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
-  font-size: 18px;
-  margin: auto;
-  float: none;
-}
-
-.fc td,
-.fc th {
-  border-style: none !important;
-}
-
-.fc-unthemed td.fc-today {
-  background: none;
-  color: seagreen;
-}
-
-.fc-sun {
-  color: #d94533;
-}
-
-.fc-sat {
-  color: #d94533;
-}
-
-.fc-day-grid-event .fc-content {
-  font-size: 8px;
+tr:first-child > td > .fc-day-grid-event {
+  position: relative;
+  top: 10px;
 }
 
 .fc-scroller,
@@ -19145,88 +19129,159 @@ h1 {
   height: 403px;
 }
 
-.fc-scroller > .fc-day-grid,
-.fc-scroller > .fc-time-grid {
-  position: relative;
-  width: 100%;
-  margin-top: 7px;
-}
-
 .fc-day-grid-container.fc-scroller {
   height: auto !important;
   overflow-y: auto;
 }
 
-#calendar a.fc-event {
-  color: #fff;
-  /* bootstrap default styles make it black. undo */
+.fc-sat,
+.fc-sun {
+  color: red;
+}
+
+.nav-right1 {
   position: relative;
-  top: -5px;
+  top: 0px;
 }
 
-.fc-toolbar {
-  text-align: center;
-  padding-bottom: 10px;
+.btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
-.fc-toolbar h2 {
-  margin: 0;
-  font-size: 18px;
-  padding-top: 13px;
+.btn:hover,
+.btn:focus {
+  color: #fb503b;
+  text-decoration: none;
 }
 
-.fc th {
-  border-style: none !important;
-  padding-bottom: 20px;
-  color: white;
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 6px solid dashed;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
 }
 
-.fc-row .fc-widget-header {
-  padding-bottom: 13px;
-  background: transparent;
+.caret > .btn:active,
+.btn.active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-.fc .fc-button-group > :first-child {
-  margin-left: 0;
-  background: transparent;
-  border-style: none;
-  color: white;
+.custom-curret > .btn:active,
+.btn.active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-.fc-next-button,
-.fc-state-default,
-.fc-corner-right {
-  background: transparent;
-  border: none;
-  color: white;
+.pointer-jempol {
+  cursor: pointer;
 }
 
-.fc .fc-button-group > :hover {
-  /*color: red;*/
-  opacity: 0.5;
+.box1 {
+  background: white;
 }
 
-.fc-toolbar .fc-state-hover,
-.fc-toolbar .ui-state-hover {
-  z-index: 2;
-  opacity: 0.5;
+.box2 {
+  background: white;
+  margin-bottom: 5px;
 }
 
-.fc-toolbar .fc-right {
-  float: right;
-  padding-top: 8px;
+.box-atas {
+  background: none;
 }
 
-.fc-toolbar .fc-left {
+.page-wrap {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+input:focus ~ label,
+select:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label,
+select:valid ~ label {
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  color: #68798b;
+  top: -2.25rem;
+  left: -10px;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+  font-weight: bold;
+}
+
+.styled-input {
   float: left;
+  width: 100%;
+  position: relative;
+  margin: 15px 0px;
 }
 
-.fc .fc-row .fc-content-skeleton table,
-.fc .fc-row .fc-content-skeleton td,
-.fc .fc-row .fc-helper-skeleton td {
-  background: 0 0;
-  border-color: transparent;
-  position: relative;
-  margin-top: -12px;
+.styled-input label {
+  color: #999;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 100%;
+}
+
+.input,
+.textarea,
+.select {
+  border: 0;
+  border-bottom: 1px solid #b2b2b2;
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555555;
+  background-color: #fff;
+}
+
+.input ~ span,
+.textarea ~ span,
+.select ~ span {
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fb503b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+}
+
+.input:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+.input:focus ~ span,
+.select:focus ~ span,
+.textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
 }
 

@@ -22,4 +22,9 @@ class Barengan extends Model
     {
         return $this->hasMany(BarenganComment::class);
     }
+
+    public function calendar()
+    {
+        return $this->belongsTo(Calendar::class);
+    }
 }

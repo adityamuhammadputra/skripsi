@@ -84,32 +84,4 @@ class CariBarenganController extends Controller
         // session()->flash('success','yeeeeeeeey');
     }
 
-    public function loadCalendar()
-    {
-        $user = auth()->id();
-        // return $user;
-        // $caribarengan = Barengan::find($user);
-        $caribarengan = Barengan::where('user_id',$user)->get();
-        // return $caribarengan;
-        // $user = Barengan::find(1);
-
-        // var_dump($user->id);
-
-        foreach ($caribarengan as $row) {
-
-            $arr[] = array(
-
-                'title' => $row->tujuan,
-                'description' => $row->content,
-                'start' => $row->mulai,
-                'end' => $row->akhir,
-                'backgroundColor' => '#dd4b39',
-                'borderColor' => $row->COLOR
-            );
-
-        }
-
-        return json_encode($arr);        
-    }
-
 }

@@ -48,13 +48,12 @@
                     
                       <!-- <a type="submit" class=""></a> -->
                       @if(Auth::user()->name ==$d->user->name )
-                      
-                       <div class="btn-group pull-right custom-curret">
+                        <div class="btn-group pull-right custom-curret">
                           <button type="button" class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu">
-                            <li><a><button type="submit" class="btn btn-primary-outline btn-xs"> <i class="fa fa-times"></i> Hapus Post</button></a></li>
+                            <li><a><button type="submit" class="btn btn-primary-outline btn-xs"> <i class="fa fa-times-circle"></i> Hapus Post</button></a></li>
                             <li><a href="#">Edit</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Laporkan</a></li>

@@ -113,7 +113,7 @@
                 <!-- <li>
                   <a href="{{ route('profile') }}"><i class="fa fa-user-circle-o"></i>Profile</a>
                 </li> -->
-                <li><a href="#"><i class="fa fa-calendar"></i>Jadwal Kamu</a></li>
+                <li><a href="{{route('calendar')}}"><i class="fa fa-calendar"></i>Jadwal Kamu</a></li>
                 <!-- menu mobile -->
                 <li class="divider hidden-md hidden-lg"></li>
                 <li class="hidden-md hidden-lg">

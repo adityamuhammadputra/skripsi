@@ -12,54 +12,59 @@
         <div class="modal-body">
           <input type="hidden" name="id" id="id">
           <div class="form-group">
-            <label for="category_id">Masukan Kategori</label>
-            <select name="category_id" id="" class="form-control">
-              <option disabled selected>----Silahkan Pilih----</option>
+            <div class="styled-input">
+            <select required name="category_id" id="" class="select">
+              <option disabled selected>---Pilih Kategori---</option>
               @foreach ($categories as $c)
-              <option value="{{ $c->id }}">{{ $c->name }}</option>
-              @endforeach
+              <option value="{{ $c->id }} "@if($c->id == $c->category_id) selected @endif>{{ $c->name }}</option>
+              @endforeach              
             </select>
-            @if($errors->has('category_id'))
-              <span class="help-block">
-                <p>{{ $errors->first('category_id') }}</p>
-              </span>
-            @endif
+            <label>Masukan Kategori</label>
+            <span></span> 
+            </div>          
+          </div>
+          <div class="form-group">
+            <div class="styled-input">
+              <input type="text" class="input" name="tujuan" id="tujuan" required/>
+              <label>Tempat Tujuan</label>
+              <span></span> 
+            </div>          
+          </div>
+          <div class="form-group">
+            <div class="styled-input">
+              <input type="text" class="input" name="mepo" id="mepo" required/>
+              <label>Tempat Meeting Point</label>
+              <span></span> 
+            </div>          
+          </div>
+          <div class="form-group">
+            <div class="styled-input">
+              <input type="date" class="input" name="mulai" id="mulai" required/>
+              <label class="labeldate">Tanggal Mulai</label>
+              <span></span> 
+            </div>          
+          </div>
+          <div class="form-group">
+            <div class="styled-input">
+              <input type="date" class="input" name="akhir" id="akhir" required/>
+              <label>Tanggal Selesai</label>
+              <span></span> 
+            </div>          
+          </div>
+          <div class="form-group">
+            <div class="styled-input">
+              <input type="text" class="input"  name="contact" id="contact" required/>
+              <label>Kontak</label>
+              <span></span> 
+            </div>          
           </div>
 
           <div class="form-group">
-            <label for="tujuan">Masukan Tujuan Anda</label>
-            <input type="text" class="form-control" name="tujuan" id="tujuan">
-            <span class="help-block with-errors"></span>            
-          </div>
-
-          <div class="form-group">
-            <label for="mepo">Tempat Meeting Point</label>
-            <input type="text" class="form-control" name="mepo" id="mepo" >
-            <span class="help-block with-errors"></span>            
-          </div>
-
-          <div class="form-group">
-            <label for="mulai">Tanggal Berangkat</label>
-            <input type="date" class="form-control" name="mulai" id="mulai">
-            <span class="help-block with-errors"></span>   
-          </div>
-
-          <div class="form-group">
-            <label for="akhir">Tanggal Pulang</label>
-            <input type="date" class="form-control" name="akhir" id="akhir" >
-            <span class="help-block with-errors"></span> 
-          </div>
-
-          <div class="form-group">
-            <label for="contact">Kontak</label>
-            <input type="text" class="form-control" name="contact" id="contact">
-            <span class="help-block with-errors"></span> 
-          </div>
-
-          <div class="form-group">
-            <label for="content">Masukan Deskripsi</label>
-            <textarea name="content" class="form-control" id="content"></textarea>
-            <span class="help-block with-errors"></span>            
+            <div class="styled-input wide">
+              <textarea required name="content" class="textarea" id="content"></textarea>
+              <label>Deskripsi</label>
+              <span></span> 
+            </div>
           </div>
 
         </div>
@@ -71,3 +76,14 @@
     </div>
   </div>
 </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>

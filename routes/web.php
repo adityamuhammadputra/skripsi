@@ -36,10 +36,14 @@ Route::delete('/{id}/comment/delete', 'HomeCommentController@destroy')->name('ho
 
 
 Route::resource('/caribarengan','CariBarenganController');
-Route::get('/loadCalendar', 'CariBarenganController@loadCalendar')->name('caribarengan.loadCalendar');
-// Route::get('/caribarengan', 'CariBarenganController@index')->name('caribarengan');
-// Route::post('/caribarengan', 'CariBarenganController@store')->name('caribarengan.store');
-// Route::delete('/caribarengan/{id}/delete', 'CariBarenganController@destroy')->name('caribarengan.destroy');
+Route::resource('/caribarengan/{id}/comment', 'CariBarenganCommentController')->only([
+    'index', 'destroy','store'
+])->names([
+   'caribarengan.comment'
+]);
+
+Route::get('/calendar', 'CalendarController@index')->name('calendar');
+Route::get('/loadCalendar', 'CalendarController@loadData')->name('calendar.load');
 
 Route::get('/tentang', 'TentangController@index')->name('tentang');
 Route::post('tentang', 'TentangController@update');
