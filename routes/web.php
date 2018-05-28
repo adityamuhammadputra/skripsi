@@ -19,7 +19,6 @@
 
 Auth::routes();
 
-
 Route::get('auth/activate', 'Auth\ActivationController@activate')->name('auth.activate');
 
 Route::get('auth/activate/resend', 'Auth\ActivationResendController@showResendForm')->name('auth.activate.resend');
@@ -37,10 +36,11 @@ Route::delete('/{id}/comment/delete', 'HomeCommentController@destroy')->name('ho
 
 Route::resource('/caribarengan','CariBarenganController');
 Route::resource('/caribarengan/{id}/comment', 'CariBarenganCommentController')->only([
-    'index', 'destroy','store'
-])->names([
-   'caribarengan.comment'
-]);
+    'store'
+])->names(['store'=>'caribarengancomment.store']);
+Route::resource('/caribarengancomment', 'CariBarenganCommentController')->only([
+    'destroy'
+])->names(['destroy' => 'caribarengancomment.destroy']);
 
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 Route::get('/loadCalendar', 'CalendarController@loadData')->name('calendar.load');
@@ -54,5 +54,3 @@ Route::post('/profile', 'ProfileController@update');
 Route::delete('/profile', 'ProfileController@destroy')->name('user.destroy');
 
 Route::get('/galeri', 'GaleriController@index')->name('galeri');
-
-

@@ -18,7 +18,7 @@ class Barengan extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function barengancomment()
+    public function barengancomments()
     {
         return $this->hasMany(BarenganComment::class);
     }

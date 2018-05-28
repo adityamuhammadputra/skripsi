@@ -27474,36 +27474,43 @@ jQuery(document).ready(function () {
 });
 
 //loaddataajaxinfinte
-$(document).ready(function () {
+// $(document).ready(function() {
 
-    $(window).scroll(fetchPosts);
+//     $(window).scroll(fetchPosts);
 
-    function fetchPosts() {
+//     function fetchPosts() {
 
-        var page = $('.endless-pagination').data('next-page');
+//         var page = $('.endless-pagination').data('next-page');
 
-        if (page !== null) {
-            clearTimeout($.data(this, "scrollCheck"));
-            $.data(this, "scrollCheck", setTimeout(function () {
 
-                var scroll_position_for_posts_load = $(window).height() + $(window).scrollTop() + 100;
+//         if(page !== null) {
+//             clearTimeout( $.data( this, "scrollCheck" ) );
+//             $.data( this, "scrollCheck", setTimeout(function() {
 
-                if (scroll_position_for_posts_load >= $(document).height()) {
-                    $('.se-pre-con').show();
 
-                    $.get(page, function (data) {
+//                 var scroll_position_for_posts_load = $(window).height() + $(window).scrollTop() + 100;
 
-                        $('.datapost').append(data.datapost);
+//                 if(scroll_position_for_posts_load >= $(document).height()) {
+//                     $('.se-pre-con').show()
 
-                        $('.endless-pagination').data('next-page', data.next_page);
+//                     $.get(page, function(data){
 
-                        $('.se-pre-con').fadeOut("slow");
-                    });
-                }
-            }, 350));
-        }
-    }
-});
+//                         $('.datapost').append(data.datapost);
+
+//                         $('.endless-pagination').data('next-page', data.next_page);
+
+//                         $('.se-pre-con').fadeOut("slow");
+//                     });
+
+//                 }
+
+//             }, 350))
+
+//         }
+//     }
+
+// })
+
 
 //add
 

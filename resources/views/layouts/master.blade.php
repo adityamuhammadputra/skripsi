@@ -161,8 +161,7 @@
       @include('layouts.partials._alert')
     
       <!-- loadinganimation -->
-      @include('layouts.partials.loadrubi')
-
+      
       @yield('content')
         
       <div class="ganjalbottom visible-xs visible-sm"></div>

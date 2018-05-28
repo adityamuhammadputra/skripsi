@@ -87,3 +87,97 @@
   ga('send', 'pageview');
 
 </script>
+
+<script>
+
+
+  function addForm() {
+    save_method = "add";
+    $('input[name=_method]').val('POST');
+    $('#modal-form').modal('show');
+    $('#modal-form form')[0].reset();
+    $('.modal-title').text('Tambah Data');
+  }
+
+  function editForm(id) {
+    save_method = 'edit';
+    $('input[name=_method]').val('PATCH');
+    $('#modal-form form')[0].reset();
+    $.ajax({
+      url: "{{ url('caribarengan')}}/" + id + "/edit", //menampilkan data dari controller edit
+      type: "GET",
+      dataType: "JSON",
+      success: function (data) {
+        $('#modal-form').modal('show');
+        $('.modal-title').text('Edit Data');
+
+        $('#id').val(data.id);
+        $('#user_id').val(data.user_id);
+        $('#category_id option:selected').val(data.category_id);
+        $('#tujuan').val(data.tujuan);
+        $('#mepo').val(data.mepo);
+        $('#mulai').val(data.mulai);
+        $('#akhir').val(data.akhir);
+        $('#contact').val(data.contact);
+        $('#content').val(data.content);
+
+      },
+      error: function () {
+        alert("Data tidak ada");
+      }
+
+    });
+  }
+
+  function deleteData(id) {
+    var popup = confirm("apakah anda yakin akan menghapus data?");
+    var csrf_token = $('meta[name="csrf-token"]').attr('content');
+    if(popup == true){                
+      $.ajax({
+        url: "{{ url('caribarengan')}}/" + id,
+        type: "POST",
+        data: {'_method': 'DELETE','_token': csrf_token
+      },
+      success: function(data) {
+        $("#contact-table").load("#contact-table");
+        $('#alert-success').html('show');
+
+
+      },
+      error: function () {
+        alert("Opppps gagal");
+      }
+    })
+    }
+  }
+
+  $(function () {
+    $('#modal-form form').on('submit', function (e) {
+      if (!e.isDefaultPrevented()) {
+        var id = $('#id').val();
+        if (save_method == 'add') url = "{{ url('caribarengan') }}"; //ini yang memisahkan antara update delete
+        else url = "{{ url('caribarengan') . '/'}}" + id;
+        
+        $.ajax({
+          url: url,
+          type: "POST",
+          data: $('#modal-form form').serialize(),
+
+            success: function ($data) {
+              $('#modal-form').modal('hide');
+              // $("#contact-table").load(document.URL + '" #contact-table"');
+              $("#contact-table").load(" #contact-table");
+              
+              
+              $('#alert-success').html('show');
+            },
+
+            error: function () {
+              alert('Oops! error!');
+            }
+          });
+        return false;
+      }
+    });
+  });
+</script>

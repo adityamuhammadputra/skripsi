@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -9,36 +8,27 @@ use App\User;
 
 class CariBarenganCommentController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-        
-    }
-
-    public function create()
-    {
-        //
-    }
-
-
-    public function store(Request $request,Barengan $id)
+    public function store(Request $request, Barengan $id)
     {
         $data = [
             'user_id' => auth()->id(),               
             'barengan_id' => $id->id,
-            'comment' => $request->comment,
+            'comment' => $request['comment'],
         ];
+        // return $data;
 
         return BarenganComment::create($data);
+
     }
 
-    public function destroy($id)
+
+    public function destroy(Barengan $barengan_id,$id)
     {
-        //
+        BarenganComment::destroy($id);
     }
 }

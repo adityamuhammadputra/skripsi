@@ -1,28 +1,6 @@
-<meta name="csrf-token" content="{{ csrf_token() }}">
-@extends('layouts.master')
-@section('content')
-<div class = "row">
-  <div class="hidden-xs hidden-sm">
-    <div class="col-md-4">
-      <div id='calendar'></div>
-    </div>
-  </div>
-  <div class="col-md-8">
-  <!-- About Me Box -->
-    <div class="box box-atas">
-      <div class="box-header box1 with-border">
-        <h3 class="box-title">
-          <button class="btn btn-primary pull-right" style="margin-top: -8px;" onclick="addForm()">Tambah barengan</button>
-        </h3>
-        <div class="box-tools pull-right">
-          <form class="custom-search navbar-form navbar-left">
-            <input type="text" name="search" placeholder="Cari Post ... ">
-          </form>
-        </div>
-      </div>
-    <div>
-    <div id="contact-table">
-      @foreach($barengan as $d)    
+
+      @foreach($barengan as $d)  
+    
       <div class="box box2">
       <!-- /.box-header -->
         <div class="box-body">
@@ -51,7 +29,7 @@
         
             <p>
             {{ $d->content }}
-            
+              
             </p>
             <ul class="list-inline">
             <li class="pull-right">
@@ -60,21 +38,21 @@
               </li>
               <li class="pull-right"><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a></li>
             </ul>
-
-            @include('layouts.form.formCommentCaribarengan')
-            @foreach($d->barengancomments as $c)
-              {{$c->comment}}
-
-                                   
-              <a onclick="deleteComment('{{$c->id }}')" class="pointer-jempol"> <i class="fa fa-times-circle"></i> Hapus komen</a>
-            @endforeach
+            <div id="formcomment">
+              <form method="post" data-toogle="validator" class="form-horzontal" id="form">
+                {{csrf_field()}}
+                {{method_field ('POST')}}
+                <input type="hidden" name="barengan_id" id="barengan_id" value="{{$d->id}}">              
+                <input class="form-control input-sm" type="text" placeholder="Type a comment" name="comment" id="comment">
+                <button type="submit" class="btn btn-primary btn-sm pull-right">Kirim</button>
+              </form>
+            </div>
+              @foreach ($d->barengancomments as $c)              
+                {{$c->comment}}
+              @endforeach
           </div>                 
         </div>
       </div>      
       @endforeach
-    </div>
-  </div>
-</div>
-@include('layouts.form.formCaribarengan')
 
-@endsection
+  

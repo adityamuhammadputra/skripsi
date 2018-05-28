@@ -17,20 +17,12 @@ class CariBarenganController extends Controller
 
     public function index()
     {
-        
         $categories = Category::all();
-
-        $caribarengan = Barengan::all();
-
-        // return view('layouts.form.formCaribarengan', compact('categories'));
-
-        return view('caribarengan',compact('caribarengan', 'categories'));
+        $barengan = Barengan::all();
+        $barengancomments = BarenganComment::all();
+        return view('caribarengan',compact('barengan', 'categories','barengancomments'));
     }
-
     
-    public function create()
-    {
-    }
 
     
     public function store(Request $request)
@@ -49,11 +41,6 @@ class CariBarenganController extends Controller
         return Barengan::create($data);
     }
 
-    
-    public function show($id)
-    {
-
-    }
     public function edit($id)
     {
         $caribarengan = Barengan::find($id);
@@ -80,8 +67,6 @@ class CariBarenganController extends Controller
     public function destroy($id)
     {
         Barengan::destroy($id);
-
-        // session()->flash('success','yeeeeeeeey');
     }
 
 }
