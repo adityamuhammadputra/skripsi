@@ -25,10 +25,10 @@
       @foreach($barengan as $d)    
       <div class="box box2">
       <!-- /.box-header -->
-        <div class="box-body">
+        <div class="box-body box-body-custom">
           <div class="post">
             <div class="user-block">
-              <img class="img-circle img-bordered-sm" src="{{ asset('storage/' . $d->user->avatar ) }}" alt="user image">
+              <img class="img-circle" src="{{ asset('storage/' . $d->user->avatar ) }}" alt="user image">
               <span class="username">
                 <a href="#">{{$d->user->name }} </a>  
                 @if(Auth::user()->name ==$d->user->name )
@@ -46,29 +46,52 @@
                 @endif
               </span>
               <span class="description"><i class="fa fa-location-arrow" title="tujuan"></i>  {{$d->tujuan}} - <i class="fa fa-clock-o"></i> {{$d->created_at->diffForHumans()}}</span>
-            </div>
-          <!-- /.user-block -->
-        
+            </div>        
             <p>
-            {{ $d->content }}
-            
+              {{ $d->content }}            
             </p>
             <ul class="list-inline">
-            <li class="pull-right">
-                <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
-                (5)</a>
+              <li class="pull-left">
+                <a class="label label-primary" title="Tempat Meeting Point"><i class="fa fa-map-marker"></i> {{$d->mepo }}</a>
+                <a class="label label-primary" title="Waktu"><i class="fa fa-calendar"></i> {{$d->mulai }} - {{$d->akhir }}</a>
               </li>
-              <li class="pull-right"><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a></li>
-            </ul>
-
+              <li class="pull-right">
+                <a href="#" class="link-black"><i class="fa fa-comments-o margin-r-5"></i> 
+                  10
+                </a>
+                <button class="button-komen">komentar</button>
+              </li>              
+            </ul>                       
+          </div>                            
+        </div>
+        <div class="box-komentar" style="display:none";>
             @include('layouts.form.formCommentCaribarengan')
             @foreach($d->barengancomments as $c)
-              {{$c->comment}}
-
-                                   
-              <a onclick="deleteComment('{{$c->id }}')" class="pointer-jempol"> <i class="fa fa-times-circle"></i> Hapus komen</a>
+              <div class="komentar-post">
+                <div class="user-block">
+                  <img class="img-circle" src="{{ asset('storage/' . $c->user->avatar ) }}" alt="user image">
+                  
+                  <span class="username usernamekoment">
+                    <a href="#">{{$c->user->name }} </a>  
+                    @if(Auth::user()->name ==$c->user->name )
+                    
+                    <div class="btn-group custom-curret nav-right-koment pull-right">
+                      <button type="button" class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a onclick="deleteComment('{{$c->id }}')" class="pointer-jempol"><i class="fa fa-times-circle"></i> Hapus Komentar</a></a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" class="pointer-jempol"><i class="fa fa-exclamation-circle"></i> Laporkan komentar</a></li>
+                      </ul>
+                    </div>
+                    @endif
+                  </span>
+                  <span class="description descriptionkoment"><i class="fa fa-clock-o"></i> {{$c->created_at->diffForHumans()}}</span>
+                </div>                 
+                <p>{{ $c->comment }}</p>
+              </div>
             @endforeach
-          </div>                 
         </div>
       </div>      
       @endforeach
@@ -77,4 +100,11 @@
 </div>
 @include('layouts.form.formCaribarengan')
 
+<script>
+  $(document).ready(function(){
+      $(".button-komen").click(function(){
+          $(".box-komentar").toggle();
+      });
+  });
+</script>
 @endsection

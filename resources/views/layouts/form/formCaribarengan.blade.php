@@ -1,28 +1,16 @@
+
 <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-
       <form method="post" data-toogle="validator" class="form-horzontal" id="form">
         {{csrf_field()}}
         {{method_field ('POST')}} 
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="modal-title"></h4>
+          <h4 class="modal-title warna" id="modal-title"></h4>
         </div>
         <div class="modal-body">
-          <input type="hidden" name="id" id="id">
-          <div class="form-group">
-            <div class="styled-input">
-            <select required name="category_id" id="" class="select">
-              <option disabled selected>---Pilih Kategori---</option>
-              @foreach ($categories as $c)
-              <option value="{{ $c->id }} "@if($c->id == $c->category_id) selected @endif>{{ $c->name }}</option>
-              @endforeach              
-            </select>
-            <label>Masukan Kategori</label>
-            <span></span> 
-            </div>          
-          </div>
+          <input type="hidden" name="id" id="id">          
           <div class="form-group">
             <div class="styled-input">
               <input type="text" class="input" name="tujuan" id="tujuan" required/>
@@ -38,14 +26,14 @@
             </div>          
           </div>
           <div class="form-group">
-            <div class="styled-input">
+            <div class="styled-input50">
               <input type="date" class="input" name="mulai" id="mulai" required/>
               <label class="labeldate">Tanggal Mulai</label>
               <span></span> 
             </div>          
           </div>
           <div class="form-group">
-            <div class="styled-input">
+            <div class="styled-input50">
               <input type="date" class="input" name="akhir" id="akhir" required/>
               <label>Tanggal Selesai</label>
               <span></span> 
@@ -67,11 +55,11 @@
             </div>
           </div>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-save" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Kirim</button>
-        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-save" data-dismiss="modal"> <i class="fa fa-times-circle"></i> Batal</button>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-chevron-circle-right"></i> Kirim</button>
+          </div>
+        </div>        
       </form>
     </div>
   </div>
@@ -89,8 +77,6 @@
 </script>
 
 <script>
-
-
   function addForm() {
     save_method = "add";
     $('input[name=_method]').val('POST');
@@ -113,7 +99,6 @@
 
         $('#id').val(data.id);
         $('#user_id').val(data.user_id);
-        $('#category_id option:selected').val(data.category_id);
         $('#tujuan').val(data.tujuan);
         $('#mepo').val(data.mepo);
         $('#mulai').val(data.mulai);
@@ -139,10 +124,8 @@
         data: {'_method': 'DELETE','_token': csrf_token
       },
       success: function(data) {
-        $("#contact-table").load("#contact-table");
+        $("#contact-table").load(" #contact-table");
         $('#alert-success').html('show');
-
-
       },
       error: function () {
         alert("Opppps gagal");
@@ -156,22 +139,17 @@
       if (!e.isDefaultPrevented()) {
         var id = $('#id').val();
         if (save_method == 'add') url = "{{ url('caribarengan') }}"; //ini yang memisahkan antara update delete
-        else url = "{{ url('caribarengan') . '/'}}" + id;
-        
+        else url = "{{ url('caribarengan') . '/'}}" + id;        
         $.ajax({
           url: url,
           type: "POST",
           data: $('#modal-form form').serialize(),
-
             success: function ($data) {
               $('#modal-form').modal('hide');
               // $("#contact-table").load(document.URL + '" #contact-table"');
-              $("#contact-table").load(" #contact-table");
-              
-              
+              $("#contact-table").load(" #contact-table");  
               $('#alert-success').html('show');
             },
-
             error: function () {
               alert('Oops! error!');
             }

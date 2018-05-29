@@ -113,13 +113,13 @@
                 <!-- <li>
                   <a href="{{ route('profile') }}"><i class="fa fa-user-circle-o"></i>Profile</a>
                 </li> -->
-                <li><a href="{{route('calendar')}}"><i class="fa fa-calendar"></i>Jadwal Kamu</a></li>
+                <li class="hidden-md hidden-lg"><a href="{{route('calendar')}}"><i class="fa fa-calendar"></i>Jadwal Kamu</a></li>
                 <!-- menu mobile -->
                 <li class="divider hidden-md hidden-lg"></li>
-                <li class="hidden-md hidden-lg">
+                <li class="">
                   <a href="{{ route('tentang') }}"><i class="fa fa-user-circle"></i>Tentang saya</a>
                 </li>
-                <li class="hidden-md hidden-lg">
+                <li class="">
                   <a href="{{ route('galeri') }}"><i class="fa fa-image"></i>Galeri saya</a>
                 </li>
                 <li class="divider hidden-md hidden-lg"></li>

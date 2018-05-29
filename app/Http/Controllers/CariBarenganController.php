@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Barengan;
 use App\User;
-use App\Category;
 use App\BarenganComment;
+use Illuminate\Support\Facades\DB;
 
 class CariBarenganController extends Controller
 {
@@ -17,10 +17,9 @@ class CariBarenganController extends Controller
 
     public function index()
     {
-        $categories = Category::all();
-        $barengan = Barengan::all();
-        $barengancomments = BarenganComment::all();
-        return view('caribarengan',compact('barengan', 'categories','barengancomments'));
+        $barengan = Barengan::all();    
+        $barengancomments = BarenganComment::all()->toArray();        
+        return view('caribarengan',compact('barengan','barengancomments','count'));
     }
     
 
@@ -29,7 +28,6 @@ class CariBarenganController extends Controller
     {
         $data = [
             'user_id' =>auth()->id(),
-            'category_id' => $request['category_id'],
             'tujuan' => $request['tujuan'],
             'mepo' => $request['mepo'],
             'mulai' => $request['mulai'],
@@ -51,7 +49,6 @@ class CariBarenganController extends Controller
     public function update(Request $request, $id)
     {
         $caribarengan = Barengan::find($id);
-        $caribarengan->category_id = $request['category_id'];
         $caribarengan->tujuan = $request['tujuan'];
         $caribarengan->mepo = $request['mepo'];
         $caribarengan->mulai = $request['mulai'];

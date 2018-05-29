@@ -16,7 +16,6 @@ class CreateBarengansTable extends Migration
         Schema::create('barengans', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->integer('category_id')->unsigned();
             $table->longtext('content');
             $table->string('tujuan');
             $table->string('mepo');
@@ -26,7 +25,6 @@ class CreateBarengansTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('CASCADE');
 
         });
     }

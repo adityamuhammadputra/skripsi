@@ -6,8 +6,9 @@
 	z-index:9999;
 }
 </style>
+
 @if(session('success'))
-<div class="alert alert-success alert-dismissible fixed" role="alert" id="alert-success">
+<div class="alert alert-success alert-dismissible fixed" role="alert">
 	<i class="icon fa fa-check"></i>
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 	{{session('success')}}
@@ -30,11 +31,12 @@
 </div>
 @endif
 
-<script type="text/javascript">
+<script>	
 	window.setTimeout(function() {
     $(".alert").fadeTo(500, 0).slideUp(500, function(){
         $(this).remove(); 
     });
 }, 5000);
+
 </script>
 
