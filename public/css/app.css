@@ -19360,3 +19360,13 @@ select:focus {
   top: 0px;
 }
 
+.box-costum-collapse {
+  margin-bottom: 7px;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+}
+
+.btn-nopadding {
+  padding: 0px;
+}
+

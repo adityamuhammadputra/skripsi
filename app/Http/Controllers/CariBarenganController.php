@@ -16,10 +16,10 @@ class CariBarenganController extends Controller
     }
 
     public function index()
-    {
-        $barengan = Barengan::all();    
-        $barengancomments = BarenganComment::all()->toArray();        
-        return view('caribarengan',compact('barengan','barengancomments','count'));
+    {  
+        $barengan = Barengan::all(); 
+        $barengancomments = BarenganComment::all()->toArray();     
+        return view('caribarengan',compact('barengan','barengancomments'));
     }
     
 

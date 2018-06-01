@@ -18,9 +18,8 @@ class CariBarenganCommentController extends Controller
         $data = [
             'user_id' => auth()->id(),               
             'barengan_id' => $id->id,
-            'comment' => $request['comment'],
+            'comment' => 'masih dummy',
         ];
-        // return $data;
 
         return BarenganComment::create($data);
 

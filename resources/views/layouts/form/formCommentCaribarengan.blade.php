@@ -1,14 +1,11 @@
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <div id="form">
-    <form method="post" data-toogle="validator" class="form-horzontal">
-        {{ csrf_field() }} 
+    <form method="post" data-barengan="{{$d->id}}">
         {{method_field ('POST')}} 
-        <input type="hidden" name="id" id="id">              
-        {{--  <!-- <input type="hidden" name="barengan_id" value="{{$d->id}}" id="barengan_id"> -->  --}}
         <div class="styled-input">
           <input class="input inputkoment" type="text" placeholder="Tulis Komentar ..." name="comment" id="comment">
           <span></span> 
           <button type="submit" class="btn btn-default pull-right btn-custom-komen"><i class="fa fa-chevron-circle-right"></i></button>
-          
         </div>        
     </form>
 </div>
@@ -17,6 +14,7 @@
 <script src="{{asset('js/jquery-1-11-0.js')}}"></script>
 
 <script>
+
 function deleteComment(id) {
     var popup = confirm("apakah anda yakin akan menghapus data?");
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
@@ -28,11 +26,10 @@ function deleteComment(id) {
         data: {'_method': 'DELETE','_token': csrf_token
       },
       success: function(data) {
-        $("#contact-table").load(" #contact-table");
+        //$("#box-komentar").load(" #box-komentar");
+        $('#box-komentar').html(data);
         
         $('#alert-success').html('show');
-        
-
 
       },
       error: function () {
@@ -43,17 +40,27 @@ function deleteComment(id) {
   }
 
  $(function () {
+  $('input[name=_method]').val('POST');
+  $('#form form')[0].reset();
     $(document).on('submit','#form form',function (e) {
       if (!e.isDefaultPrevented()) {
         // var id = $('#barengan_id').val();
-        // url = "{{ url('caribarengan')}}/" + id + "/comment";  
-        url= '{{route('caribarengancomment.store',$d)}}';          
+        var barenganId = $(this).data('barengan');
+        console.log(barenganId);
+        url = "{{ url('caribarengan')}}/" + barenganId + "/comment";  
+        //url= '{{route('caribarengancomment.store',$d)}}';  
+        $.ajaxSetup({
+          headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+       });        
         $.ajax({
           url: url,
           type: "POST",
           data: $('#form form').serialize(),
             success: function(data) {
               $("#contact-table").load(" #contact-table");
+              
               
               $('#alert-success').html('show');
             },
