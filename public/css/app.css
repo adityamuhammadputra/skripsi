@@ -19296,7 +19296,7 @@ select:focus {
 
 .textarea {
   width: 100%;
-  min-height: 80px;
+  min-height: 120px;
 }
 
 .modal-footer {

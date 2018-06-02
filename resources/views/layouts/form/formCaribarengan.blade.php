@@ -82,7 +82,7 @@
     $('input[name=_method]').val('POST');
     $('#modal-form').modal('show');
     $('#modal-form form')[0].reset();
-    $('.modal-title').text('Tambah Data');
+    $('.modal-title').text('Buat Kiriman Baru');
   }
 
   function editForm(id) {
@@ -95,7 +95,7 @@
       dataType: "JSON",
       success: function (data) {
         $('#modal-form').modal('show');
-        $('.modal-title').text('Edit Data');
+        $('.modal-title').text('Ubah Data');
 
         $('#id').val(data.id);
         $('#user_id').val(data.user_id);

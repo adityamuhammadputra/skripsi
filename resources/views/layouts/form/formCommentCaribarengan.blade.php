@@ -26,9 +26,7 @@ function deleteComment(id) {
         data: {'_method': 'DELETE','_token': csrf_token
       },
       success: function(data) {
-        //$("#box-komentar").load(" #box-komentar");
-        $('#box-komentar').html(data);
-        
+        $("#contact-table").load(" #contact-table");
         $('#alert-success').html('show');
 
       },
@@ -57,7 +55,7 @@ function deleteComment(id) {
         $.ajax({
           url: url,
           type: "POST",
-          data: $('#form form').serialize(),
+          data: $(this).serialize(),
             success: function(data) {
               $("#contact-table").load(" #contact-table");
               
