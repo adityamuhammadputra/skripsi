@@ -16,6 +16,7 @@ class CreateSinggahsTable extends Migration
         Schema::create('singgahs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
+            $table->longtext('lokasi');
             $table->longtext('content');
             $table->string('contact');
             $table->string('category');

@@ -15,13 +15,13 @@
         </h3>
         <div class="box-tools pull-right">
           <form class="custom-search navbar-form navbar-left" method="GET" action="/searchBarengan">
-            <input type="text" name="search" placeholder="Cari Post ... ">
+            <input type="text" name="search" placeholder="Cari Rumah Singgah ... ">
           </form>
         </div>
       </div>
     <div>
     <div id="contact-table">
-      @foreach($barengan as $d)    
+      @foreach($singgah as $d)    
       <div class="box box2">
         <div class="box-body box-body-custom">
           <div class="post">
@@ -43,15 +43,15 @@
                   </ul>
                 </div>
               </span>
-              <span class="description"><i class="fa fa-location-arrow" title="tujuan"></i>  {{$d->tujuan}} - <i class="fa fa-clock-o"></i> {{$d->created_at->diffForHumans()}}</span>
+              <span class="description"><i class="fa fa-hashtag" title="Sebagai"></i>  {{$d->category}} - <i class="fa fa-clock-o"></i> {{$d->created_at->diffForHumans()}}</span>
             </div>        
             <p>
               {{ $d->content }}            
             </p>
             <div class="box box-default box-costum-collapse">
               <div class="box-header with-border" style="padding:0px;">
-                <a class="label label-primary" title="Tempat Meeting Point"><i class="fa fa-map-marker"></i> {{$d->mepo }}</a>
-                <a class="label label-primary" title="Waktu"><i class="fa fa-calendar"></i> {{$d->mulai }} - {{$d->akhir }}</a>
+                <a class="label label-primary" title="Kota"><i class="fa fa-map-marker"></i> {{$d->lokasi }}</a>
+                <a class="label label-primary" title="Kontak"><i class="fa fa-phone-square"></i> {{$d->contact }}</a>
   
                 <div class="pull-right">
                   <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> 10
@@ -60,9 +60,9 @@
               </div>
               <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
-                  @include('layouts.form.formCommentCaribarengan')
+                  @include('layouts.form.formCommentSinggah')
                   <div id="box-komentar">
-                  @foreach($d->barengancomments as $c)
+                  @foreach($d->singgahcomment as $c)
                     <div class="komentar-post"> 
                       <div class="user-block">
                         <img class="img-circle" src="{{ asset('storage/' . $c->user->avatar ) }}" alt="user image">
@@ -97,7 +97,9 @@
     </div>
   </div>
 </div>
-@include('layouts.form.formCaribarengan')
+@include('layouts.form.formSinggah')
+
+
 
 @push('scripts')
     //script caribarengan
@@ -114,7 +116,7 @@
       $('input[name=_method]').val('PATCH');
       $('#modal-form form')[0].reset();
       $.ajax({
-        url: "{{ url('caribarengan')}}/" + id + "/edit", //menampilkan data dari controller edit
+        url: "{{ url('singgah')}}/" + id + "/edit", //menampilkan data dari controller edit
         type: "GET",
         dataType: "JSON",
         success: function (data) {
@@ -123,12 +125,10 @@
   
           $('#id').val(data.id);
           $('#user_id').val(data.user_id);
-          $('#tujuan').val(data.tujuan);
-          $('#mepo').val(data.mepo);
-          $('#mulai').val(data.mulai);
-          $('#akhir').val(data.akhir);
-          $('#contact').val(data.contact);
+          $('#lokasi').val(data.lokasi);
           $('#content').val(data.content);
+          $('#contact').val(data.contact);
+          $('#category').val(data.category);
   
         },
         error: function () {
@@ -143,7 +143,7 @@
       var csrf_token = $('meta[name="csrf-token"]').attr('content');
       if(popup == true){                
         $.ajax({
-          url: "{{ url('caribarengan')}}/" + id,
+          url: "{{ url('singgah')}}/" + id,
           type: "POST",
           data: {'_method': 'DELETE','_token': csrf_token
         },
@@ -162,8 +162,8 @@
       $('#modal-form form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
           var id = $('#id').val();
-          if (save_method == 'add') url = "{{ url('caribarengan') }}"; //ini yang memisahkan antara update delete
-          else url = "{{ url('caribarengan') . '/'}}" + id;        
+          if (save_method == 'add') url = "{{ url('singgah') }}"; //ini yang memisahkan antara update delete
+          else url = "{{ url('singgah') . '/'}}" + id;        
           $.ajax({
             url: url,
             type: "POST",
@@ -190,7 +190,7 @@
       if(popup == true){                
         $.ajax({
          
-          url: "{{ url('caribarengancomment')}}/"+id,         
+          url: "{{ url('singgahcomment')}}/"+id,         
           type: "POST",
           data: {'_method': 'DELETE','_token': csrf_token
         },
@@ -211,8 +211,8 @@
     $('#form form')[0].reset();
       $(document).on('submit','#form form',function (e) {
         if (!e.isDefaultPrevented()) {
-          var barenganId = $(this).data('barengan');
-          url = "{{ url('caribarengan')}}/" + barenganId + "/comment";  
+          var singgahId = $(this).data('singgah');
+          url = "{{ url('singgah')}}/" + singgahId + "/comment";  
           $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

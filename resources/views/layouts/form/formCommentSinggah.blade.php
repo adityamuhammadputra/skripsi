@@ -1,6 +1,6 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <div id="form">
-    <form method="post" data-barengan="{{$d->id}}">
+    <form method="post" data-singgah="{{$d->id}}">
         {{method_field ('POST')}} 
         <div class="styled-input">
           <input class="input inputkoment" type="text" placeholder="Tulis Komentar ..." name="comment" id="comment">

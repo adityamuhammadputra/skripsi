@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 
 class Barengan extends Model
 {
+    use Searchable;
+
     protected $fillable = ['user_id','content','tujuan','mepo','mulai','akhir','contact'];
 
     public function user()

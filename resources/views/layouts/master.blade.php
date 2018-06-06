@@ -28,14 +28,14 @@
           <div id="sidebar-menu">
             <ul class="f-color1 nav navbar-nav active-menu hidden-xs">
               <li><a href="{{route('caribarengan.index')}}"><i class="fa fa-users fa-size-15"></i> Barengan</a></li>
-              <li><a href="#"><i class="fa fa-home fa-size-15"></i> Singgah</a></li>
-              <li><a href="#"><i class="fa fa-info-circle fa-size-15"></i> Info</a></li>
+              <li><a href="{{ route('singgah.index') }}"><i class="fa fa-home fa-size-15"></i> Singgah</a></li>
+              <li><a href="{{ route('info.index') }}"><i class="fa fa-info-circle fa-size-15"></i> Info</a></li>
             </ul>
             <nav class="icon-bar nav active-menu visible-xs bottom">
               <li><a href="{{route('home')}}"><i class="fa fa-globe"></i></a></li>
               <li><a href="{{route('caribarengan.index')}}"><i class="fa fa-users"></i></a> </li>
-              <li><a href="#"><i class="fa fa-home"></i></a> </li>
-              <li><a href="#"><i class="fa fa-info-circle"></i></a> </li>
+              <li><a href="{{ route('singgah.index') }}"><i class="fa fa-home"></i></a> </li>
+              <li><a href="{{ route('info.index') }}"><i class="fa fa-info-circle"></i></a> </li>
               <li><a href="#"><i class="fa fa-user"></i></a> </li>
             </nav>
           </div>
@@ -161,6 +161,7 @@
       @include('layouts.partials._alert')
     
       <!-- loadinganimation -->
+      @include('layouts.partials.loadrubi')
       
       @yield('content')
         
@@ -170,7 +171,6 @@
 </div>
 
 </body>
-
 <script src="{{asset('js/app.js')}}"></script>
-
+<script>@stack('scripts')</script>
 </html>

@@ -21,7 +21,7 @@ class HomeController extends Controller
         $comments = PostComment::latest()->paginate(5);
         if($request->ajax()) {
             return [
-                'datapost' => view('load.welcome')->with(compact('datapost','comments'))->render(),
+                'datapost' => view('load.loadHome')->with(compact('datapost','comments'))->render(),
                 'next_page' => $datapost->nextPageUrl()
                 ];
         }

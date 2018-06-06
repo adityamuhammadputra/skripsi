@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +41,20 @@ Route::resource('/caribarengan/{id}/comment', 'CariBarenganCommentController')->
 Route::resource('/caribarengancomment', 'CariBarenganCommentController')->only([
     'destroy'
 ])->names(['destroy' => 'caribarengancomment.destroy']);
+Route::get('/searchBarengan',function (Request $request){
+    $result = App\Barengan::search($request->search)->get();
+    return view('result.resultBarengan',compact('result'));
+});
+
+Route::resource('/singgah','SinggahController');
+Route::resource('/singgah/{id}/comment', 'SinggahCommentController')->only([
+    'store'
+])->names(['store'=>'singgahcomment.store']);
+Route::resource('/singgahcomment', 'SinggahCommentController')->only([
+    'destroy'
+])->names(['destroy' => 'singgahcomment.destroy']);
+
+Route::resource('/info','InfoController');
 
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 Route::get('/loadCalendar', 'CalendarController@loadData')->name('calendar.load');

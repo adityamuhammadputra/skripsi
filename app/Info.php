@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Info extends Model
 {
-    protected $fillable = ['user_id','category_id','content','images'];
+    protected $fillable = ['user_id','category_id','title','content','images'];
 
     public function user()
     {
@@ -18,8 +18,8 @@ class Info extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function info_comment()
+    public function infocomment()
     {
-        return $this->hasMany(Info_Comment::class);
+        return $this->hasMany(InfoComment::class);
     }
 }

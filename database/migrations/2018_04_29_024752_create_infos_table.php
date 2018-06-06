@@ -17,6 +17,7 @@ class CreateInfosTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
+            $table->string('title');
             $table->longtext('content');
             $table->string('images')->nullable();
             $table->timestamps();

@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Singgah extends Model
 {
-    protected $fillable = ['user_id','content','contact','category'];
+    protected $fillable = ['user_id','lokasi','content','contact','category'];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function singgah_comment()
+    public function singgahcomment()
     {
-        return $this->hasMany(singgah_comment::class);
+        return $this->hasMany(singgahcomment::class);
     }
 }

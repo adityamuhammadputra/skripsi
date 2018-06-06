@@ -21,14 +21,12 @@
       </div>
     <div>
     <div id="contact-table">
-      @foreach($barengan as $d)    
+      @foreach($info as $d)    
       <div class="box box2">
         <div class="box-body box-body-custom">
           <div class="post">
-            <div class="user-block">
-              <img class="img-circle" src="{{ asset('storage/' . $d->user->avatar ) }}" alt="user image">
-              <span class="username">
-                <a href="#">{{$d->user->name }} </a>  
+            <div class="title-info">
+                <a href="#" class="title">{{ $d->title}} </a>  
                 <div class="btn-group pull-right custom-curret nav-right1">
                   <button type="button" class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="fa fa-ellipsis-h"></span>
@@ -42,27 +40,33 @@
                     <li><a href="#" class="pointer-jempol"><i class="fa fa-exclamation-circle"></i> Laporkan Kiriman</a></li>
                   </ul>
                 </div>
-              </span>
-              <span class="description"><i class="fa fa-location-arrow" title="tujuan"></i>  {{$d->tujuan}} - <i class="fa fa-clock-o"></i> {{$d->created_at->diffForHumans()}}</span>
+                <div class="info-by">
+                    <i class="fa fa-clock-o"></i> {{$d->created_at->diffForHumans()}} - DIposting oleh <a href="#">{{ $d->user->name }}</a>
+                </div>
+            </div>
+            
+            <div class="col-md-6 img-info">
+                <img class="rounded-square img-responsive" src="{{ asset($d->images) }}" alt=""> 
             </div>        
-            <p>
-              {{ $d->content }}            
+            <p class="text-justify">
+                {{ str_limit(strip_tags($d->content), 800) }}
+                @if (strlen(strip_tags($d->content)) > 800)
+                  <a href="{{ action('InfoController@show', $d) }}" ><i class="readmore"> Lanjutkan Membaca ...</i></a>
+                @endif
             </p>
             <div class="box box-default box-costum-collapse">
               <div class="box-header with-border" style="padding:0px;">
-                <a class="label label-primary" title="Tempat Meeting Point"><i class="fa fa-map-marker"></i> {{$d->mepo }}</a>
-                <a class="label label-primary" title="Waktu"><i class="fa fa-calendar"></i> {{$d->mulai }} - {{$d->akhir }}</a>
-  
+                <a class="label label-primary" title="Tempat Meeting Point"><i class="fa fa-map-marker"></i> {{$d->category->name }}</a>
                 <div class="pull-right">
-                  <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> 10
+                  <a class="btn-nopadding btn btn-box-tool" href="{{ action('InfoController@show', $d) }}"><i class="fa fa-comment"></i> 10
                   </a>
                 </div>
               </div>
-              <div class="box-body" style="padding:0px;">
+              {{--  <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
                   @include('layouts.form.formCommentCaribarengan')
                   <div id="box-komentar">
-                  @foreach($d->barengancomments as $c)
+                  @foreach($infocomments as $c)
                     <div class="komentar-post"> 
                       <div class="user-block">
                         <img class="img-circle" src="{{ asset('storage/' . $c->user->avatar ) }}" alt="user image">
@@ -88,7 +92,7 @@
                   @endforeach
                   </div>
                 </div>
-              </div>
+              </div>  --}}
             </div>
           </div>                            
         </div>
@@ -97,7 +101,7 @@
     </div>
   </div>
 </div>
-@include('layouts.form.formCaribarengan')
+@include('layouts.form.formInfo')
 
 @push('scripts')
     //script caribarengan
@@ -114,7 +118,7 @@
       $('input[name=_method]').val('PATCH');
       $('#modal-form form')[0].reset();
       $.ajax({
-        url: "{{ url('caribarengan')}}/" + id + "/edit", //menampilkan data dari controller edit
+        url: "{{ url('info')}}/" + id + "/edit", //menampilkan data dari controller edit
         type: "GET",
         dataType: "JSON",
         success: function (data) {
@@ -123,12 +127,9 @@
   
           $('#id').val(data.id);
           $('#user_id').val(data.user_id);
-          $('#tujuan').val(data.tujuan);
-          $('#mepo').val(data.mepo);
-          $('#mulai').val(data.mulai);
-          $('#akhir').val(data.akhir);
-          $('#contact').val(data.contact);
+          $('#title').val(data.title);
           $('#content').val(data.content);
+          $('#category').val(data.category);
   
         },
         error: function () {
@@ -143,7 +144,7 @@
       var csrf_token = $('meta[name="csrf-token"]').attr('content');
       if(popup == true){                
         $.ajax({
-          url: "{{ url('caribarengan')}}/" + id,
+          url: "{{ url('info')}}/" + id,
           type: "POST",
           data: {'_method': 'DELETE','_token': csrf_token
         },
@@ -159,15 +160,18 @@
     }
   
     $(function () {
-      $('#modal-form form').on('submit', function (e) {
+      $('#form form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
           var id = $('#id').val();
-          if (save_method == 'add') url = "{{ url('caribarengan') }}"; //ini yang memisahkan antara update delete
-          else url = "{{ url('caribarengan') . '/'}}" + id;        
+          if (save_method == 'add') url = "{{ url('info') }}"; //ini yang memisahkan antara update delete
+          else url = "{{ url('info') . '/'}}" + id;        
           $.ajax({
             url: url,
             type: "POST",
-            data: $('#modal-form form').serialize(),
+            //data: $('#modal-form form').serialize(),
+            data:new FormData($('$form form')[0]),
+            contentType: false,
+            processData: false,
               success: function ($data) {
                 $('#modal-form').modal('hide');
                 // $("#contact-table").load(document.URL + '" #contact-table"');
@@ -184,7 +188,7 @@
     });
 
   //proses komentar
-    function deleteComment(id) {
+    {{--  function deleteComment(id) {
       var popup = confirm("apakah anda yakin akan menghapus data?");
       var csrf_token = $('meta[name="csrf-token"]').attr('content');
       if(popup == true){                
@@ -208,7 +212,7 @@
   
    $(function () {
     $('input[name=_method]').val('POST');
-    $('#form form')[0].reset();
+    //$('#form form')[0].reset();
       $(document).on('submit','#form form',function (e) {
         if (!e.isDefaultPrevented()) {
           var barenganId = $(this).data('barengan');
@@ -233,7 +237,7 @@
           return false;
         }
       });
-    });
+    });  --}}
 
     //loadscroll
     

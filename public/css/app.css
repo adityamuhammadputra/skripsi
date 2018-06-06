@@ -19326,7 +19326,8 @@ select:focus {
 }
 
 .komentar-post {
-  padding: 0px 10px;
+  padding: 10px 0px 0px;
+  border-bottom: 1px solid #d2d6de;
   font-size: 14px;
 }
 
@@ -19368,5 +19369,41 @@ select:focus {
 
 .btn-nopadding {
   padding: 0px;
+}
+
+.img-info {
+  padding-left: 0px;
+}
+
+.title-info {
+  padding-bottom: 10px;
+}
+
+.title-info > .title {
+  font: 30px calibri;
+}
+
+.title-info a:hover {
+  text-decoration: none;
+}
+
+.info-by a {
+  font-style: italic;
+  color: #555555;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: underline;
+}
+
+.readmore {
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .img-info {
+    padding-right: 0px;
+    padding-bottom: 5px;
+  }
 }
 

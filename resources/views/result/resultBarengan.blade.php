@@ -21,7 +21,8 @@
       </div>
     <div>
     <div id="contact-table">
-      @foreach($barengan as $d)    
+    @if(count($result) > 0)
+      @foreach($result as $d)    
       <div class="box box2">
         <div class="box-body box-body-custom">
           <div class="post">
@@ -94,6 +95,9 @@
         </div>
       </div>      
       @endforeach
+      @else
+            <p>Maaaf Data yang anda cari tidak ada, klik</p>
+        @endif
     </div>
   </div>
 </div>
@@ -234,8 +238,6 @@
         }
       });
     });
-
-    //loadscroll
     
     @endpush
 @endsection

@@ -15,10 +15,18 @@ class CariBarenganController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {  
         $barengan = Barengan::all(); 
-        $barengancomments = BarenganComment::all()->toArray();     
+        $barengancomments = BarenganComment::all();
+
+        // if($request->ajax()) {
+        //     return [
+        //         'barengan' => view('load.loadBarengan')->with(compact('barengan','barengancomments'))->render(),
+        //         'next_page' => $barengan->nextPageUrl()
+        //         ];
+        // }
+
         return view('caribarengan',compact('barengan','barengancomments'));
     }
     
