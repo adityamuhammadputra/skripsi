@@ -26,15 +26,24 @@ Route::get('auth/activate/resend', 'Auth\ActivationResendController@showResendFo
 Route::post('auth/activate/resend', 'Auth\ActivationResendController@resend')->name('auth.activate.resend');;
 
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::post('/', 'HomeController@store')->name('home.store');
-Route::delete('/{id}/delete', 'HomeController@destroy')->name('home.destroy');
+// Route::get('/', 'HomeController@index')->name('home');
+// Route::post('/', 'HomeController@store')->name('home.store');
+// Route::delete('/{id}/delete', 'HomeController@destroy')->name('home.destroy');
 
-Route::post('/{id}/comment', 'HomeCommentController@store')->name('home.comment.store');
-Route::delete('/{id}/comment/delete', 'HomeCommentController@destroy')->name('home.comment.destroy');
+// Route::post('/{id}/comment', 'HomeCommentController@store')->name('home.comment.store');
+// Route::delete('/{id}/comment/delete', 'HomeCommentController@destroy')->name('home.comment.destroy');
 
+Route::resource('/', 'HomeController', [
+    'names' => [
+        'index' => 'home',
+        'store' => 'home.store',
+        'destroy' => 'home.destroy',
+        'edit' => 'home.edit',
+        'update' => 'home.update'
+    ]
+])->except(['show','create']);
 
-Route::resource('/caribarengan','CariBarenganController');
+Route::resource('/caribarengan','CariBarenganController')->except(['show','create']);
 Route::resource('/caribarengan/{id}/comment', 'CariBarenganCommentController')->only([
     'store'
 ])->names(['store'=>'caribarengancomment.store']);
@@ -46,7 +55,7 @@ Route::get('/searchBarengan',function (Request $request){
     return view('result.resultBarengan',compact('result'));
 });
 
-Route::resource('/singgah','SinggahController');
+Route::resource('/singgah','SinggahController')->except(['show','create']);
 Route::resource('/singgah/{id}/comment', 'SinggahCommentController')->only([
     'store'
 ])->names(['store'=>'singgahcomment.store']);
@@ -54,7 +63,9 @@ Route::resource('/singgahcomment', 'SinggahCommentController')->only([
     'destroy'
 ])->names(['destroy' => 'singgahcomment.destroy']);
 
-Route::resource('/info','InfoController');
+Route::resource('/info', 'InfoController')->except(['create']);
+Route::resource('/info/{id}/comment','InfoCommentController')->only(['store']);
+Route::resource('/infocomment','InfoCommentController')->only(['destroy']);
 
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 Route::get('/loadCalendar', 'CalendarController@loadData')->name('calendar.load');

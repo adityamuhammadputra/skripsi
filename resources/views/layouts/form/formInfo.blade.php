@@ -13,7 +13,7 @@
             <input type="hidden" name="id" id="id">  
             <div class="form-group">
                 <div class="styled-input">
-                    <select name="category_id" class="input">
+                    <select name="category_id" class="input" required>
                         <option value="1">Gunung</option>
                         <option value="2">Pantai</option>
                         <option value="3">Goa</option>
@@ -29,22 +29,25 @@
                 <input type="text" class="input" name="title" id="title" required/>
                 <label>Judul</label>
                 <span></span> 
+                <span class="help-block with-errors"></span>
               </div>          
             </div>
             
             <div class="form-group">
               <div class="styled-input wide">
-                <textarea required name="content" class="textarea" id="content"></textarea>
+                <textarea name="content" class="textarea" id="content" required></textarea>
                 <label>Deskripsi</label>
                 <span></span> 
+                <span class="help-block with-errors"></span>
               </div>
             </div>
 
             <div class="form-group">
                 <div class="styled-input">
-                  <input type="file" class="input" name="images" id="images"/>
+                  <input type="file" class="input" name="images" id="images" required/>
                   <label>Gambar</label>
                   <span></span> 
+                  <span class="help-block with-errors"></span>
                 </div>          
               </div>
 

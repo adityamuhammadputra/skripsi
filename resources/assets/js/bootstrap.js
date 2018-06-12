@@ -15,6 +15,9 @@ try {
 
 require('admin-lte');
 require('fullcalendar');
+window.swal = require('sweetalert2');
+
+require('bootstrap-validator');
 
 
 

@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <form method="post" action="#" class="">
+      <form method="post" action="{{ route('home.store') }}" class="">
       	{{ csrf_field() }}
         <div class="form-group has-feedback {{ $errors->has('content') ? 'has-error' : '' }}">
           <textarea name="content" id="content" class="form-control"></textarea>
@@ -33,7 +33,7 @@
       </form>
 
       <!-- /.box-header -->
-      <div class="box-body">
+      <div class="box-body datapost endless-pagination" data-next-page="{{ $datapost->nextPageUrl() }}">
       		@foreach($datapost as $d)
           <div class="post">
             <div class="user-block">
@@ -41,7 +41,7 @@
               
                   <span class="username">
                     <a href="#">{{$d->user->name }} </a>
-                    <form method = "POST" action="#">
+                    <form method = "POST" action="{{route('home.destroy', $d)}}">
 					          {{ csrf_field() }}
 					          {{ method_field('DELETE') }}
                     
@@ -87,7 +87,7 @@
                   
                       <span class="username">
                         <a href="#">{{$c->user->name }} </a>
-                        <form method = "POST" action="">
+                        <form method = "POST" action="{{route('home.comment.destroy',$c)}}">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
                         @if(Auth::user()->name ==$c->user->name )
@@ -112,7 +112,7 @@
                 </p>
             </div>
             @endforeach     
-            <form method="post" action="">
+            <form method="post" action="{{ route('home.comment.store',$d) }}">
 					    {{ csrf_field() }}
             
               <input class="form-control input-sm" type="text" placeholder="Type a comment" name="comment" id="comment">
@@ -129,6 +129,41 @@
 </div>
 
 <script>
+  $(document).ready(function() {
 
+    $(window).scroll(fetchPosts);
+
+    function fetchPosts() {
+
+        var page = $('.endless-pagination').data('next-page');
+          
+
+        if(page !== null) {
+            clearTimeout( $.data( this, "scrollCheck" ) );
+            $.data( this, "scrollCheck", setTimeout(function() {
+        
+
+                var scroll_position_for_posts_load = $(window).height() + $(window).scrollTop() + 100;
+
+                if(scroll_position_for_posts_load >= $(document).height()) {
+                    $('.se-pre-con').show()
+
+                    $.get(page, function(data){
+
+                        $('.datapost').append(data.datapost);
+
+                        $('.endless-pagination').data('next-page', data.next_page);
+
+                        $('.se-pre-con').fadeOut("slow");
+                    });
+                    
+                }
+
+            }, 350))
+
+        }
+    }
+
+})
 </script>
 @endsection

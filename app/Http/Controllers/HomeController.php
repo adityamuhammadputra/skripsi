@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
 use App\User;
+use App\Post;
 use App\PostComment;
-
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -15,42 +15,31 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Request $request)
+    public function index()
     {
-        $datapost = Post::latest()->paginate(5);
-        $comments = PostComment::latest()->paginate(5);
-        if($request->ajax()) {
-            return [
-                'datapost' => view('load.loadHome')->with(compact('datapost','comments'))->render(),
-                'next_page' => $datapost->nextPageUrl()
-                ];
-        }
-        return view('welcome',compact('datapost', 'comments'));
+        $datapost = Post::all();
+        return view('welcome',compact('datapost'));
+        
+    }
+   
+    public function store(Request $request)
+    {
+        
+    }
+  
+    public function edit($id)
+    {
+        
     }
 
-    public function store()
+    public function update(Request $request, $id)
     {
-        $this->validate(
-            request(),
-            [
-                'content' => 'required | min:15',
-            ]
-        );
-
-        Post::create([
-            'user_id' => auth()->id(),
-            'content' => request('content')
-        ]);
-
-        return redirect()->back()->withInfo('Data berhasil ditambah ');
-
+        
     }
 
-    public function destroy(Post $id)
+   
+    public function destroy($id)
     {
-        $id->delete();
-
-        return redirect()->back()->withDanger('Data berhasil dihapus');
+        
     }
-
 }

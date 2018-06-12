@@ -116,12 +116,19 @@ color:rgb(251, 80, 59);
 //menu buttom
 .icon-bar.nav.active-menu>li.current-page
 {
-	border-bottom:3px rgb(251, 80, 59) solid;
+	// border-bottom:3px rgb(251, 80, 59) solid;
   	position: relative;
       bottom: 0px;
        font-size: 30px;
-      color:rgb(251, 80, 59);
      
+}
+.f-color1.nav.navbar-nav.active-menu>li.current-page>a{
+    color:rgb(251, 80, 59);
+
+}
+.nav.icon-bar.nav.active-menu.visible-xs.bottom>li.current-page>a{
+    color:rgb(251, 80, 59);
+
 }
 
 .icon-bar {
@@ -656,4 +663,11 @@ textarea:focus, select:focus { outline: 0; }
     padding-right: 0px;
     padding-bottom: 5px;
     }
+}
+
+.form-group.has-error .help-block {
+    color: #dd4b39;
+    width: 100%;
+    bottom: -10px;
+    font-size: 12px;
 }

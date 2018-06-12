@@ -5,19 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Info;
-use App\InfoComment;
 use App\User;
+use Session;
+use View;
+
 
 class InfoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $info = Info::all(); 
-        $infocomments = InfoComment::all();
-        return view('info',compact('info','infocomments'));
-
+        $data = Info::all();
+        return view('info',compact('data'));
     }
-   
+
     public function store(Request $request)
     {
         $input = $request->all();
@@ -27,56 +32,58 @@ class InfoController extends Controller
 
         if ($request->hasFile('images')){
             $input['images'] = '/upload/photo/'.str_slug($input['title'],'-').'.'.$request->images->getClientOriginalExtension();
-            $request->images->move(public_path('/upload/photo/'),$input['images']);
+            $request->images->move(public_path('/upload/photo/'), $input['images']);
         }
 
         Info::create($input);
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Contact Created'
-        ]);
+        Session::flash('success', 'Kiriman Ditambah');
+        return View::make('layouts/partials/_alertajax');
     }
 
+  
     public function show($id)
     {
-        //
+        $d = Info::find($id);
+        return view('info-detail',compact('d'));
     }
+
    
     public function edit($id)
-    {
+    {   
         $data = Info::find($id);
-
         return $data;
-    }
+    }   
 
-   
     public function update(Request $request, $id)
     {
-        $data = $request->all();
+        $input = $request->all();
         $info = Info::findOrFail($id);
 
-        $data['images'] = $info->images;
+        $input['images'] = $info->images;
 
-        if($request->hasFile('images')){
-            if($info->photo != null)
+        if($request->hasFile('images'))
+        {
+            if($info->images != null)
             {
                 unlink(public_path($info->images));
             }
 
-            $data['images'] = '/upload/photo/'.str_slug($data['title'],'-').'.'.$request->images->getClientOriginalExtension();
-            $request->images->move(public_path('/upload/photo/'), $data['images']);
-
+            $input['images'] = '/upload/photo/'.str_slug($input['title'],'-').'.'.$request->images->getClientOriginalExtension();
+            $request->images->move(public_path('/upload/photo/'), $input['images']);
         }
-        $info->update($data);
+        $info->update($input);
 
-        return response()->json([
-            'success'=>true,
-            'message' => 'Contact Updated'
-        ]);
+        Session::flash('info', 'Kiriman Diperbaharui');
+        return View::make('layouts/partials/_alertajax');
     }
 
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($id)
     {
         $info = Info::findOrFail($id);
@@ -86,11 +93,9 @@ class InfoController extends Controller
             unlink(public_path($info->images));
         }
 
-        Contact::destroy($id);
+        Info::destroy($id);
 
-         return response()->json([
-            'success'=>true,
-            'message' => 'Contact Deleted'
-        ]);
+        Session::flash('error', 'Kiriman Dihapus');
+        return View::make('layouts/partials/_alertajax');
     }
 }

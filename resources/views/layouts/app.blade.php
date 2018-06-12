@@ -44,7 +44,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('register') }}">Bergabung</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
@@ -74,7 +74,7 @@
         @include('layouts.partials._alert')
 
         <!-- loading -->
-        @include('layouts.loading')
+        @include('layouts.partials.loadrubi')
 
         <!-- content-start -->
         @yield('content')
