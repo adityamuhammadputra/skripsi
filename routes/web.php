@@ -33,15 +33,12 @@ Route::post('auth/activate/resend', 'Auth\ActivationResendController@resend')->n
 // Route::post('/{id}/comment', 'HomeCommentController@store')->name('home.comment.store');
 // Route::delete('/{id}/comment/delete', 'HomeCommentController@destroy')->name('home.comment.destroy');
 
-Route::resource('/', 'HomeController', [
-    'names' => [
-        'index' => 'home',
-        'store' => 'home.store',
-        'destroy' => 'home.destroy',
-        'edit' => 'home.edit',
-        'update' => 'home.update'
-    ]
-])->except(['show','create']);
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::resource('/home/{id}/comment','HomeCommentController')->only(['store']);
+Route::resource('/homecomment','HomeCommentController')->only(['destroy']);
+
+Route::resource('/home', 'HomeController')->except(['show','create']);
 
 Route::resource('/caribarengan','CariBarenganController')->except(['show','create']);
 Route::resource('/caribarengan/{id}/comment', 'CariBarenganCommentController')->only([
@@ -73,9 +70,11 @@ Route::get('/loadCalendar', 'CalendarController@loadData')->name('calendar.load'
 Route::get('/tentang', 'TentangController@index')->name('tentang');
 Route::post('tentang', 'TentangController@update');
 
+Route::resource('/profile', 'ProfileController')->only(['show']);
 
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::post('/profile', 'ProfileController@update');
-Route::delete('/profile', 'ProfileController@destroy')->name('user.destroy');
+Route::get('/search','ProfileController@search')->name('seacrh');
+// Route::get('/profile', 'ProfileController@index')->name('profile');
+// Route::post('/profile', 'ProfileController@update');
+// Route::delete('/profile', 'ProfileController@destroy')->name('user.destroy');
 
 Route::get('/galeri', 'GaleriController@index')->name('galeri');

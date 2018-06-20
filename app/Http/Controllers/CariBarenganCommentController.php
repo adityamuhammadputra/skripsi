@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use App\Barengan;
 use App\BarenganComment;
 use App\User;
+use View;
+use Session;
 
 class CariBarenganCommentController extends Controller
 {
@@ -21,7 +23,10 @@ class CariBarenganCommentController extends Controller
             'comment' => $request->comment,
         ];
 
-        return BarenganComment::create($data);
+        BarenganComment::create($data);
+
+        Session::flash('success', 'Komentar Ditambah');
+        return View::make('layouts/partials/_alertajax');
 
     }
 
@@ -29,5 +34,8 @@ class CariBarenganCommentController extends Controller
     public function destroy(Barengan $barengan_id,$id)
     {
         BarenganComment::destroy($id);
+
+        Session::flash('error', 'Komentar Dihapus');
+        return View::make('layouts/partials/_alertajax');
     }
 }

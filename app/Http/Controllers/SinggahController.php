@@ -8,6 +8,8 @@ use App\Singgah;
 use App\SinggahComment;
 use App\User;
 use Illuminate\Support\Facades\DB;
+use Session;
+use View;
 
 class SinggahController extends Controller
 {
@@ -18,7 +20,7 @@ class SinggahController extends Controller
     
     public function index()
     {
-        $singgah = Singgah::all(); 
+        $singgah = Singgah::orderBy('created_at','desc')->get();
         $singgahcomment = SinggahComment::all();
 
         // return $singgahcomment;
@@ -42,7 +44,10 @@ class SinggahController extends Controller
             'content' => $request['content'],
         ];
 
-        return Singgah::create($data);
+        Singgah::create($data);
+        
+        Session::flash('success', 'Kiriman Ditambah');
+        return View::make('layouts/partials/_alertajax');
     }
 
     public function edit($id)
@@ -61,12 +66,16 @@ class SinggahController extends Controller
         $singgah->content = $request['content'];
         $singgah->update();
 
-        return $singgah;
+        Session::flash('info', 'Kiriman Rubah');
+        return View::make('layouts/partials/_alertajax');
     }
 
    
     public function destroy($id)
     {
         Singgah::destroy($id);
+
+        Session::flash('error', 'Kiriman Dihapus');
+        return View::make('layouts/partials/_alertajax');
     }
 }

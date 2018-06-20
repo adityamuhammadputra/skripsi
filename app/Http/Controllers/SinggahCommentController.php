@@ -7,6 +7,10 @@ use App\User;
 use App\Singgah;
 use App\SinggahComment;
 
+use View;
+use Session;
+
+
 class SinggahCommentController extends Controller
 {
     public function __construct()
@@ -22,11 +26,17 @@ class SinggahCommentController extends Controller
             'comment' => $request->comment,
         ];
 
-        return SinggahComment::create($data);
+        SinggahComment::create($data);
+
+        Session::flash('success', 'Komentar Ditambah');
+        return View::make('layouts/partials/_alertajax');
     }
 
     public function destroy($id)
     {
         SinggahComment::destroy($id);
+
+        Session::flash('error', 'Komentar Dihapus');
+        return View::make('layouts/partials/_alertajax');
     }
 }

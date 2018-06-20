@@ -19,7 +19,8 @@ class InfoController extends Controller
 
     public function index()
     {
-        $data = Info::all();
+        $data = Info::orderBy('created_at','desc')->get();
+        
         return view('info',compact('data'));
     }
 

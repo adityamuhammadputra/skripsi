@@ -12,7 +12,22 @@
   <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
   <!-- <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script> -->
 </head>
-<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<style>
+    #result {
+     position: absolute;
+     width: 13%;
+     max-width:870px;
+     cursor: pointer;
+     overflow-y: auto;
+     max-height: 400px;
+     box-sizing: border-box;
+     z-index: 1001;
+     top: 42px;
+    }
+    .link-class:hover{
+     background-color:#f1f1f1;
+    }
+    </style>
 <body class="hold-transition fixed layout-top-nav">
 <div class="wrapper">
 
@@ -44,7 +59,8 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
           <form class="custom-search navbar-form navbar-left">
-            <input type="text" name="search" placeholder="Cari User..">
+            <input type="text" name="search" id="search" placeholder="Cari User..">
+            <ul class="list-group" id="result"></ul>
           </form>
           <ul class="nav navbar-nav f-color2">
             <!-- Messages: style can be found in dropdown.less-->
@@ -111,7 +127,7 @@
               </a>
               <ul class="dropdown-menu" role="menu">
                 <!-- <li>
-                  <a href="{{ route('profile') }}"><i class="fa fa-user-circle-o"></i>Profile</a>
+                  <a href="{{ route('tentang') }}"><i class="fa fa-user-circle-o"></i>Profile</a>
                 </li> -->
                 <li class="hidden-md hidden-lg"><a href="{{route('calendar')}}"><i class="fa fa-calendar"></i>Jadwal Kamu</a></li>
                 <!-- menu mobile -->
@@ -159,6 +175,7 @@
     <div class="container">
       <!-- alert -->
       @include('layouts.partials._alert')
+      <div class="flash-message"></div>
     
       <!-- loadinganimation -->
       @include('layouts.partials.loadrubi')
@@ -172,5 +189,40 @@
 
 </body>
 <script src="{{asset('js/app.js')}}"></script>
+<script>
+    $(document).ready(function(){
+      $.ajaxSetup({ cache: false });
+      $('#search').keyup(function(){
+       $('#result').html('');
+       $('#state').val('');
+     
+       var searchField = $('#search').val();
+     
+       var expression = new RegExp(searchField, "i");
+       $.getJSON('{{ route('seacrh') }}', function(data) {
+        $.each(data, function(key, value){
+          var img = value.email;
+          console.log(img);
+         if (value.name.search(expression) != -1 || value.name.search(expression) != -1)
+         {
+          $('#result').append('<li class="list-group-item link-class"><a href ="{{ action('ProfileController@show', $email) }}"><img src="{{ asset('storage')}}/'+value.avatar+'" height="40" width="40" class="img-thumbnail" /> '+value.name+' | <span class="text-muted">'+value.name+'</span></a></li>');
+        }
+         // console.log(searchField);
+         if(searchField == 0)
+         {
+           $("#result").html('');
+         }
+     
+        });   
+       });
+      });
+      
+      $('#result').on('click', 'li', function() {
+       var click_text = $(this).text().split('|');
+       $('#search').val($.trim(click_text[0]));
+       $("#result").html('');
+      });
+     });
+</script>
 <script>@stack('scripts')</script>
 </html>

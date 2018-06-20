@@ -3,29 +3,36 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+
 use App\Post;
 use App\PostComment;
+use App\User;
+use View;
+use Illuminate\Support\Facades\Auth;
+use Session;
 
 
 class HomeCommentController extends Controller
 {
+
     public function store(Request $request,Post $id)
     {
-
-        PostComment::create([
+        $data = [
+            'user_id' => auth()->id(),               
             'post_id' => $id->id,
-            'user_id' => auth()->id(),
             'comment' => $request->comment,
-        ]);
-        return redirect()->back()->withInfo('Comment berhasil ');
-    }
+        ];
 
-    public function destroy(PostComment $id)
+        PostComment::create($data);
+
+        Session::flash('success', 'Komentar Ditambah');
+        return View::make('layouts/partials/_alertajax');
+    }
+   
+    public function destroy($id)
     {
-        $id->delete();
-
-        return redirect()->back()->withDanger('Data berhasil dihapus');
+        PostComment::destroy($id);
+        Session::flash('error', 'Komentar Dihapus');
+        return View::make('layouts/partials/_alertajax');
     }
-
 }

@@ -61,7 +61,7 @@
               </div>
               <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
-                  @include('layouts.form.formCommentInfo')
+                  @include('layouts.form.formComment')
                   <div id="box-komentar">
                   @foreach($d->infocomment()->get() as $c)
                     <div class="komentar-post"> 
@@ -219,7 +219,7 @@
     $('#form form')[0].reset();
     $(document).on('submit','#form form', function (e) {
         if (!e.isDefaultPrevented()) {
-           var infoId = $(this).data('info');
+           var infoId = $(this).data('id');
             url = "{{ url('info')}}/" + infoId + "/comment";  
             $.ajaxSetup({
               headers: {
@@ -230,9 +230,9 @@
                 url: url,
                 type: "POST",
                 data: $(this).serialize(),                                      
-                success: function ($data) {
+                success: function (data) {
                   $("#contact-table").load(" #contact-table");
-                  $('#alert-success').html('show'); 
+                  $('div.flash-message').html(data);
                 },
                 error: function () {
                     alert('Oops! error!');
@@ -244,28 +244,36 @@
   });
 
   function deleteComment(id) {
-    var popup = confirm("apakah anda yakin akan menghapus data?");
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
-    
-    if(popup == true){
-    var infoid = $(this).data('i');
-    
-                      
-      $.ajax({
-        url: "{{ url('infocomment')}}/"+id,         
-        type: "POST",
-        data: {'_method': 'DELETE','_token': csrf_token
-      },
-      success: function(data) {
-        $("#contact-table").load(" #contact-table");
-        $('#alert-success').html('show');
+    swal({
+      title: 'Hapus Komentar',
+      text: "Apakah Anda Yakin Akan Menghapus Komentar Ini ?",
+      type:'warning',
+      showCancelButton:true,
+      cancelButtonColor:'#d33',
+      confirmButtonColor:'#3085d6',
+      confirmButtonText:'Ya, Hapus saja!',
+      cancelButtonText:'Batal'
+    }).then(function(result){
+      if(result.value){                
+        $.ajax({
+        
+          url: "{{ url('infocomment')}}/"+id,         
+          type: "POST",
+          data: {'_method': 'DELETE','_token': csrf_token
+        },
+        success: function(data) {
+          $("#contact-table").load(" #contact-table");
+          $('div.flash-message').html(data);
+          $('#form form')[0].reset();
 
-      },
-      error: function () {
-        alert("Opppps gagal");
+        },
+        error: function () {
+          alert("Opppps gagal");
+        }
+      })
       }
     })
-    }
   }
 
 @endpush

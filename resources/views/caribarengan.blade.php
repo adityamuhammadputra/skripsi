@@ -28,7 +28,8 @@
             <div class="user-block">
               <img class="img-circle" src="{{ asset('storage/' . $d->user->avatar ) }}" alt="user image">
               <span class="username">
-                <a href="#">{{$d->user->name }} </a>  
+                <?php $email = Crypt::encrypt($d->user->email) ?>
+                <a href="{{ action('ProfileController@show', $email) }}">{{ $d->user->name}}</a> 
                 <div class="btn-group pull-right custom-curret nav-right1">
                   <button type="button" class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="fa fa-ellipsis-h"></span>
@@ -54,13 +55,13 @@
                 <a class="label label-primary" title="Waktu"><i class="fa fa-calendar"></i> {{$d->mulai }} - {{$d->akhir }}</a>
   
                 <div class="pull-right">
-                  <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> 10
+                  <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> 0
                   </a>
                 </div>
               </div>
               <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
-                  @include('layouts.form.formCommentCaribarengan')
+                  @include('layouts.form.formComment')
                   <div id="box-komentar">
                   @foreach($d->barengancomments as $c)
                     <div class="komentar-post"> 
@@ -139,40 +140,60 @@
     }
   
     function deleteData(id) {
-      var popup = confirm("apakah anda yakin akan menghapus data?");
       var csrf_token = $('meta[name="csrf-token"]').attr('content');
-      if(popup == true){                
-        $.ajax({
-          url: "{{ url('caribarengan')}}/" + id,
-          type: "POST",
-          data: {'_method': 'DELETE','_token': csrf_token
-        },
-        success: function(data) {
-          $("#contact-table").load(" #contact-table");
-          $('#alert-success').html('show');
-        },
-        error: function () {
-          alert("Opppps gagal");
+      swal({
+        title: 'Hapus kiriman',
+        text: "Apakah Anda Yakin Akan Menghapus Kiriman Ini ?",
+        type:'warning',
+        showCancelButton:true,
+        cancelButtonColor:'#d33',
+        confirmButtonColor:'#3085d6',
+        confirmButtonText:'Ya, Hapus saja!',
+        cancelButtonText:'Batal'
+      }).then(function(result){
+        if(result.value){                
+          $.ajax({
+              url: "{{ url('caribarengan')}}/" + id,
+              type: "POST",
+              data: {'_method': 'DELETE','_token': csrf_token
+            },
+            success: function(data) {
+              $("#contact-table").load(" #contact-table");
+              $('div.flash-message').html(data);
+              $('#modal-form form')[0].reset();
+  
+            },
+            error: function () {
+              alert("Opppps gagal");
+            }
+          });
         }
-      })
-      }
+        else{
+          swal({
+            title:'Ya..',
+            text: 'anda tidak jadi mengahpus',
+            type:'error',
+            timer: 2000
+          })
+        }    
+     });
     }
   
     $(function () {
       $('#modal-form form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
           var id = $('#id').val();
-          if (save_method == 'add') url = "{{ url('caribarengan') }}"; //ini yang memisahkan antara update delete
+          if (save_method == 'add') url = "{{ route('caribarengan.store') }}"; //ini yang memisahkan antara update delete
           else url = "{{ url('caribarengan') . '/'}}" + id;        
           $.ajax({
             url: url,
             type: "POST",
             data: $('#modal-form form').serialize(),
-              success: function ($data) {
+              success: function (data) {
                 $('#modal-form').modal('hide');
                 // $("#contact-table").load(document.URL + '" #contact-table"');
                 $("#contact-table").load(" #contact-table");  
-                $('#alert-success').html('show');
+                $('div.flash-message').html(data);
               },
               error: function () {
                 alert('Oops! error!');
@@ -184,34 +205,44 @@
     });
 
   //proses komentar
-    function deleteComment(id) {
-      var popup = confirm("apakah anda yakin akan menghapus data?");
-      var csrf_token = $('meta[name="csrf-token"]').attr('content');
-      if(popup == true){                
+  function deleteComment(id) {
+    var csrf_token = $('meta[name="csrf-token"]').attr('content');
+    swal({
+      title: 'Hapus Komentar',
+      text: "Apakah Anda Yakin Akan Menghapus Komentar Ini ?",
+      type:'warning',
+      showCancelButton:true,
+      cancelButtonColor:'#d33',
+      confirmButtonColor:'#3085d6',
+      confirmButtonText:'Ya, Hapus saja!',
+      cancelButtonText:'Batal'
+    }).then(function(result){
+      if(result.value){                
         $.ajax({
-         
+        
           url: "{{ url('caribarengancomment')}}/"+id,         
           type: "POST",
           data: {'_method': 'DELETE','_token': csrf_token
         },
         success: function(data) {
           $("#contact-table").load(" #contact-table");
-          $('#alert-success').html('show');
-  
+          $('div.flash-message').html(data);
+          $('#form form')[0].reset();
+
         },
         error: function () {
           alert("Opppps gagal");
         }
       })
       }
-    }
+    })
+  }
   
    $(function () {
     $('input[name=_method]').val('POST');
-    $('#form form')[0].reset();
       $(document).on('submit','#form form',function (e) {
         if (!e.isDefaultPrevented()) {
-          var barenganId = $(this).data('barengan');
+          var barenganId = $(this).data('id');
           url = "{{ url('caribarengan')}}/" + barenganId + "/comment";  
           $.ajaxSetup({
             headers: {
@@ -224,7 +255,8 @@
             data: $(this).serialize(),
               success: function(data) {
                 $("#contact-table").load(" #contact-table");
-                $('#alert-success').html('show');
+                $('#form form')[0].reset();
+                $('div.flash-message').html(data);
               },
               error: function () {
                 alert('Oops! error!');

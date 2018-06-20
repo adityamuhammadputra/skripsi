@@ -8,6 +8,10 @@ use App\User;
 use App\BarenganComment;
 use Illuminate\Support\Facades\DB;
 
+use Session;
+use View;
+
+
 class CariBarenganController extends Controller
 {
     public function __construct()
@@ -17,7 +21,7 @@ class CariBarenganController extends Controller
 
     public function index(Request $request)
     {  
-        $barengan = Barengan::all(); 
+        $barengan = Barengan::orderBy('created_at','desc')->get();
         $barengancomments = BarenganComment::all();
 
         // if($request->ajax()) {
@@ -44,7 +48,10 @@ class CariBarenganController extends Controller
             'content' => $request['content']
         ];
 
-        return Barengan::create($data);
+        Barengan::create($data);
+
+        Session::flash('success', 'Kiriman Ditambah');
+        return View::make('layouts/partials/_alertajax');
     }
 
     public function edit($id)
@@ -65,13 +72,16 @@ class CariBarenganController extends Controller
         $caribarengan->content = $request['content'];
         $caribarengan->update();
 
-        return $caribarengan;
+        Session::flash('info', 'Kiriman Rubah');
+        return View::make('layouts/partials/_alertajax');
     }
 
     
     public function destroy($id)
     {
         Barengan::destroy($id);
+        Session::flash('error', 'Kiriman Dihapus');
+        return View::make('layouts/partials/_alertajax');
     }
 
 }

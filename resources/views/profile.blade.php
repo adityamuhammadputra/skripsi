@@ -2,19 +2,20 @@
 
 @section('content')
 <div class = "row">
-    <div class="col-md-4">
-        <!-- Widget: user widget style 1 -->
-        <div class="box box-widget widget-user">
-            <!-- <a type="button" class="icon-change-foto" data-toggle="modal" data-target="#modal-edit-foto">
-                <i class="fa fa-camera" data-toggle="tooltip" title="Ubah-foto sampul & profile"></i>
-            </a> -->
-        <!-- Add the bg color to the header using any of the bg-* classes -->
+     
+  
+        <div class="col-md-4 visible-md visible-lg">
+          <div class="box box-widget widget-user">
+               {{-- <a type="button" class="icon-change-foto" data-toggle="modal" data-target="#modal-edit-foto">
+                    <i class="fa fa-camera" data-toggle="tooltip" title="Ubah-foto sampul & profile"></i>
+                </a> --}}
+            <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-black" style="background: url('{{ asset('storage/' . auth()->user()->avatar) }}') center center;">
-            <h4 class="widget-user-username">{{ Auth::user()->name }} </h4>
-            <h6 class="widget-user-desc">Web Designer</h6>
+              <h4 class="widget-user-username">{{ Auth::user()->name }} </h4>
+              <h6 class="widget-user-desc">{{ Auth::user()->pekerjaan}}</h6>
             </div>
             <div class="widget-user-image">
-                <img class="img-circle" src="{{ asset('storage/' . auth()->user()->avatar) }}" alt="User Avatar">
+              <img class="img-circle" src="{{ asset('storage/' . auth()->user()->avatar) }}" alt="User Avatar">
             </div>
             <div class="box-footer">
                 <div class="sosmed">
@@ -23,7 +24,7 @@
                     <a href="#"><i class="fa fa-instagram"></i></a> 
                     <a href="#"><i class="fa fa-google"></i></a> 
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-sm-4 col-xs-4 border-right">
                         <div class="description-block">
                             <h5 class="description-header">3,200</h5>
@@ -42,63 +43,69 @@
                             <span class="description-text">PRODUCTS</span>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <hr class"hidden-xs">
                 <a href="{{route('tentang')}}" class="btn btn-primary col-md-5"><b><i class="fa fa-user"></i> Tentang</b></a>
                 <a href="{{route('galeri')}}" class="btn btn-primary col-md-5 pull-right"><b><i class="fa fa-image"></i> Galery</b></a>
-            
-            <!-- /.row -->
+               
+              <!-- /.row -->
             </div>
         </div>       
     </div>
     
     <div class="col-md-8">
+
+          <!-- /.box -->
+        <!-- About Me Box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Tentang</h3>
-                 <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-edit-tentang">
-                    Ubah Tentang
-                </button> -->
+                <h3 class="box-title">Profile {{ $data->name}}</h3>
+                
+                 
             </div> 
-            <div class="box">
-                <div class="box-body">
+             <div class="box">
+                <div class="box-body hr-tentang">
                     <strong><i class="fa fa-user margin-r-5"></i> Username</strong>
 
                     <p class="text-muted">
-                        {{ Auth::user()->name}}
+                        {{ $data->name}}
+                    </p>
+                    
+                    <hr>
+                    
+                    <strong><i class="fa fa-envelope margin-r-5"></i> Email</strong>
+
+                    <p class="text-blue">
+                        {{ $data->email}}
                     </p>
                     <hr>
-                    <strong><i class="fa fa-email margin-r-5"></i> Email</strong>
-
+                    
+                    <strong><i class="fa fa-book margin-r-5"></i> Pekerjaan</strong>
                     <p class="text-muted">
-                        {{ Auth::user()->email}}
+                        {{ $data->pekerjaan}}
                     </p>
                     <hr>
-                    <strong><i class="fa fa-book margin-r-5"></i> Pendidikan</strong>
-
-                    <p class="text-muted">
-                        {{ Auth::user()->pendidikan}}
-                    </p>
-                    <hr>
-
+                    
                     <strong><i class="fa fa-map-marker margin-r-5"></i> Alamat</strong>
                     <p class="text-muted">
-                        {{ Auth::user()->alamat}}
-                        
+                        {{ $data->alamat}}
                     </p>
                     <hr>
 
                     <strong><i class="fa fa-play margin-r-5"></i> Hobby</strong>
-                       
                     <p>
-                    <span class="label label-danger"> {{ Auth::user()->hobby}}</span>
+                    <span class="label label-danger"> {{ $data->hobby}}</span>
                     </p>
-
                     <hr>
 
+                    <strong><i class="fa fa-address-book-o margin-r-5"></i> Kontak</strong>
+                    <p>
+                    <span class="label label-primary"> {{ $data->contact}}</span>
+                    </p>
+                    <hr>
+                    
                     <strong><i class="fa fa-file-text-o margin-r-5"></i> Bio</strong>
-
-                    <div class="attachment">{{ Auth::user()->bio}}</div>
+                    <div class="attachment">{{ $data->bio}}</div>
 
                    
                 </div>            
@@ -106,12 +113,6 @@
         
         </div>
     </div>
-    <div class="col-md-8">
-           <!-- @include('galeri') -->
-    </div>
-
-     
-    
 </div>
 <!-- Modal edit Foto-->
 <div class="modal fade" id="modal-edit-foto">
@@ -163,13 +164,13 @@
                             <input type="text" class="form-control" name="name" id="name" value="{{old('name') ?? auth()->user()->name }}">
                         </div>
                         <div class="form-group">
-                            <label for="pendidikan">Pekerjaan</label>
-                            <input type="text" class="form-control" name="pendidikan" id="pendidikan" value="{{old('name') ?? auth()->user()->pekerjaan }}">
+                            <label for="pekerjaan">Pekerjaan</label>
+                            <input type="text" class="form-control" name="pekerjaan" id="pekerjaan" value="{{old('pekerjaan') ?? auth()->user()->pekerjaan }}">
                         </div>
                         <div class="form-group">
                             <label for="agama">Agama</label>
                             <select class="form-control" name="agama" id="hobby">
-                                <option selected value="{{old('name') ?? auth()->user()->agama }}">{{old('name') ?? auth()->user()->agama }}</option>
+                                <option selected value="{{old('name') ?? auth()->user()->agama }}">{{old('agama') ?? auth()->user()->agama }}</option>
                                 <option value="islam">Islam</option>
                                 <option value="Kristen">Kristen</option>
                                 <option value="Budha">Budha</option>
@@ -180,15 +181,19 @@
                         </div>
                         <div class="form-group">
                             <label for="hobby">Hobby</label>
-                            <input type="text" class="form-control" name="hobby" id="hobby" value="{{old('name') ?? auth()->user()->hobby }}">
+                            <input type="text" class="form-control" name="hobby" id="hobby" value="{{old('hobby') ?? auth()->user()->hobby }}">
                         </div>
                         <div class="form-group">
                             <label for="kontak">Kontak</label>
-                            <input type="text" class="form-control" name="kontak" id="kontak" value="{{old('name') ?? auth()->user()->concact }}">
+                            <input type="text" class="form-control" name="contact" id="contact" value="{{old('contact') ?? auth()->user()->contact }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="kontak">Alamat</label>
+                            <input type="text" class="form-control" name="alamat" id="alamat" value="{{old('alamat') ?? auth()->user()->alamat }}">
                         </div>
                         <div class="form-group">
                             <label for="bio">Bio</label>
-                            <textarea name="bio" class="form-control" id="bio">{{old('name') ?? auth()->user()->bio }}</textarea>
+                            <textarea name="bio" class="form-control" id="bio">{{old('bio') ?? auth()->user()->bio }}</textarea>
                         </div>
                     </div>
                     

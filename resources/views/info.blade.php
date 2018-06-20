@@ -41,7 +41,8 @@
                   </ul>
                 </div>
                 <div class="info-by">
-                    <i class="fa fa-clock-o"></i> {{$d->created_at->diffForHumans()}} - Diposting oleh <a href="#">{{ $d->user->name }}</a>
+                  <?php $email = Crypt::encrypt($d->user->email) ?>
+                    <i class="fa fa-clock-o"></i> {{$d->created_at->diffForHumans()}} - Diposting oleh <a href="{{ action('ProfileController@show', $email) }}">{{ $d->user->name }}</a>
                 </div>
             </div>
             

@@ -7,6 +7,10 @@ use App\Info;
 use App\InfoComment;
 use App\User;
 
+use View;
+use Session;
+
+
 class InfoCommentController extends Controller
 {
     public function __construct()
@@ -22,11 +26,16 @@ class InfoCommentController extends Controller
             'comment' => $request->comment,
         ];
 
-        return InfoComment::create($data);
+        InfoComment::create($data);
+        Session::flash('success', 'Komentar Ditambah');
+        return View::make('layouts/partials/_alertajax');
     }
 
     public function destroy($id)
     {
         InfoComment::destroy($id);
+
+        Session::flash('error', 'Komentar Dihapus');
+        return View::make('layouts/partials/_alertajax');
     }
 }
