@@ -41,8 +41,8 @@
               <div class="user-block">
                 <img class="img-circle" src="{{ asset('storage/' . $d->user->avatar ) }}" alt="user image">
                 <span class="username">
-                  <?php $email = Crypt::encrypt($d->user->email) ?>
-                  <a href="{{ action('ProfileController@show', $email) }}">{{$d->user->name }} </a>  
+                   <!-- $email = Crypt::encrypt($d->user->email)  -->
+                  <a href="{{ action('ProfileController@show', $d->user->email) }}">{{$d->user->name }} </a>  
                   <div class="btn-group pull-right custom-curret nav-right1">
                     <button type="button" class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span class="fa fa-ellipsis-h"></span>
@@ -81,7 +81,7 @@
                         <div class="user-block">
                           <img class="img-circle" src="{{ asset('storage/' . $c->user->avatar ) }}" alt="user image">
                           <span class="username usernamekoment">
-                            <a href="#">{{$c->user->name }} </a>  
+                            <a href="{{ action('ProfileController@show', $c->user->email) }}">{{$c->user->name }} </a>  
                             <div class="btn-group custom-curret nav-right-koment pull-right">
                               <button type="button" class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="fa fa-ellipsis-h"></span>

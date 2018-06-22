@@ -20,18 +20,32 @@ class ProfileController extends Controller
 
     public function show($email)
     {
-        $email = Crypt::decrypt($email);
+        // $email = Crypt::decrypt($email);
         $data = User::where('email', $email)->first();
-
+        // return $data;
         return view('profile',compact('data'));
         // return response()->json([
         //     $data
         // ]);
     }
 
+    public function showuser($id)
+    {
+        
+        // $id = Crypt::decrypt($id);
+        // return $id;
+        
+        $dataprofile = User::where('email', $id)->first();
+        // return $dataprofile;
+        return view('profile', compact('dataprofile'));
+
+        // $news = News::find($news);
+        // return view('profile')->with('data' ,$email);
+    }
+
     public function search()
     {
-        $data = User::select('name','email','avatar')->get();
+        $data = User::select('name','email','avatar','pekerjaan')->get();
         
 
         // return response()->json([

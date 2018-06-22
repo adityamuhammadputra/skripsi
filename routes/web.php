@@ -73,6 +73,7 @@ Route::post('tentang', 'TentangController@update');
 Route::resource('/profile', 'ProfileController')->only(['show']);
 
 Route::get('/search','ProfileController@search')->name('seacrh');
+Route::get('/profileuser/{id}','ProfileController@showuser')->name('showuser');
 // Route::get('/profile', 'ProfileController@index')->name('profile');
 // Route::post('/profile', 'ProfileController@update');
 // Route::delete('/profile', 'ProfileController@destroy')->name('user.destroy');

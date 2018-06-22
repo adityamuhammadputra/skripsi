@@ -59,16 +59,24 @@
         <!-- About Me Box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Profile {{ $data->name}}</h3>
-                
-                 
+                <h3 class="box-title">Profile 
+                    @if (empty($data->name))
+                        {{ $dataprofile->name}}
+                    @else
+                        {{ $data->name}}
+                    @endif
+                </h3>
             </div> 
              <div class="box">
                 <div class="box-body hr-tentang">
                     <strong><i class="fa fa-user margin-r-5"></i> Username</strong>
 
                     <p class="text-muted">
-                        {{ $data->name}}
+                        @if (empty($data->name))
+                            {{ $dataprofile->name}}
+                        @else
+                            {{ $data->name}}
+                        @endif
                     </p>
                     
                     <hr>
@@ -76,36 +84,66 @@
                     <strong><i class="fa fa-envelope margin-r-5"></i> Email</strong>
 
                     <p class="text-blue">
-                        {{ $data->email}}
+                        @if (empty($data->name))
+                            {{ $dataprofile->email}}
+                        @else
+                            {{ $data->email}}
+                        @endif
                     </p>
                     <hr>
                     
                     <strong><i class="fa fa-book margin-r-5"></i> Pekerjaan</strong>
                     <p class="text-muted">
-                        {{ $data->pekerjaan}}
+                        @if (empty($data->name))
+                            {{ $dataprofile->pekerjaan}}
+                        @else
+                            {{ $data->pekerjaan}}
+                        @endif
                     </p>
                     <hr>
                     
                     <strong><i class="fa fa-map-marker margin-r-5"></i> Alamat</strong>
                     <p class="text-muted">
-                        {{ $data->alamat}}
+                        @if (empty($data->name))
+                            {{ $dataprofile->alamat}}
+                        @else
+                            {{ $data->alamat}}
+                        @endif
                     </p>
                     <hr>
 
                     <strong><i class="fa fa-play margin-r-5"></i> Hobby</strong>
                     <p>
-                    <span class="label label-danger"> {{ $data->hobby}}</span>
+                    <span class="label label-danger"> 
+                        @if (empty($data->name))
+                            {{ $dataprofile->hobby}}
+                        @else
+                            {{ $data->hobby}}
+                        @endif
+                    </span>
                     </p>
                     <hr>
 
                     <strong><i class="fa fa-address-book-o margin-r-5"></i> Kontak</strong>
                     <p>
-                    <span class="label label-primary"> {{ $data->contact}}</span>
+                    <span class="label label-primary"> 
+                        @if (empty($data->name))
+                            {{ $dataprofile->contact}}
+                        @else
+                            {{ $data->contact}}
+                        @endif
+                    </span>
                     </p>
                     <hr>
                     
                     <strong><i class="fa fa-file-text-o margin-r-5"></i> Bio</strong>
-                    <div class="attachment">{{ $data->bio}}</div>
+                    <div class="attachment">
+                        @if (empty($data->name))
+                            {{ $dataprofile->bio}}
+                        @else
+                            {{ $data->bio}}
+                        @endif
+                    </div>
 
                    
                 </div>            
