@@ -14,18 +14,38 @@
 </head>
 <style>
     #result {
-     position: absolute;
-     width: 13%;
-     max-width:870px;
-     cursor: pointer;
-     overflow-y: auto;
-     max-height: 400px;
-     box-sizing: border-box;
-     z-index: 1001;
-     top: 42px;
+      position: absolute;
+      width: 262px;
+      max-width: 870px;
+      overflow-y: auto;
+      max-height: 400px;
+      box-sizing: border-box;
+      z-index: 1001;
+      top: 42px;
+      margin-left: -20px;
     }
     .link-class:hover{
-     background-color:#f1f1f1;
+      background-color:#f1f1f1;
+    }
+    .list-group-item-custom{
+      padding:5px 6px;
+    }
+    .list-group-item-custom a{
+      text-decoration:none;
+      cursor:pointer;
+    }
+
+    .list-group-item-custom .text-blue{
+      position: relative;
+      left: 5px;
+      top: -10px;
+      font-size: 15px;
+      font-weight: 510;
+    }
+    .list-group-item-custom .text-muted{
+      position: absolute;
+      left: 55px;
+      top: 22px;
     }
     </style>
 <body class="hold-transition fixed layout-top-nav">
@@ -59,7 +79,7 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
           <form class="custom-search navbar-form navbar-left">
-            <input type="text" name="search" id="search" placeholder="Cari User..">
+            <input type="text" name="search" id="search" onClick="fungsiklik()" placeholder="Cari User..">
             <ul class="list-group" id="result"></ul>
           </form>
           <ul class="nav navbar-nav f-color2">
@@ -190,6 +210,9 @@
 </body>
 <script src="{{asset('js/app.js')}}"></script>
 <script>
+    function fungsiklik(){
+      // $('#search').hide();
+    }
     $(document).ready(function(){
       $.ajaxSetup({ cache: false });
       $('#search').keyup(function(){
@@ -204,9 +227,9 @@
           var img = value.email;
           console.log(img);
          if (value.name.search(expression) != -1 || value.name.search(expression) != -1)
-         {
-          $('#result').append('<li class="list-group-item link-class"><a href ="{{ action('ProfileController@show', $email) }}"><img src="{{ asset('storage')}}/'+value.avatar+'" height="40" width="40" class="img-thumbnail" /> '+value.name+' | <span class="text-muted">'+value.name+'</span></a></li>');
-        }
+          {
+            $('#result').append('<li class="list-group-item list-group-item-custom link-class"><a href ="{{ action('ProfileController@showuser',"")}}/'+value.email+'"><img src="{{ asset('storage')}}/'+value.avatar+'" height="40" width="40" /> <span class="text-blue">'+value.name+'</span> <span class="text-muted">'+value.pekerjaan+'</span></a></li>');
+          }
          // console.log(searchField);
          if(searchField == 0)
          {
