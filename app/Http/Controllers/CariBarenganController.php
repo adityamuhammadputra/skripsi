@@ -21,7 +21,9 @@ class CariBarenganController extends Controller
 
     public function index(Request $request)
     {  
-        $barengan = Barengan::orderBy('created_at','desc')->get();
+        // $barengan = Barengan::orderBy('created_at','desc')->get();
+        $barengan = Barengan::with('barengancomments')->get();
+        return $barengan;
         $barengancomments = BarenganComment::all();
 
         // if($request->ajax()) {
