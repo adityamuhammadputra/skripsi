@@ -158,6 +158,7 @@
             },
             success: function(data) {
               $("#contact-table").load(" #contact-table");
+              
               $('div.flash-message').html(data);
               $('#modal-form form')[0].reset();
   

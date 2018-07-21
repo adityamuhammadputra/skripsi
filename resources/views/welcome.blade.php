@@ -33,7 +33,7 @@
         </form>
       </div>
       <!-- /.box-header -->
-      <div id="contact-table">
+      <div id="contact-table" class="infinite-scroll">
         @foreach($datapost as $d)    
         <div class="box box2">
           <div class="box-body box-body-custom">
@@ -108,13 +108,32 @@
           </div>
         </div>      
         @endforeach
+        {{ $datapost->links() }}
       </div>
+
     <!-- /.box-body -->
     </div>
   </div>
 </div>
 
+@push('script-src')
+
+@endpush
 @push('scripts')
+$('ul.pagination').hide();
+    $(function() {
+        $('.infinite-scroll').jscroll({
+            autoTrigger: true,
+            loadingHtml: '<img class="center-block" src="images/gif-load.gif" alt="Loading..." />',
+            padding: 0,
+            nextSelector: '.pagination li.active + li a',
+            contentSelector: 'div.infinite-scroll',
+            callback: function() {
+                $('ul.pagination').remove();
+            }
+        });
+    });
+
   function addForm() {
     save_method = "add";
     $('input[name=_method]').val('POST');
@@ -258,6 +277,7 @@
           data: $(this).serialize(),
             success: function(data) {
               $("#contact-table").load(" #contact-table");
+              {{-- $("#contact-table").load(document.URL + '" #contact-table"'); --}}
               $('#form form')[0].reset();
               $('div.flash-message').html(data);
             },
@@ -270,5 +290,6 @@
     });
   });
 
+   
 @endpush
 @endsection

@@ -18,9 +18,9 @@ class Post extends Model
         return $this->hasMany(PostComment::class);
     }
 
-    public function latest($column = 'created_at')
-    {
-        return $this->orderBy($column, 'desc');
-    }
+    // public function latest($column = 'created_at')
+    // {
+    //     return $this->orderBy($column, 'desc');
+    // }
 
 }
