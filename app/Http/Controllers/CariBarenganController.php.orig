@@ -21,11 +21,17 @@ class CariBarenganController extends Controller
 
     public function index(Request $request)
     {  
+<<<<<<< HEAD
+        $barengan = Barengan::orderBy('created_at','desc')->get();
+        // $barengancomments = BarenganComment::all();
+=======
         // $barengan = Barengan::orderBy('created_at','desc')->get();
         $barengan = BarenganComment::with('Barengan')->where('barengan_id','!=',0)->get();
         // $barengan = Barengan::with('barengancomments')->get();
         // 
         return $barengan;
+        $barengancomments = BarenganComment::all();
+>>>>>>> 4078a844404e9a4601ae52ad81695d119d8e2556
 
         // if($request->ajax()) {
         //     return [
@@ -35,7 +41,6 @@ class CariBarenganController extends Controller
         // }
 
         return view('caribarengan',compact('barengan'));
-        return view('caribarengan',compact('barengan','barengancomments'));
     }
     
 
