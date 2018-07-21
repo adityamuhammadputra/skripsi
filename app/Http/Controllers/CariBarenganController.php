@@ -22,11 +22,12 @@ class CariBarenganController extends Controller
     public function index(Request $request)
     {  
         // $barengan = Barengan::orderBy('created_at','desc')->get();
-        $barengan = BarenganComment::with('Barengan')->where('barengan_id','!=',0)->get();
-        // $barengan = Barengan::with('barengancomments')->get();
+        // $barengan = BarenganComment::with('Barengan')->where('barengan_id','!=',0)->get();
+        $barengan = Barengan::with('barengancomments')->get();
         // 
-        return $barengan;
-        $barengancomments = BarenganComment::all();
+        // return $barengan;
+        // $barengancomments = BarenganComment::all();
+        // return $barengancomments;
 
         // if($request->ajax()) {
         //     return [

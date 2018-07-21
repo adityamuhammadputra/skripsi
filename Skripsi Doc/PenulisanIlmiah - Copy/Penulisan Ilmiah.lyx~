@@ -1,0 +1,10212 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+%% \renewcommand{\chapter}[1]{\chapter[#1]{\centering #1}}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{14pt}{\Huge}
+
+%%-------------
+\newcommand{\Judul}{WEBSITE RESERVASIRAGUNAN MENGGUNAKAN HTML}
+\newcommand{\JudulInggris}{Judul Skripsi dalam Bahasa Inggris}
+\newcommand{\Penulis}{Slamet Ferianto}
+\newcommand{\NPM}{1A114400}
+\newcommand{\NIRM}{NIRM}
+\newcommand{\JenisTulisan}{Skripsi}
+\newcommand{\Gelar}{Sarjana S1}
+\newcommand{\Fakultas}{Ilmu Komputer}
+\newcommand{\Jurusan}{Sistem Informasi}
+%%-------------
+\newcommand{\Prodi}{Sistem Informasi}
+\newcommand{\Tahun}{2017}
+\newcommand{\Bulan}{September}
+\newcommand{\Tanggal}{1}
+\newcommand{\Kota}{Jakarta}
+\newcommand{\BulanTahun}{September 2017}
+%%-------------
+\newcommand{\KataKunci}{Website, Reservasi, Mysql, PHP}
+\newcommand{\KeyWords}{Algorithm, Parallel, GPU}
+%%-------------
+\newcommand{\KoordinatorPI}{Dr. Edi Sukirman}
+%%-------------
+\newcommand{\KetuaJurusan}{Dr. -Ing. Adang Suhendra, S.Si., S.Kom., M.Sc}
+\newcommand{\KetuaPembimbing}{Andreas Hadiyono, S.T.,MMSi}
+\newcommand{\AnggotaPembimbingA}{nama pembimbing 1}
+\newcommand{\AnggotaPembimbingB}{nama pembimbing 2}
+%%------------
+\newcommand{\KetuaUjian}{Dr. Ravi A. Salim}
+\newcommand{\SekUjian}{Prof. Dr. Wahyudi Priyono}
+\newcommand{\AnggotaUjianA}{Andreas Hadiyono, S.T.,MMSi}
+\newcommand{\AnggotaUjianB}{nama pembimbing 1}
+\newcommand{\AnggotaUjianC}{nama pembimbing 2}
+%%-------------
+\newcommand{\Ringkasan}{Tulis ringkasan skripsi, pi, atau apa dengan bahasa yang jelas, lugas dan menggambarkan secara singkat tulisan ini.  Sebaiknya tidak lebih dari 150 kata dan sudah menjelaskan dari permasalahan, pembahasan dan penutup.}
+\newcommand{\JumlahPustaka}{8}
+\newcommand{\JumlahHalaman}{50}
+\newcommand{\JumlahHalamanDepan}{13}
+\newcommand{\TahunPustaka}{2006-2015}
+%%
+%% Keterangan administratif sidang sarjana
+%%
+\newcommand{\TanggalSidang}{1 September 2015}
+\newcommand{\TanggalLulus}{1 September 2015}
+\newcommand{\TanggalSah}{1 September 2015}
+\newcommand{\PejabatBagianSidang}{Meilani B. Siregar, S.Kom., MMSI}
+\setlength{\headheight}{15pt}
+%%-------------
+%%
+%%Untuk Kata pengantar
+%%
+\newcommand{\Rektor}{Prof. Dr. E.S. Margianti, S.E., M.M}
+\newcommand{\Dekan}{Prof. Dr. Ir. Bambang Suryawan, M.T}
+\newcommand{\KotaPenulis}{Jakarta}
+\newcommand{\BlnThn}{Maret 2017}
+%%-----------
+%%-----------
+% The following commands set the page numbers on the top right
+% except in the beginning of chapters
+\lhead{}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+%\usepackage{indentfirst}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language bahasa
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "charter" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Indeks
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{bahasa-hypen.tex} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+sloppy 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Halaman Judul}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size huge
+UNIVERSITAS GUNADARMA
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+FAKULTAS 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+MakeUppercase{
+\backslash
+Fakultas}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{12mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename LogoGunadarma.jpg
+	width 35mm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{6mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Penulisan Ilmiah
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{1cm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="13cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MakeUppercase{
+\backslash
+Judul}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nama
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fakultas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fakultas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jurusan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Jurusan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pembimbing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KetuaPembimbing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Diajukan Guna Melengkapi Sebagian Syarat
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Dalam Mencapai Gelar Setara Sarjana Muda
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{3mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+MakeUppercase{
+\backslash
+Kota}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{1mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Pernyataan Orisinalitas dan Publikasi
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Lembar Orisinalitas}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Saya yang bertanda tangan di bawah ini:
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="35mm">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nama
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Judul PI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Judul
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tanggal Sidang
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalSidang
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tanggal Lulus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalLulus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Menyatakan bahwa tulisan di atas merupakan hasil karya saya sendiri dan
+ dapat dipublikasikan sepenuhnya oleh Universitas Gunadarma.
+ Segala kutipan dalam bentuk apapun telah mengikuti kaidah dan etika yang
+ berlaku.
+ Semua hak cipta dari logo serta produk yang disebut dalam buku ini adalah
+ milik masing-masing pemegang haknya, kecuali disebutkan lain.
+ Mengenai isi dan tulisan merupakan tanggung jawab Penulis, bukan Universitas
+ Gunadarma.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+Demikianlah pernyataan ini dibuat dengan sebenarnya dan dengan penuh kesadaran.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{25mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Kota, 
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tanggal
+\backslash
+ 
+\backslash
+Bulan
+\backslash
+ 
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Lembar Pengesahan
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Lembar Pengesahan}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="60text%">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Judul PI
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Judul
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nama
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tanggal Sidang
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalSidang
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tanggal Lulus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TanggalLulus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="1.3cm">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none" width="135mm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+MENGETAHUI
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Pembimbing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Koordinator PI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KetuaPembimbing
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+PejabatBagianSidang
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Ketua Jurusan
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KetuaJurusan
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Abstraksi
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Abstraksi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NPM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MakeUppercase{
+\backslash
+Judul}
+\end_layout
+
+\end_inset
+
+.
+
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+Penulisan Ilmiah, Fakultas 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fakultas
+\end_layout
+
+\end_inset
+
+, Jurusan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+Jurusan
+\end_layout
+
+\end_inset
+
+, Universitas Gunadarma, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Tahun
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Kata Kunci : 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KataKunci
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JumlahHalamanDepan
+\end_layout
+
+\end_inset
+
+ + 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+JumlahHalaman
+\end_layout
+
+\end_inset
+
+ + lampiran)
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Di bidang pemesanan tempat, internet telah digunakan untuk mempromosikan
+ dan memasarkan keberadaan tempat dengan adanya penggunaan website yang
+ dapat diakses dari mana saja dan oleh siapa saja yang memiliki koneksi
+ internet.
+ Dan perumusan masalah yang akan dibahas adalah bagaimana mengembangkan
+ sistem informasi reservasi sewa tempat berbasis website di Taman Margasatwa
+ Ragunan.
+ Tujuan yang dapat dicapai adalah memberikan suatu gambaran tentang sistem
+ yang berjalan pada Taman Margasatwa Ragunan dan membuat perancangan sistem
+ aplikasi pemasaran berbasis web untuk memudahkan pekerjaan dalam pengelolaan
+ reservasi pada Taman Margasatwa Ragunan.
+ 
+\end_layout
+
+\begin_layout Standard
+Metode perancangan dilakukan dengan cara membuat DFD (Data Flow Diagram)
+ dan ERD (Entity Relationship Diagram).
+ Setelah itu dengan menggunakan database MySQL, data tempat dan penyewa
+ akan disimpan.
+ Untuk merancang sebuah sistem informasi berbasis web yang berfungsi membantu
+ pencatatan data penyewa dan permintaan kamar secara online di Taman Margasatwa
+ Ragunan.
+ Dengan menggunakan bahasa pemrograman HTML dan web server yang digunakan
+ adalah XAMPP.
+ 
+\end_layout
+
+\begin_layout Standard
+Hasil yang dicapai adalah suatu aplikasi sistem informasi pengelolaan reservasi
+ yang mempermudah proses layanan kepada para tamu melalui promosi dan reservasi
+ secara online pada Taman Margasatwa Ragunan.
+ Serta kesimpulan dari penulisan ilmiah adalah dengan sistem aplikasi ini
+ dapat mengembangkan sistem informasi berbasis teknologi informasi yang
+ dapat membantu Taman Margasatwa Ragunan dalam proses penyampaian informasi
+ tentang fasilitas Taman Margasatwa Ragunan.
+ Sistem dapat menyimpan dan menampilkan data reservasi yang dimasukkan oleh
+ penyewa secara online dan menyediakan beberapa laporan yang dapat digunakan
+ oleh admin untuk mengetahui tingkat reservasi pada suatu tanggal (pemilihan
+ tanggal yang kosong, ketersediaan tempat, dan proses pembatalan.) dan merencanak
+an pengembangan kedepannya.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Daftar Pustaka (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TahunPustaka
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Chapter*
+Kata Pengantar
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Kata Pengantar}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puji syukut kehadirat Allah SWT, karena atas rahmat dan hidayah-Nya penulis
+ dapat menyelesaikan penulisan ilmiah ini dengan judul 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Judul
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+.
+ Penulisan ilmiah ini dibuat untuk melengkapi salah satu syarat mencapai
+ jenjang setara sarjana muda pada program pendidikan di Universitas Gunadarama.
+\end_layout
+
+\begin_layout Standard
+Keberhasilan penulisa dalam menyelesaikan penulisan ilmiah ini tidak lepas
+ dari bantuan dan dukungan dari berbagai pihak, walaupun banyak hambatan
+ dan kesulitan yang dihadapi, namun hal tersebut menjadi pelajaran dan pengalama
+n yang berharga yang berkesan bagi penulis.
+ Oleh sebab itu, dalam kesampatan ini penulis ingin mengucapkan terima kasih
+ kepada :
+\end_layout
+
+\begin_layout Enumerate
+Ibu 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Rektor
+\end_layout
+
+\end_inset
+
+, selaku Rektor Universitas Gunadarma.
+\end_layout
+
+\begin_layout Enumerate
+Bapak 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Dekan
+\end_layout
+
+\end_inset
+
+, selaku Dekan Fakultas Teknologi Industri, Universitas Gunadarma.
+\end_layout
+
+\begin_layout Enumerate
+Bapak 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KetuaJurusan 
+\end_layout
+
+\end_inset
+
+, selaku Ketua Jurusan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Jurusan
+\end_layout
+
+\end_inset
+
+, Universitas Gunadarma.
+\end_layout
+
+\begin_layout Enumerate
+Ibu 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+PejabatBagianSidang
+\end_layout
+
+\end_inset
+
+, selaku Koordinator PI Jurusan Teknik Informatika.
+\end_layout
+
+\begin_layout Enumerate
+Bapak 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+KetuaPembimbing
+\end_layout
+
+\end_inset
+
+, sebagai Pembimbing penulis yang ditengah- tengah aktifitas dan kesibukannya
+ telah membimbing penulis dan memberikan dorongan sehingga penulisan ini
+ dapat diselesaikan.
+\end_layout
+
+\begin_layout Enumerate
+Kedua orang tua, kakak dan adik tercinta yang selalu mendukung dan terus
+ memberikan motivasi.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Teman-teman Asisten Laboratorium Teknik Informatika yang selalu memberikan
+ masukan untuk penulis tentang bagaimana cara penulisan yang baik dan benar1
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Teman-teman kelas 4KA25 angkatan 2014 yang telah memberikan semangat, do’a
+ dan informasi terhadap hasil penulisan ini.
+\end_layout
+
+\begin_layout Enumerate
+Seluruh rekan seperjuangan di Universitas Gunadarma yang telah banyak membantu
+ penulis.
+\end_layout
+
+\begin_layout Enumerate
+Semua pihak yang tidak tersebutkan yang telah membantu penyelesaian Tugas
+ Akhir ini, penulis ucapkan juga terima kasih atas segala bantuan dan sarannya.
+ 
+\end_layout
+
+\begin_layout Standard
+Sebagai manusia biasa yang tak luput dari kesalahan, maka penulis meminta
+ maaf atas segala kekurangan dan keterbatasan dalam penyusunan penulisan
+ ilmiah ini.
+ 
+\end_layout
+
+\begin_layout Standard
+Akhir kata, hanya kepada Tuhan jualah segalanya dikembalikan dan penulis
+ sadari bahwa penulisan ini masih jauh dari sempurna, disebabkan karena
+ berbagai keterbatasan yang penulis miliki.
+ Untuk itu penulis mengharapkan kritik dan saran yang bersifat membangun
+ untuk menjadi perbaikan di masa yang akan datang.
+ 
+\end_layout
+
+\begin_layout Standard
+Semoga apa yang ada pada penulisan ilmiah ini dapat bermanfaat bagi kita
+ semua.
+ Amin.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{20mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{plain}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Kota
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+BulanTahun
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{10mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Penulis
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Daftar Isi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Daftar Gambar}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Daftar Tabel}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Daftar Lampiran
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Daftar Lampiran}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+Lampiran 1 .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ 
+\begin_inset space \quad{}
+\end_inset
+
+64
+\end_layout
+
+\begin_layout Quote
+Lampiran 2 .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ .
+ 
+\begin_inset space \quad{}
+\end_inset
+
+105
+\end_layout
+
+\begin_layout Chapter
+PENDAHULUAN
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Latar Belakang
+\end_layout
+
+\begin_layout Standard
+Tempat rekreasi merupakan salah satu bentuk pelayanan publik yang menawarkan
+ suatu jasa dalam hal penyediaan tempat acara.
+ Biasanya yang ingin menggunakan suatu tempat adalah orang-orang yang sedang
+ mengadakan gathering ataupun acara arisan keluarga.
+ Sedangkan pengertian Reservasi sendiri adalah sebuah proses perjanjian
+ berupa pemesanan sebuah produk baik barang maupun jasa dimana pada saat
+ itu telah terdapat kesepahaman antara konsumen dengan produsen mengenai
+ produk tersebut namun belum ditutup oleh sebuah transaksi jual-beli.
+ 
+\end_layout
+
+\begin_layout Standard
+Taman Margasatwa Ragunan merupakan perusahaan yang bergerak di bidang konservasi
+ dan rekreasi yang dituntut untuk mengutamakan kualitas pelayanan kepada
+ para penggunjungnya dan kesehatan bagi satwanya.
+ Taman Margasatwa Ragunan saat ini memiliki kendala lambatnya pencarian
+ informasi tempat reservasi yang mengakibatkan pelayanan terhadap pengunjung
+ menjadi lambat.
+ Dan juga seringnya terjadi double booking terhadap sistem manual saat ini.
+ Oleh sebab itu dibutuhkan suatu pengaturan sistem yang baik, yang dapat
+ meningkatkan pelayanan terhadap pengunjung, mempermudah pencarian informasi
+ pengunjung dan tempat.
+ 
+\end_layout
+
+\begin_layout Standard
+Berdasarkan hal tersebut di atas, maka penulis menganggap perlu untuk melakukan
+ penelitian mengenai sistem informasi yang cocok untuk diterapkan pada Taman
+ Margasatwa Ragunan.
+ Selanjutnya penulis mencoba untuk membuat sebuah rancangan bangun Sistem
+ Reservasi Ragunan berbasiskan web dalam menangani pemesanan dengan harapan
+ Sistem Informasi Reservasi Ragunan ini nantinya dapat meningkatkan efisiensi
+ kinerja petugas dan dapat memberikan Informasi yang cepat, tepat, efisien
+ dan efektif
+\series bold
+.
+\end_layout
+
+\begin_layout Section
+Batasan Masalah
+\end_layout
+
+\begin_layout Standard
+Dari uraian permasalahan diatas maka penulis menganggap perlu membatasi
+ permasalahan yang akan dibahas agar nantinya tidak menyimpang dan meluas
+ dari batasan masalah berikut :
+\end_layout
+
+\begin_layout Enumerate
+Fkus Tempat di Taman Margastwa Ragunan
+\end_layout
+
+\begin_layout Enumerate
+Sistem Pembayaran Hanya Berupa Status
+\end_layout
+
+\begin_layout Enumerate
+Fokus pengunjung terhadap setiap tempat itu sama 
+\end_layout
+
+\begin_layout Section
+Tujuan Penulisan
+\end_layout
+
+\begin_layout Standard
+Tujuan dari penyusunan tugas akhir ini adalah : 
+\end_layout
+
+\begin_layout Enumerate
+Untuk merancang dan mendesain sistem pemesanan secara online yang mudah
+ sehingga dapat digunakan oleh admin (front office) untuk mengatasi kelemahan
+ sistem manual yang digunakan saat ini dan meningkatkan pelayanan terhadap
+ customer, dengan bahasa pemprograman HTML dan My SQL/XAMPP sehingga mempermudah
+ proses reservasi.
+\end_layout
+
+\begin_layout Enumerate
+Dapat mengimplementasikan program sistem reservasi pada Taman Margasatwa
+ Ragunan berbasis web.
+\end_layout
+
+\begin_layout Section
+Metode Penelitian
+\end_layout
+
+\begin_layout Standard
+Dalam penulisan ini penulis mengumpulkan data yang diperlukan dari berbagai
+ sumber dalam pembuatan perancangan website ini melalui pencarian informasi
+ penunjang pembuatan website yang terdapat dari buku sebagai referensi dan
+ juga dari situs internet yang relevan.
+ Pembuatan website ini menggunakan prinsip SDLC (System Development Life
+ Cycle) dengan model waterfall yang mencakup yaitu :
+\end_layout
+
+\begin_layout Enumerate
+Perencanaan
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Pada tahap awal perencanaan ini dimulai dengan mendefinisikan tujuan dari
+ pembuatan website.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Analisis
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Menganalisis masalah yang ada, dimulai dari pengumpulan data seputar informasi
+ reservasi yang saat ini berjalan.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Design
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Pada tahap ini dilakukan perancangan tampilan yang menggunakan struktur
+ navigasi sebagai dasar pembuatan website menggunakan HTML, Xampp, dan perancang
+an menggunakan UML
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Implementasi
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Website yang telah dirancang dan dikembangkan kemudian dijalankan dan diupload
+ dan mengetahui spesifikasi perangkat keras dan perangkat lunak apa saja
+ yang digunakan.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Sistematika Penulisan
+\end_layout
+
+\begin_layout Standard
+Pada penulisan ilmiah ini dibuat berdasarkan sistematika penulisan yang
+ telah ditentukan dengan tujuan mempermudah dan memperjelas bagaimana penulisan
+ ini disusun.
+ Penulisan ilmiah ini dibagi menjadi 4 bab dan setiap bab akan dibagi oleh
+ beberapa sub bab, dimana tiap-tiap bab saling berhubungan satu dengan yang
+ lainnya.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+BAB I PENDAHULUAN
+\end_layout
+
+\begin_layout Standard
+Menjelaskan latar belakang, batasan masalah, tujuan penulisan, metode penelitian
+ dan sistematika penulisan.
+\end_layout
+
+\begin_layout Standard
+BAB II LANDASAN TEORI
+\end_layout
+
+\begin_layout Standard
+Menjelaskan tentang landasan teori yaitu mengenai HTML dan XAMPP dimulai
+ dari definisi sampai kepada elemen-elemen yang ada pada bahasa pemprograman
+ tersebut.
+\end_layout
+
+\begin_layout Standard
+BAB III PERANCANGAN DAN IMPLEMENTASI
+\end_layout
+
+\begin_layout Standard
+Menguraikan tentang perancangan website beserta hasil dan implementasi dari
+ website tersebut.
+\end_layout
+
+\begin_layout Standard
+BAB IV PENUTUP
+\end_layout
+
+\begin_layout Standard
+Terdapat kesimpulan dan saran dari semua bahasan dan penulisan ilmiah ini
+ yang ditujukan kepada pembaca untuk pengembangan aplikasi ini dimasa yang
+ akan mendatang.
+\end_layout
+
+\begin_layout Chapter
+LANDASAN TEORI
+\end_layout
+
+\begin_layout Section
+World Wide Web
+\end_layout
+
+\begin_layout Standard
+Sistem pengakses informasi dalam internet yang paling terkenal adalah World
+ Wide Web atau disingkat WWW juga dikenal dengan nama web.
+ World Wide Web adalah suatu program yang ditemukan oleh Tim Berners-Lee
+ pada tahun 1991.
+ Awalnya Berners-Lee hanya ingin menemukan cara untuk menyusun arsip-arsip
+ risetnya, kemudian mengembangkan suatu sistem untuk keperluan pribadi.
+ Sistem itu adalah program perangkat lunak yang diberi nama Equire.
+ Dengan program itu, Berners-Lee berhasil menciptakan jaringan terkait antara
+ berbagai arsip sehingga memudahkan informasi yang dibutuhkan.
+ Inilah yang kemudian menjadi dasar dari sebuah revolusi yang dikenal sebagai
+ web.
+ WWW dikembangkan pertama kali di Pusat Penelitian Fisika Partikel Eropa
+ (CERN), Jenewa, Swiss.
+ Pada tahun 1989 Berners-lee membuat proposal untuk proyek pembuatan hypertext
+ secara global, kemudian pada bulan Oktober 1990, ‘World Wide Web‘ sudah
+ bisa dijalankan dalam lingkungan CERN.
+ Pada musim panas tahun 1991, WWW resmi digunakan secara luas pada jaringan
+ Internet.
+ 
+\end_layout
+
+\begin_layout Standard
+Web menggunakan protokol yang disebut HTTP kepanjangan dari Hypertext Transfer
+ Protocol yang berjalan pada TCP/IP.
+ Adapun dokumen web ditulis dalam format HTML (Hypertext Markup Languange).
+ Dokumen ini diletakkan dalam web server yang melayani permintaan halaman
+ web dan diakses oleh klien atau pengakses informasi melalui perangkat lunak
+ yang disebut web browser atau sering disebut browser saja.
+ Konsep hypertext tersebut digunakan pada web sebenarnya telah dikembangkan
+ jauh dari sebelum kehadiran web itu sendiri.
+ Dengan konsep hypertext ini, seseorang dapat melompat dari satu dokumen
+ ke dokumen lainnya.
+ Dokumen-dokumen dapat diakses di berbagai mesin dan di berbagai negara.
+ Bagaikan jaring laba-laba, jejaring web telah mebentang ke seluruh penjuru
+ dunia.
+ 
+\end_layout
+
+\begin_layout Section
+HTML (
+\shape italic
+Hypertext Markup Language
+\shape default
+)
+\end_layout
+
+\begin_layout Standard
+HTML adalah singkatan dari Hypertext Markup Language sebuah bahasa pemrograman
+ yang umum digunakan untuk membuat sebuah halaman website, dimana HTML ini
+ bisa kita gunakan untuk menginput gambar, text, audio, video dan lainnya
+ untuk membuat sebuah website.
+ HTML adalah sebuah standar yang digunakan secara luas untuk menampilkan
+ halaman web.
+ Menggunakan tag-tag tertentu untuk menyatakan kode-kode yang harus ditafsirkan
+ oleh browser agar halaman tersebut dapat ditampilkan di web browser.
+ HTML hingga saat ini merupakan standar Internet yang didefinisikan dan
+ dikendalikan penggunaannya oleh World Wide Web Consortium (W3C).
+ HTML dibuat oleh kolaborasi Caillau TIM dengan Berners-lee Robert ketika
+ mereka bekerja di CERN pada tahun 1989 CERN adalah lembaga penelitian fisika
+ energi tinggi di Jenewa.
+ 
+\end_layout
+
+\begin_layout Standard
+Pada tahun 1980, IBM memikirkan pembuatan suatu dokumen yang akan mengenali
+ setiap elemen dari dokumen dengan suatu tanda tertentu.
+ IBM kemudian mengembangkan suatu jenis bahasa yang menggabungkan teks dengan
+ perintah-perintah pemformatan dokumen.
+ Bahasa ini dinamakan Markup Language, sebuah bahasa yang menggunakan tanda-tand
+a sebagai basisnya.
+ IBM menamakan sistemnya ini sebagai Generalized Markup Language atau GML.ISO
+ pada tahun 1986 menyatakan bahwa IBM memiliki suatu konsep tentang dokumen
+ yang sangat baik, dan kemudian mengeluarkan suatu publikasi (ISO 8879)
+ yang menyatakan markup language sebagai standar untuk pembuatan dokumen-dokumen.
+ ISO membuat bahasa ini dari GML milik IBM, tetapi memberinya nama lain,
+ yaitu SGML (Standard Generalized Markup Language).
+ ISO dalam publikasinya meyakini bahwa SGML akan sangat berguna untuk pemrosesan
+ informasi teks dan sistem-sistem perkantoran.
+ Tetapi di luar perkiraan ISO, SGML dan terutama subset dari SGML, yaitu
+ HTML juga berguna untuk menjelajahi internet.
+ Khususnya bagi mereka yang menggunakan World Wide Web.
+ Versi terakhir dari HTML saat ini adalah HTML5.
+ 
+\end_layout
+
+\begin_layout Standard
+Fungsi dari HTML adalah digunakan untuk membuat sebuah halaman website dan
+ juga menampilkan berbagai informasi yang di inputkan ke dalam 6 HTML tersebut
+ seperti gambar, teks, video, dan lainnya sehingga bisa di tampilkan melalui
+ web browser.
+ Selain itu HTML juga bisa digunakan untuk membuat sebuah link yang nantinya
+ menuju ke sebuah halaman website lainnya dengan kode tertentu.
+ Bentuk umum dari HTML adalah sebagai berikut :
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+<html>
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset space \hspace{}
+\length 1.2cm
+\end_inset
+
+<head>
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset space \hspace{}
+\length 1.2cm
+\end_inset
+
+*Bagian Head*
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset space \hspace{}
+\length 1.2cm
+\end_inset
+
+</head>
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset space \hspace{}
+\length 1.2cm
+\end_inset
+
+<body>
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset space \hspace{}
+\length 1.2cm
+\end_inset
+
+*Bagian Body*
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\begin_inset space \hspace{}
+\length 1.2cm
+\end_inset
+
+</body>
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+</html>
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1.2cm
+\end_inset
+
+Ketarangan : 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<html>
+\family default
+ : Untuk Memulai HTML
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<tittle>
+\family default
+ : Untuk memberi judul pada yang nantinya akan muncul di TabBrowser
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<head>
+\family default
+ : Untuk bagian Header atau Atas
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+</head>
+\family default
+ : Untuk penutup Header dan diawali dengan garis miring "/"
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<body>
+\family default
+ : Untuk bagian Body atau isi dalam HTML
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+</body>
+\family default
+ : Untuk penutup/menutup Body dan diawali dengan garis miring "/"
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+</html>
+\family default
+ : untuk menutup Sebuah HTML dan diawali juga dengan garis miring "/"
+\end_layout
+
+\begin_layout Standard
+Dalam HTML juga ada Tag-tag tertentu untuk mendukung membuat sebuah website
+ dibawah ini ada beberapa Tag dasar yang harus anda ketahui dalam HTML.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<h1>
+\family default
+ : ini adalah Tag Heading, yang berlevel 1, selain <h1> ada juga <h2>, <h3>,
+ <h4>, <h5>, <h6>
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<b>
+\family default
+ : (Bold) Fungsinya untuk membuat Huruf menjadi Tebal
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<i>
+\family default
+ : (Italic) Fungsinya untuk membuat Huruf menjadi Miring
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<u>
+\family default
+ : (Underline) Fungsinya untuk membuat dibawah huruf berisi garis
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<p>
+\family default
+ : Untuk membuat sebuah Paragraf
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<br>
+\family default
+ : untuk Membuat sebuah baris baru atau enter 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<hr>
+\family default
+ : untuk membuat sebuah garis Horizontal
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<center>
+\family default
+ : untuk membuat tulisan atau gambar berada di tengah-tengah 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<img src="gambar-anda.jpg atau Url gambar anda">
+\family default
+ : fungsinya untuk memasukan sebuah gambar 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<body bgcolor="black">
+\family default
+ : Fungsinya untuk memberi warna untuk background atau latar belakang dan
+ "black" bisa diganti sesuai keinginan anda, misalnya "red", "yellow" 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<font color="red">
+\family default
+ : Untuk mengatur warna Text dan ditutup dengan </font> 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<font size="12">
+\family default
+ : untuk mengatur Ukuran Sebuah Text dan ditutup dengan </font> 
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+<font face="arial">
+\family default
+ : Untuk mengatur jenis Font atau Text yang akan digunakan 22.
+ <marquee> : untuk membuat sebuah text ataupun gambar bergerak
+\end_layout
+
+\begin_layout Chapter
+PERANCANGAN dan IMPLEMENTASI
+\end_layout
+
+\begin_layout Section
+Gambaran Umum
+\end_layout
+
+\begin_layout Standard
+Pada situs web yang penulis buat ini berisikan informasi tentang seputar
+ tata cara reservasi tempat yang ada di Taman Margasatwa Ragunan.
+ Berikut adalah alur proses reservasi secara umum pada situs web yang penulis
+ buat 
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/slari_000/Pictures/PI/FLowchart Pemesanan Tempat.jpg
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flowchart Pemesanan Tempat
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+User yang ingin melakukan reservasi dapat langsung memilih lokasi yang telah
+ di sediakan di dalam web, setelah memilih lokasi user dapat memilih tanggal
+ reservasi yang diinginkan, setelah melalukan pemilihan tanggal user di
+ haruskan mengisi data diri untuk proses konfirmasi terkait pemesanan tempat
+ di Taman Margasatwa Ragunan, setelah user malakukan reservasi user dapat
+ melakukan pembayaran dengan cara transfer ke rekening yang telah di tentukan
+ oleh pihak Taman Margasatwa Ragunan, setelah transfer dilakukan user dapat
+ melakukan konfirmasi pembayaran dan cetak note pambayaran.
+ 
+\end_layout
+
+\begin_layout Standard
+Website ini memiliki menu utama yang dimana terdapat beberapa lokasi atau
+ tempat yang di sewakan oleh Taman Margasatwa Ragunan, dan juga menu konfirmasi
+ booking untuk melihat daftar reservasi yang telah di lakukan, penulis juga
+ menambahkan menu informasi terkait cara pemesanan di dalam Website
+\end_layout
+
+\begin_layout Section
+Desain
+\end_layout
+
+\begin_layout Standard
+Website Reservasi Ragunan adalah sebagai solusi bagi pengunjung untuk melakukan
+ pemesanan tempat di Taman Margasatwa Ragunan.
+ Website Reservasi Ragunan ini berisikan menu halaman utama, Pendopo, Gedung,
+ Cara Pemesanan, Hubungi Kami dan Admin yang di dalamnya berisi menu kategori,
+ lokasi, data penyewaan, user, banner, konfirmasi booking (menu khusus untuk
+ management).
+ 
+\end_layout
+
+\begin_layout Standard
+Spesifikasi software yang digunakan : 
+\end_layout
+
+\begin_layout Enumerate
+Sublime text editor v3.0 2.
+ Xampp v3.2.2 3.
+ Google Chrome 
+\end_layout
+
+\begin_layout Enumerate
+Windows 10 64bit 
+\end_layout
+
+\begin_layout Standard
+Spesifikasi hardware yang digunakan : 
+\end_layout
+
+\begin_layout Enumerate
+Lenovo Ideapad 310 
+\end_layout
+
+\begin_layout Enumerate
+Processor intel CORE i5 
+\end_layout
+
+\begin_layout Enumerate
+4GB RAM (DDR4-2.50GHz) 
+\end_layout
+
+\begin_layout Subsection
+Analisis Model Sistem
+\end_layout
+
+\begin_layout Standard
+Menganalisis masalah yang ada, dimulai dari pengumpulan ilmu informasi seputar
+ tempat dan tarif yang ada di Taman Magasatwa Ragunan.
+ Pengambilan informasi dilakukan melalui pengalaman bekerja dari penulis
+ sendiri
+\end_layout
+
+\begin_layout Section
+Perancangan Sistem Dengan UML
+\end_layout
+
+\begin_layout Standard
+Dalam perancangan sistem website ini, penulis hanya menggunakan dua diagram
+ dalam penulisannya yaitu diagram use case dan diagram activity yang sesuai
+ dengan fungsi diagram tersebut dan berkaitan dengan sistem website tersebut.
+\end_layout
+
+\begin_layout Subsection
+Diagram Use Case
+\end_layout
+
+\begin_layout Standard
+Dalam diagram ini terdapat aktor yang terlibat ada dua yaitu Use Case admin
+ dan Use Case user.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted1.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Use Case Diagram Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Use Case Admin adalah pengurus dari website ini yang memvalidasi dan menginput
+ data.
+ Pada langkah pertama admin akan melakukan login dengan menggunakan username
+ dan password.
+ Kemudian admin akan masuk ke dalam halaman utama admin yang berisikan menu
+ untuk input daftar Kategori, input daftar Lokasi, pengecekan daftar penyewaan
+ tempat, edit data User, validasi data Pesanan dan melihat halaman utama
+ website.
+ Apabila admin sudah selesai menggunakan fasilitas admin yang terdapat pada
+ website ini, admin dapat keluar menggunakan menu logout.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted2.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Use Case Diagram User
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk Use Case User berbeda dengan admin, pengunjung website ini dapat melihat
+ informasi seputar harga tarif dan lokasi penyewaan tempat yang ada di Taman
+ Margasatwa Ragunan.
+ User disini hanya dapat melihat dan melakukan pesanan yang ada di dalam
+ website.
+\end_layout
+
+\begin_layout Subsection
+Diagram Activity
+\end_layout
+
+\begin_layout Standard
+Diagram activity adalah diagram yang menggambarkan aktifitas admin dan user.
+ Menggambarkan alur yang dilalui oleh admin dan user pada saat masuk ke
+ website sampai saat keluar dari website tersebut.
+\end_layout
+
+\begin_layout Subsubsection
+Diagram Activity Admin
+\end_layout
+
+\begin_layout Standard
+Untuk melaukan penginputan data, admin terlebih dulu menginput username
+ dan password di menu login lalu di proses, apabila sudah benar maka akan
+ masuk ke tampilan menu admin.
+ Menu admin dapat melakukan pengolahan data, seperti input kategori dan
+ lokasi dan validasi pemesanan.
+ Jika username dan password yang diinput salah maka proses akan menolak
+ dan mengembalikan dengan notif login gagal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted3.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Activity Diagram Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diagram Activity User
+\end_layout
+
+\begin_layout Standard
+User dapat login untuk melakukan pemesanan dan melihat daftar lokasi dan
+ tarif di website ini, user hanya dapat melakukan pemesanan dan melihat
+ lihat daftar lokasi yang ada di website ini.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted4.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Activity Diagram User
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Struktur Navigasi
+\end_layout
+
+\begin_layout Standard
+Struktur navigasi adalah struktur atau alur dari suatu website.
+ Struktur navigasi penting bagi suatu pembuatan website dalam tahap perencanaan.
+ Peta navigasi menggambarkan suatu hubungan dan keterkaitan dari tiap halaman
+ website yang telah dirancang agar dapat terorganisir dengan baik.
+ Struktur navigasi website ini terbagi dua, yaitu struktur navigasi user
+ dan struktur navigasi admin.
+\end_layout
+
+\begin_layout Subsection
+Struktur Navigasi User
+\end_layout
+
+\begin_layout Standard
+Struktur navigasi user digunakan untuk menggambarkan secara garis besar
+ isi dari seluruh situs website.
+ Struktur website yang menghubungkan dari setiap menu yang tersedia di homepage
+ website ini, yaitu menu home, menu cara pemesanan, menu pendopo , menu
+ gedung, dan menu pesanan.
+ Struktur navigasi user ini menggunakan struktur navigasi campuran yang
+ merupakan gabungan antara struktur navigasi linear dan struktur navigasi
+ hirarki.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted5.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi User
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Struktur Navigasi Admin
+\end_layout
+
+\begin_layout Standard
+Struktur navigasi admin digunakan untuk perencanaan setiap isi dari konten
+ halaman website admin.
+ Dari navigasi ini terlihat hubungan dari setiap isi, menu dan data yang
+ ada di dalam website admin tersebut.
+ Pada website admin ini, akses ini hanya akan diberikan kepada satu admin.
+ Pembuatan struktur navigasi ini sangat membantu bagi admin untuk mengatur
+ halaman website admin tersebut.
+ Struktur navigasi admin ini menggunakan struktur navigasi campuran yang
+ merupakan gabungan antara struktur navigasi linear dan struktur navigasi
+ hirarki.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted6.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Struktur Navigasi Admin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Rancangan Tampilan Website
+\end_layout
+
+\begin_layout Standard
+Rancangan tampilan website halaman user mempunyai beberapa halaman, yaitu
+ index.php, main.php, detail.php, keranjang.php, cara-pemesanan.php.
+ Adapun website admin juga terdapat beberapa halaman, yaitu module banner,
+ module kategori, module lokasi, module penyewaan, module pesanan, module
+ user.
+ Keseluruhan halaman website memiliki konsep tampilan yang tidak jauh berbeda
+ pada tiap halamannya, sehingga memberikan kenyamanan dan tetap menaik untuk
+ di lihat, serta tidak membuat bingung bagi user.
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman User
+\end_layout
+
+\begin_layout Subsubsection
+Rancangan Tampilan Halaman Utama
+\end_layout
+
+\begin_layout Standard
+index.php adalah halaman depan dari semua halaman yang ada pada website.
+ Halaman ini juga dapat disebut halaman pembuka, karena pada saat website
+ pertama kali dibuka maka halaman inilah yang akan tampil sebelum halaman
+ lain yang berada pada Gambar dan Text index.php tersebut.
+ Pada teks atau gambar yang mengandung link, akan berubah warna apabila
+ pointer mengarah ke gambar atau text tersebut.
+ Halaman index.php mempunyai rancangan seperti gambar 3.8:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted7.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rancangan Tampilan Index.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Rancangan Halaman My_Profile
+\end_layout
+
+\begin_layout Standard
+Halaman MyProfile.php ini adalah tampilan menu yang dibuat untuk mengakomodir
+ daftar pesanan yang dimiliki oleh user dan memiliki rancangan seperti gambar
+ 3.9:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted8.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rancangan Halaman My_Profile.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Rancangan Detail Pesanan
+\end_layout
+
+\begin_layout Standard
+Halaman detail.php yang berada pada module pesanan ini adalah tampilan menu
+ yang dibuat untuk mengakomodir bukti cetak nota pemesanan dan konfirmasi
+ pembayaran pada website ini.
+ Halaman detail.php memiliki rancangan seperti gambar 3.10:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted9.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rancangan Halaman Detail.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Detail Lokasi
+\end_layout
+
+\begin_layout Standard
+Halaman detial.php ini adalah tampilan menu yang dibuat untuk mengakomodir
+ untuk melihat detail dari lokasi yang di pilih oleh user dan menentukan
+ tanggal reservasi yang diinginkan.
+ Halaman detail.php memiliki rancangan seperti gambar 3.11:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted10.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rancangan Halaman Lokasi Detail.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Rancangan Halaman Keranjang
+\end_layout
+
+\begin_layout Standard
+Halaman keranjang.php ini adalah tampilan menu yang dibuat untuk mengakomodir
+ halaman penyimpanan reservasi yang telah di lakukan oleh user.
+ Halaman keranjang.php memiliki rancangan seperti gambar 3.12:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted11.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rancangan Halaman Keranjang.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Rancangan Halaman Data Pesanan
+\end_layout
+
+\begin_layout Standard
+Halaman data_pemesan.php ini adalah tampilan menu yang dibuat untuk mengakomodir
+ halaman pengisian data user yang akan melakukan reservasi tempat.
+ Halaman data_pemesan.php memiliki rancangan seperti gambar 3.13:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted12.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rancangan Halaman Data_pemesan.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rancangan Halaman Admin
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Login
+\end_layout
+
+\begin_layout Standard
+Halaman login untuk admin yang diberikan hak akses lebih banyak dari hak
+ akses yang diberikan kepada user.
+ Pada halaman login.php ini admin memasukkan username dan password yang sudah
+ terdaftar sebagai superadmin pada database, jika benar maka akan masuk
+ ke halaman website admin.
+ Sedangkan, jika username dan password yang dimasukkan salah, maka admin
+ akan diminta untuk memasukkan username dan password yang benar.
+ Halaman login.php memiliki rancangan seperti gambar 3.14:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted13.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Racangan Halaman Login.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Admin
+\end_layout
+
+\begin_layout Standard
+Saat admin masuk pertama kali ke website admin, ini adalah halaman my_profile.php
+ bagi admin yang ditampilkan sebelum admin masuk ke halaman lainnya.
+ Rancangan halaman my_profile.php adalah seperti gambar 3.15:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted14.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Racangan Halaman My_Profile.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Admin Module Kategori
+\end_layout
+
+\begin_layout Standard
+Halaman admin module kategori berfungsi untuk memasukkan data kategori ke
+ dalam database.
+ Rancangan halaman admin module kategori adalah seperti gambar 3.16:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted15.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Racangan Halaman Admin Module Kategori
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Admin Module Lokasi
+\end_layout
+
+\begin_layout Standard
+Halaman admin module lokasi berfungsi untuk memasukkan data lokasi ke dalam
+ database.
+ Rancangan halaman admin module lokasi adalah seperti gambar 3.17:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted16.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rancangan Halaman Admin Module Lokasi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Admin Module Data Penyewaan
+\end_layout
+
+\begin_layout Standard
+Halaman admin module data penyewaan berfungsi untuk memeriksa lokasi yang
+ telah di reservasi dalam database.
+ Rancangan halaman admin module data penyewaan adalah seperti gambar 3.18:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted17.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Racangan Halaman Admin Module Data Penyewaan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Admin Module User
+\end_layout
+
+\begin_layout Standard
+Halaman admin module user berfungsi untuk memeriksa data user dalam database.
+ Rancangan halaman admin module user adalah seperti gambar 3.19:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted18.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Racangan Halaman Admin Module User
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Admin Module Banner
+\end_layout
+
+\begin_layout Standard
+Halaman admin module banner berfungsi untuk input data banner untuk home
+ slider dalam database.
+ Rancangan halaman admin module banner adalah seperti gambar 3.20:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted19.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Racangan Halaman Admin Module Banner
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Racangan Halaman Admin Module Penyewaan
+\end_layout
+
+\begin_layout Standard
+Halaman admin module penyewaan berfungsi untuk update status validasi dari
+ pembayawan dalam database.
+ Rancangan halaman admin module banner adalah seperti gambar 3.21:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted20.emf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Racangan Halaman Admin Module Penyewaan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tahapan Pembuatan Website
+\end_layout
+
+\begin_layout Subsection
+Perancangan Database
+\end_layout
+
+\begin_layout Standard
+Database yang akan digunakan dalam menjalankan web dirancang sedemikian
+ rupa sehingga operasional website dapat berjalan dengan lancar.
+ Hal pertama yang dilakukan adalah merancang struktur database secara konseptual
+ sehingga dalam proses pembuatan selanjutnya dapat diketahui proses jalannya
+ aplikasi web dan juga proses keluar dan masuknya data serta pengolahan
+ dari data tersebut.
+\end_layout
+
+\begin_layout Subsection
+Membuat Dictionary Database
+\end_layout
+
+\begin_layout Standard
+Untuk pembuatan struktur database penulis harus mengetahui atribut-atribut
+ apa yang harus diperlukan dalam pembuatan tabel di dalam database.
+ Setelah mengetahui atribut-atribut apa saja yang diperlukan, penulis juga
+ menentukan jenis tipe data apa saja yang diperlukan untuk atribut-atribut
+ tersebut.
+\end_layout
+
+\begin_layout Enumerate
+Table Banner
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tabel ini berisikan banner atau home slider yang ada di halaman utama website
+ ini.
+ Data-data yang terdapat dalam tabel ini yaitu banner_id, banner, gambar,
+ link dan status
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Banner
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAMA FIELD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIPE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PANJANG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KETERANGAN
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+banner_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primary Key
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+banner
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gambar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+link
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+status
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enum('on','off')
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Table Kategori
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tabel ini berisikan semua kategori lokasi yang ada di dalam Website ini.
+ Data-data yang terdapat dalam tabel ini yaitu kategori_id, kategori dan
+ status.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kategori
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAMA FIELD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIPE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PANJANG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KETERANGAN
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kategori_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primary Key
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kategori
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+status
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enum('on','off')
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Table Konfirmasi_Pembayaran
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tabel ini berisikan tentang data konfirmasi pembayaran yang ada di dalam
+ menu konfirmasi_pembayaran.
+ Data-data yang terdapat dalam tabel ini yaitu konfirmasi_id, pesanan_id,
+ nomor_rekening, nama_account, tanggal_transfer.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+konfirmasi_pembayaran
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAMA FIELD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIPE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PANJANG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KETERANGAN
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+konfirmasi_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primary Key
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pesanan_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nomor_rekening
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nama_account
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tanggal_transfer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Date
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Table lokasi
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tabel ini berisikan semua lokasi yang terdapat di dalam Website ini.
+ Data-data yang terdapat dalam tabel ini yaitu lokasi_id, kategori_id, nama_loka
+si, spesifikasi, gambar, harga, stok, status.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+lokasi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAMA FIELD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIPE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PANJANG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KETERANGAN
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lokasi_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primary Key
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kategori_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nama_lokasi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+spesifikasi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Text
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gambar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+harga
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+stok
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tinyint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+status
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enum('on','off')
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Table pesanan
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tabel ini berisi data reservasi yang telah dilakukan oleh user.
+ Data-data yang terdapat pada tabel pesanan yaitu pesanan_id.
+ user_id, nama, kontak, alamat, tanggal_pemesanan, status dan nama_instansi
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+pesanan
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAMA FIELD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIPE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PANJANG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KETERANGAN
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pesanan_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primary Key
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+user_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nama
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kontak
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+alamat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tanggal_pesanan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Datetime
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+status
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tinyint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nama_instansi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Table pesanan_detail
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tabel ini berisikan detail pesanan pada reservasi di website ini.
+ Data-data yang terdapat dalam tabel ini yaitu pesanan_id, lokasi_id, tanggal
+ dan harga
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+pesanan_detail
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAMA FIELD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIPE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PANJANG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KETERANGAN
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pesanan_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primary Key
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lokasi_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tanggal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+harga
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Table user
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tabel ini berisikan data user yang ada didalam website ini.
+ Data-data yang terdapat dalam tabel ini yaitu user_id, level, nama, email,
+ alamat, phone, password dan status.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+user
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAMA FIELD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TIPE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PANJANG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KETERANGAN
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+user_id
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Int
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Primary Key
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+level
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nama
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+150
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+email
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+160
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+alamat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+400
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+phone
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+password
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Varchar
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+status
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enum('on','off')
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Dalam pembuatan database penulis menggunakan fasilitas dari XAMPP yaitu
+ PHPMyadmin, yang digunakan untuk membuat struktur database mysql secara
+ mudah, dan cepat.
+ Selain itu PHPMyadmin dapat juga digunakan untuk memasukkan data ke dalam
+ tabel data, maupun mengubah isi dari data tersebut, mengeditnya, menghapus
+ dan hampir semua perintah-perintah dasr mysql.
+ Salah satu keunggulan dari PHPMyadmin adalah bisa merubah semua isi maupun
+ struktur database tanpa mengetikkan perintah-perintah SQL di dalamnya.
+ Adapun langkah-langkah pengerjaannya adalah sebagai berikut:
+\end_layout
+
+\begin_layout Enumerate
+Membuka XAMPP Control Panel, lalu mengklik tombol start pada option apache
+ dan mysql 
+\end_layout
+
+\begin_layout Enumerate
+Membuka Google Chrome lalu mengetikkan localhost/phpmyadmin 
+\end_layout
+
+\begin_layout Enumerate
+Saatnya membuat database dengan cara mengklik database, lalu mengisikan
+ nama database.
+ Dalam hal ini penulis mengisi nama database dengan nama ‘reservasi’.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Setelah database dibuat, langkah selanjutnya adalah membuat tabel.
+ Penulis membuat tabel sesuai dengan apa yang sudah direncanakan sebelumnya.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Langkah terakhir adalah mengisi field dari tabel yang telah dibuat beserta
+ tipe datanya 
+\end_layout
+
+\begin_layout Subsection
+Implementasi
+\end_layout
+
+\begin_layout Standard
+Setelah membuat struktur navigasi dan rancangan halaman situs website, maka
+ langkah selanjutnya adalah mengimplementasikannya kedalam pembuatan situs.
+ Pertama-tama bukalah Sublime Text, lalu mulailah dengan membuat file php
+ terlebih dahulu, lalu membuat koneksi ke dalam database sesuai dengan database
+ yang telah dibuat melalui phpmyadmin.
+ Kemudian lanjutkan dengan membuat halaman utama.
+ Jika halaman utama sudah dibuat mulailah dengan merancang halaman my_profile.
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Utama
+\end_layout
+
+\begin_layout Standard
+Halaman Utama adalah halaman depan dari semua halaman yang ada pada website.
+ Halaman ini juga dapat disebut halaman pembuka, karena pada saat website
+ pertama kali dibuka maka halaman inilah yang akan tampil sebelum halaman
+ lain yang berada pada link index.php tersebut.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted22.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Utama
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\tiny},tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Script Program Index.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+	session_start();
+\end_layout
+
+\begin_layout Plain Layout
+
+	include_once("function/koneksi.php");
+\end_layout
+
+\begin_layout Plain Layout
+
+	include_once("function/helper.php");
+\end_layout
+
+\begin_layout Plain Layout
+
+?>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Detail Lokasi
+\end_layout
+
+\begin_layout Standard
+Halaman Detail Lokasi adalah halaman dimana lokasi yang pilih akan menampilkan
+ informasi terkait lokasi yang di pilih oleh user dan pemilihan tanggal
+ reservasi.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted23.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Detail Lokasi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Script Program detail.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<link rel="stylesheet" href="<?php echo BASE_URL."js/jquery.ui/jquery-ui.css";?>">
+\end_layout
+
+\begin_layout Plain Layout
+
+<script src="<?php echo BASE_URL."js/jquery.ui/external/jquery/jquery.js";?>"></scr
+ipt>
+\end_layout
+
+\begin_layout Plain Layout
+
+<script src="<?php echo BASE_URL."js/jquery.ui/jquery-ui.js"; ?>"></script>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Keranjang
+\end_layout
+
+\begin_layout Standard
+Halaman Keranjang adalah halaman daftar reservasi yang telah dilakukan oleh
+ user.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted24.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Keranjang
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\tiny},tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Script Program keranjang.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+	if($totalBarang == 0){
+\end_layout
+
+\begin_layout Plain Layout
+
+		echo "<h3>Saat ini belum ada data di dalam keranjang penyewaan anda</h3>";
+\end_layout
+
+\begin_layout Plain Layout
+
+	}else{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		$no=1;
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		echo "<table class='table-list'>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<tr class='baris-title'>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<th class='tengah'>No</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<th class='kiri'>Image</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<th class='kiri'>Nama lokasi</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<th class='tengah'>Tanggal</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<th class='kanan'>Harga Satuan</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<th class='kanan'>Total</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+				</tr>";
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		$subtotal = 0;		
+\end_layout
+
+\begin_layout Plain Layout
+
+		foreach($keranjang AS $key => $value){
+\end_layout
+
+\begin_layout Plain Layout
+
+			$lokasi_id = $key;
+\end_layout
+
+\begin_layout Plain Layout
+
+			$nama_lokasi = $value["nama_lokasi"];
+\end_layout
+
+\begin_layout Plain Layout
+
+			$tanggal = $value["tanggal"];
+\end_layout
+
+\begin_layout Plain Layout
+
+			$gambar = $value["gambar"];
+\end_layout
+
+\begin_layout Plain Layout
+
+			$harga = $value["harga"];
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+			$total = $harga;
+\end_layout
+
+\begin_layout Plain Layout
+
+			$subtotal = $subtotal + $total;
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+			echo "<tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<td class='tengah'>$no</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<td class='kiri'><img src='".BASE_URL."images/lokasi/$gambar' height='100px'
+ /></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<td class='kiri'>$nama_lokasi</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<td class='tengah'>$tanggal</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<td class='kanan'>".rupiah($harga)."</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<td class='kanan hapus_item'>".rupiah($total)." 
+\end_layout
+
+\begin_layout Plain Layout
+
+<a class='hapus' href='".BASE_URL."hapus_item.php?lokasi_id=$lokasi_id'>X</a></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+				</tr>";
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\end_layout
+
+\begin_layout Plain Layout
+
+			$no++;	
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		echo "<tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<td colspan='5' class='kanan'><b>Sub Total</b></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<td class='kanan'><b>".rupiah($subtotal)."</b></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+			  </tr>";
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		echo "</table>";
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		echo "<div id='frame-button-keranjang'>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<a id='lanjut-belanja' href='".BASE_URL."index.php'>< Lanjut Belanja</a>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<a id='lanjut-pemesanan' href='".BASE_URL."index.php?page=data_pemesan'>
+\end_layout
+
+\begin_layout Plain Layout
+
+				Lanjut Pemesanan ></a>
+\end_layout
+
+\begin_layout Plain Layout
+
+			  </div>";
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+?>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<!-- <script>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	$(".update-quantity").on("input", function(e){
+\end_layout
+
+\begin_layout Plain Layout
+
+		var lokasi_id = $(this).attr("name");
+\end_layout
+
+\begin_layout Plain Layout
+
+		var value = $(this).val();
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		$.ajax({
+\end_layout
+
+\begin_layout Plain Layout
+
+			method: "POST",
+\end_layout
+
+\begin_layout Plain Layout
+
+			url: "update_keranjang.php",
+\end_layout
+
+\begin_layout Plain Layout
+
+			data: "lokasi_id="+lokasi_id+"&value="+value
+\end_layout
+
+\begin_layout Plain Layout
+
+		})
+\end_layout
+
+\begin_layout Plain Layout
+
+		.done(function(data){
+\end_layout
+
+\begin_layout Plain Layout
+
+			location.reload();
+\end_layout
+
+\begin_layout Plain Layout
+
+		});
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+	});
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+</script> -->
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Data Pemesan
+\end_layout
+
+\begin_layout Standard
+Halaman Data Pemesan adalah halaman input data pemesan agar memudahkan pengelola
+ untuk mengkonfirmasi pesanan 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted25.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Form Data Pemesan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Script Program data_pemesan.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+include_once("function/koneksi.php");
+\end_layout
+
+\begin_layout Plain Layout
+
+include_once("function/helper.php");
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if($user_id == false){
+\end_layout
+
+\begin_layout Plain Layout
+
+		$_SESSION["proses_pesanan"] = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		header("location: ".BASE_URL."index.php?page=login");
+\end_layout
+
+\begin_layout Plain Layout
+
+		exit;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if($user_id){
+\end_layout
+
+\begin_layout Plain Layout
+
+		$querydata = mysqli_query($koneksi, "SELECT user.nama,user.alamat,user.phone
+ from user 
+\end_layout
+
+\begin_layout Plain Layout
+
+		where user_id = '$user_id'");
+\end_layout
+
+\begin_layout Plain Layout
+
+		$row=mysqli_fetch_assoc($querydata);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		$nama = $row['nama'];
+\end_layout
+
+\begin_layout Plain Layout
+
+		$alamat = $row['alamat'];
+\end_layout
+
+\begin_layout Plain Layout
+
+		$kontak = $row['phone'];
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+?>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<div id="frame-data-pemesan">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	<h3 class="label-data-pemesan">Data Pemesan</h3>
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	<div id="frame-form-pemesan">
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		<form action="<?php echo BASE_URL."proses_pemesanan.php"; ?>" method="POST">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+			$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+			if($notif == "data"){
+\end_layout
+
+\begin_layout Plain Layout
+
+				echo "<div class='notif'>Maaf, kamu harus melengkapi form dibawah ini</div>"
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+			?>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+				<label>Nama</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<span><input type="text" name="nama" value="<?php echo($nama)?>" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</div>	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+				<label>Instansi / Sekolah</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<span><input type="text" name="instansi"></textarea></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</div>	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+				<label>Nomor Telepon</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<span><input type="text" name="kontak" value="<?php echo($kontak)?>"
+ /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</div>		
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+			<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+				<label>Alamat</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<span><textarea name="alamat" ><?php echo($alamat)?></textarea></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</div>					
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+				<span><input type="submit" value="submit" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</div>			
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+		</form>
+\end_layout
+
+\begin_layout Plain Layout
+
+	</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<div id="frame-data-detail">
+\end_layout
+
+\begin_layout Plain Layout
+
+	<h3 class="label-data-pengiriman">Detail Order</h3>
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	<div id="frame-detail-order">
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		<table class="table-list">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<th class='kiri'>Nama lokasi</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<th class='tengah'>Tanggal</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<th class='kanan'>Total</th>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+			<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+				$subtotal = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+				foreach($keranjang AS $key => $value){	
+\end_layout
+
+\begin_layout Plain Layout
+
+					$lokasi_id = $key;
+\end_layout
+
+\begin_layout Plain Layout
+
+					$nama_lokasi = $value['nama_lokasi'];
+\end_layout
+
+\begin_layout Plain Layout
+
+					$harga = $value['harga'];
+\end_layout
+
+\begin_layout Plain Layout
+
+					$tanggal = $value['tanggal'];
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\end_layout
+
+\begin_layout Plain Layout
+
+					$total = $harga;
+\end_layout
+
+\begin_layout Plain Layout
+
+					$subtotal = $subtotal + $total;
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\end_layout
+
+\begin_layout Plain Layout
+
+					echo "<tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+							<td class='kiri'>$nama_lokasi</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+							<td class='tengah'>$tanggal</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+							<td class='kanan'>".rupiah($total)."</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+						</tr>";
+\end_layout
+
+\begin_layout Plain Layout
+
+				}
+\end_layout
+
+\begin_layout Plain Layout
+
+				echo "<tr>
+\end_layout
+
+\begin_layout Plain Layout
+
+						<td colspan='2' class='kanan'><b>Sub Total</b></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+						<td class='kanan'><b>".rupiah($subtotal)."</b></td>
+\end_layout
+
+\begin_layout Plain Layout
+
+					 </tr>";				
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\end_layout
+
+\begin_layout Plain Layout
+
+			?>
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+		</table>
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+	</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Login
+\end_layout
+
+\begin_layout Standard
+Halaman Login ini adalah halaman sebelum masuk kehalaman my_profile yang
+ berisi menu konfirmasi_pembayaran untuk User dan menu banner, kategori,
+ lokasi, user, data Penyewaan dan Konfirmasi Booking untuk Admin 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted26.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Login
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Script Program login.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if($user_id){
+\end_layout
+
+\begin_layout Plain Layout
+
+		header("location: ".BASE_URL);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+?>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<div id="container-user-akses">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	<form action="<?php echo BASE_URL."proses_login.php"; ?>" method="POST">
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+			$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+			if($notif == true){
+\end_layout
+
+\begin_layout Plain Layout
+
+				echo "<div class='notif'>Maaf, email atau password yang kamu masukan
+ tidak cocok</div>";
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		?>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<label>Email</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="text" name="email" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<label>Password</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="password" name="password" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="submit" value="Login" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	</form>
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Register
+\end_layout
+
+\begin_layout Standard
+Halaman Register ini adalah halaman dimana user dapat mendaftar agar dapat
+ login ke website dengan data diri pengguna.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted27.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Register
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Script Program register.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<div id="container-user-akses">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	<form action="<?php echo BASE_URL."proses_register.php"; ?>" method="POST">
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+			$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+			$nama_lengkap = isset($_GET['nama_lengkap']) ? $_GET['nama_lengkap']
+ : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+			$email = isset($_GET['email']) ? $_GET['email'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+			$phone = isset($_GET['phone']) ? $_GET['phone'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+			$alamat = isset($_GET['alamat']) ? $_GET['alamat'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\end_layout
+
+\begin_layout Plain Layout
+
+			if($notif == "require"){
+\end_layout
+
+\begin_layout Plain Layout
+
+				echo "<div class='notif'>Maaf, kamu harus melengkapi form dibawah ini</div>"
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+			}else if($notif == "password"){
+\end_layout
+
+\begin_layout Plain Layout
+
+				echo "<div class='notif'>Maaf, password yang kamu masukan tidak sama</div>";
+\end_layout
+
+\begin_layout Plain Layout
+
+			}else if($notif == "email"){
+\end_layout
+
+\begin_layout Plain Layout
+
+				echo "<div class='notif'>Maaf, email yang kamu masukan sudah terdaftar</div>
+";
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+		?>
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<label>Nama Lengkap</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="text" name="nama_lengkap" value="<?php echo $nama_lengkap;
+ ?>"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<label>Email</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="text" name="email" value="<?php echo $email; ?>" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<label>Nomor Telepon / Handphone</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="text" name="phone" value="<?php echo $phone; ?>" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<label>Alamat</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><textarea name="alamat"><?php echo $alamat; ?></textarea></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<label>Password</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="password" name="password" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<label>Re-type Password</label>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="password" name="re_password" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		<div class="element-form">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<span><input type="submit" value="Register" /></span>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</div>	
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	</form>
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman My_Profile Custumer
+\end_layout
+
+\begin_layout Standard
+Menu My_Profile ini adalah daftar menu yang dapat digunakan oleh user saat
+ melakukan konfirmasi booking 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted28.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman My_Profile Custumer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\tiny}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Script Program my_profile.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	if($user_id){
+\end_layout
+
+\begin_layout Plain Layout
+
+		$module = isset($_GET['module']) ? $_GET['module'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+		$action = isset($_GET['action']) ? $_GET['action'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+		$mode = isset($_GET['mode']) ? $_GET['mode'] : false;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}else{
+\end_layout
+
+\begin_layout Plain Layout
+
+		header("location: ".BASE_URL."index.php?page=login");
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<div id="bg-page-profile">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	<div id="menu-profile">
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		<ul>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+				if($level == "superadmin"){
+\end_layout
+
+\begin_layout Plain Layout
+
+			?>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<li>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<a <?php if($module == "kategori"){ echo "class='active'"; } ?> 
+\end_layout
+
+\begin_layout Plain Layout
+
+href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=list";
+ ?>">Kategori</a>
+\end_layout
+
+\begin_layout Plain Layout
+
+				</li>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<li>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<a <?php if($module == "Lokasi"){ echo "class='active'"; } ?> 
+\end_layout
+
+\begin_layout Plain Layout
+
+href="<?php echo BASE_URL."index.php?page=my_profile&module=lokasi&action=list";
+ ?>">Lokasi</a>
+\end_layout
+
+\begin_layout Plain Layout
+
+				</li>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<li>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<a <?php if($module == "penyewaan"){ echo "class='active'"; } ?> 
+\end_layout
+
+\begin_layout Plain Layout
+
+href="<?php echo BASE_URL."index.php?page=my_profile&module=penyewaan&action=list"
+; ?>">Data Penyewaan</a>
+\end_layout
+
+\begin_layout Plain Layout
+
+				</li>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<li>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<a <?php if($module == "user"){ echo "class='active'"; } ?> 
+\end_layout
+
+\begin_layout Plain Layout
+
+href="<?php echo BASE_URL."index.php?page=my_profile&module=user&action=list";
+ ?>">User</a>
+\end_layout
+
+\begin_layout Plain Layout
+
+				</li>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<li>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<a <?php if($module == "banner"){ echo "class='active'"; } ?> 
+\end_layout
+
+\begin_layout Plain Layout
+
+href="<?php echo BASE_URL."index.php?page=my_profile&module=banner&action=list";
+ ?>">Banner</a>
+\end_layout
+
+\begin_layout Plain Layout
+
+				</li>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+				}
+\end_layout
+
+\begin_layout Plain Layout
+
+			?>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<li>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<a <?php if($module == "pesanan"){ echo "class='active'"; } ?> 
+\end_layout
+
+\begin_layout Plain Layout
+
+href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=list";
+ ?>">Konfirmasi Booking</a>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</li>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</ul>
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	<div id="profile-content">
+\end_layout
+
+\begin_layout Plain Layout
+
+		<?php
+\end_layout
+
+\begin_layout Plain Layout
+
+			$file = "module/$module/$action.php";
+\end_layout
+
+\begin_layout Plain Layout
+
+			if(file_exists($file)){
+\end_layout
+
+\begin_layout Plain Layout
+
+				include_once($file);
+\end_layout
+
+\begin_layout Plain Layout
+
+			}else{
+\end_layout
+
+\begin_layout Plain Layout
+
+				echo "<h3>Maaf, halaman tersebut tidak ditemukan</h3>";
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+		?>
+\end_layout
+
+\begin_layout Plain Layout
+
+	</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman My_Profile Superadmin
+\end_layout
+
+\begin_layout Standard
+Menu My_Profile ini adalah daftar menu yang dapat digunakan oleh admin saat
+ melakukan konfirmasi booking, menambah kategori, lokasi, banner dan user
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted29.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman My_Profile Superadmin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Cara Pemesanan
+\end_layout
+
+\begin_layout Standard
+Halaman ini berisi tentang informasi tata cara pemesanan yang ada di dalam
+ website reservasi ragunan.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted30.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Cara Pemesanan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Menu Kategori
+\end_layout
+
+\begin_layout Standard
+Menu kategori ini adalah menu dimana Superadmin dapat menambah daftar kategori
+ yang ada didalam website.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted31.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Menu Kategori
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pada menu ini Admin dapat menekan tombol tambah dan melanjutkan ke form
+ tambah kategori.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted32.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Form Kategori
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Menu Lokasi
+\end_layout
+
+\begin_layout Standard
+Menu Lokasi ini adalah menu dimana Superadmin dapat menambah daftar Lokasi
+ yang ada didalam website.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted33.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Menu Lokasi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pada menu ini Admin dapat menekan tombol tambah dan melanjutkan ke form
+ tambah lokasi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted34.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Form Tambah Lokasi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Menu DataPenyewaan
+\end_layout
+
+\begin_layout Standard
+Menu Data Penyewaan adalah menu untuk Admin melihat daftar lokasi melalui
+ tanggal yang dipilih.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted35.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Menu Data Penyewaan
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Menu User
+\end_layout
+
+\begin_layout Standard
+Menu User adalah menu data user yang telah terdaftar di dalam database website
+ didalam menu user kita dapat mengubah data user dengan menekan tombol edit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted36.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Menu User
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted37.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Menu User Form
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Menu Banner
+\end_layout
+
+\begin_layout Standard
+Menu Banner ini adalah menu dimana Superadmin dapat menambah daftar Banner
+ yang ada didalam website.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted38.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Menu Banner
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted39.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Menu Banner Form
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Halaman Menu Konfirmasi Booking
+\end_layout
+
+\begin_layout Standard
+Menu Konfirmasi Booking ini adalah menu dimana Superadmin dapat meng-update
+ status booking dari daftar reservasi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted40.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Menu Konfirmasi Booking
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pasted41.emf
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Halaman Menu Konfirmasi Booking Update Status
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cara Mengupload Website ke Hosting
+\end_layout
+
+\begin_layout Enumerate
+Kunjungi Official Site Idhostinger.com.
+ Pertama harus login terlebih dahulu menggunakan Email dan Password yang
+ sudah di buat di Idhostinger.
+ Apabila belum punya silahkan register terlebih dahulu 
+\end_layout
+
+\begin_layout Enumerate
+Sesudah login masuk kedalam Control Panel Hosting Idhostinger (Cpanel Hosting).
+ Di dalam navigasi menu.
+ Pilih Hosting kemudian pilih Order Hosting Baru.Kemudian dihadapkan dengan
+ 3 jenis paket hosting, penulis memilih subdomain gratis.
+ Lalu Klik Order.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Kemudian gunakan subdomain yang sudah tersedia atau bawaan dari Idhostinger.
+ Buat juga password untuk aplikasi web kita.
+ Kemudian Pilih Lanjutkan.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Di Halaman Ringkasan Order ketikkan kode Captcha atau kode verifikasi bukan
+ robot, beserta checklist atau centang tulisan persetujuan kemudian klik
+ Order.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Di halaman Akun Hosting subdomain yang sudah dibuat tadi sudah selesai dibuat.
+ Klik pada nama subdomain yang sudah dibuat tadi lalu klik tombol kelola.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Klik tombol Database MySQL untuk membuat nama database, nama user, dan password
+ database.
+ Isikan pada kolom yang tersedia lalu klik Buat.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Masuk Kembali kehalaman Cpanel Hosting dari Subdomain dibuat.
+ Scroll ke bawah pada menu Database.
+ Klik PhpMyAdmin untuk mengupload file database sql yang sebelumnya sudah
+ dibuat di localhost.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Kembali lagi ke halaman Cpanel Hosting 
+\end_layout
+
+\begin_layout Enumerate
+Setelah masuk ke halaman cpanel hosting, Kemudian pilih File Manajer 2.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Upload file aplikasi web nya dalam bentuk .zip kemudian klik icon centang
+ warna hijau.
+ Jika proses upload sudah selesai klik icon kembali warna biru.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Jika aplikasi menggunakan database sql, klik edit pada directory file koneksi.php.
+ sesuaikanlah dengan nama server database, user dan password yang sudah
+ kita buat.
+ Kemudian anda klik icon save.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Menghapus file default.php yang ada di dalam folder public_html.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Website sudah bisa diakses di url www.slariant.id 
+\end_layout
+
+\begin_layout Chapter
+PENUTUP
+\end_layout
+
+\begin_layout Section
+Kesimpulan 
+\end_layout
+
+\begin_layout Standard
+Penulis telah berhasil membuat aplikasi website Reservasi Ragunan menggunakan
+ Sublime Text dan XAMPP.
+ Dengan adanya website ini dapat memudahkan pengguna yang ingin melakukan
+ reservasi di Taman Margasatwa Ragunan.
+ Dengan disediakan menu lengkap yang ada didalamnya yang akan lebih memudahkan
+ bagi admin maupun user untuk mendapatkan informasi terkait reservasi di
+ Taman Margasatwa Ragunan.
+ Website ini juga sangat cocok bagi yang memiliki mobilitas tinggi.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+bibname{DAFTAR PUSTAKA}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "biblio"
+options "apalike"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+LAMPIRAN 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{LAMPIRAN}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+LAMPIRAN 2
+\end_layout
+
+\end_body
+\end_document
