@@ -19,6 +19,7 @@ window.swal = require('sweetalert2');
 
 require('bootstrap-validator');
 
+require('jquery-jscroll');
 
 
 

@@ -22,7 +22,7 @@ class CariBarenganController extends Controller
     public function index(Request $request)
     {  
         $barengan = Barengan::orderBy('created_at','desc')->get();
-        $barengancomments = BarenganComment::all();
+        // $barengancomments = BarenganComment::all();
 
         // if($request->ajax()) {
         //     return [
@@ -31,7 +31,7 @@ class CariBarenganController extends Controller
         //         ];
         // }
 
-        return view('caribarengan',compact('barengan','barengancomments'));
+        return view('caribarengan',compact('barengan'));
     }
     
 
@@ -70,6 +70,7 @@ class CariBarenganController extends Controller
         $caribarengan->akhir = $request['akhir'];
         $caribarengan->contact = $request['contact'];
         $caribarengan->content = $request['content'];
+        return $caribarengan;
         $caribarengan->update();
 
         Session::flash('info', 'Kiriman Rubah');

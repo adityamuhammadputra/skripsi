@@ -21,8 +21,18 @@ class HomeController extends Controller
 
     public function index()
     {
-        $datapost = Post::orderBy('created_at','desc')->get();
+        // $datapost = Post::orderBy('created_at','desc')->get();
+        // $datapost = Post::where('user_id', Auth::id())->paginate(5);
+        // $datapost = Post::all();
+        // $datapost = Post::all()->paginate(10);
+        $datapost = Post::latest()->paginate(10);
+
+
+        // return $datapost;
+
         $comments = PostComment::latest()->paginate(1);
+        // return $comments;
+       
 
         // $datapost = Post::latest()->paginate(10);
 

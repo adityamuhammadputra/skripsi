@@ -208,7 +208,10 @@
 </div>
 
 </body>
+
+
 <script src="{{asset('js/app.js')}}"></script>
+
 <script>
     function fungsiklik(){
       // $('#search').hide();
@@ -247,5 +250,7 @@
       });
      });
 </script>
+
 <script>@stack('scripts')</script>
+<script>@stack('script-src')</script>
 </html>

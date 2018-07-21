@@ -4584,7 +4584,7 @@ return hooks;
 
 
 var bind = __webpack_require__(127);
-var isBuffer = __webpack_require__(147);
+var isBuffer = __webpack_require__(148);
 
 /*global toString:true*/
 
@@ -4922,7 +4922,7 @@ module.exports = function(module) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(1);
-var normalizeHeaderName = __webpack_require__(150);
+var normalizeHeaderName = __webpack_require__(151);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -5012,7 +5012,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(149)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(150)))
 
 /***/ }),
 /* 4 */
@@ -27084,12 +27084,12 @@ module.exports = function bind(fn, thisArg) {
 
 
 var utils = __webpack_require__(1);
-var settle = __webpack_require__(151);
-var buildURL = __webpack_require__(153);
-var parseHeaders = __webpack_require__(154);
-var isURLSameOrigin = __webpack_require__(155);
+var settle = __webpack_require__(152);
+var buildURL = __webpack_require__(154);
+var parseHeaders = __webpack_require__(155);
+var isURLSameOrigin = __webpack_require__(156);
 var createError = __webpack_require__(129);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(156);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(157);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -27186,7 +27186,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(157);
+      var cookies = __webpack_require__(158);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -27270,7 +27270,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(152);
+var enhanceError = __webpack_require__(153);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -27331,7 +27331,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(133);
-module.exports = __webpack_require__(166);
+module.exports = __webpack_require__(167);
 
 
 /***/ }),
@@ -27348,7 +27348,7 @@ module.exports = __webpack_require__(166);
 __webpack_require__(134);
 
 __webpack_require__(136);
-__webpack_require__(165);
+__webpack_require__(166);
 
 // window.Vue = require('vue');
 
@@ -29849,13 +29849,15 @@ window.swal = __webpack_require__(143);
 
 __webpack_require__(144);
 
+__webpack_require__(145);
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(145);
+window.axios = __webpack_require__(146);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -68683,10 +68685,253 @@ if (typeof window !== 'undefined' && window.Sweetalert2){  window.swal = window.
 /* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(146);
+/*!
+ * jScroll - jQuery Plugin for Infinite Scrolling / Auto-Paging
+ * @see @link{http://jscroll.com}
+ *
+ * @copyright 2011-2017, Philip Klauzinski
+ * @license Dual licensed under the MIT and GPL Version 2 licenses.
+ * @author Philip Klauzinski (http://webtopian.com)
+ * @version 2.3.9
+ * @requires jQuery v1.4.3+
+ * @preserve
+ * @Supports AMD pattern
+ */
+(function($, factory) {
+    'use strict';
+    if (true) {
+        return factory($);
+    } else {
+        window.jScroll = factory($);
+    }
+})(jQuery || null, function($) {
+
+    'use strict';
+
+    // Define the jscroll namespace and default settings
+    $.jscroll = {
+        defaults: {
+            debug: false,
+            autoTrigger: true,
+            autoTriggerUntil: false,
+            loadingHtml: '<small>Loading...</small>',
+            loadingFunction: false,
+            padding: 0,
+            nextSelector: 'a:last',
+            contentSelector: '',
+            pagingSelector: '',
+            callback: false
+        }
+    };
+
+    // Constructor
+    var jScroll = function($e, options) {
+
+        // Private vars and methods
+        var _data = $e.data('jscroll'),
+            _userOptions = (typeof options === 'function') ? { callback: options } : options,
+            _options = $.extend({}, $.jscroll.defaults, _userOptions, _data || {}),
+            _isWindow = ($e.css('overflow-y') === 'visible'),
+            _$next = $e.find(_options.nextSelector).first(),
+            _$window = $(window),
+            _$body = $('body'),
+            _$scroll = _isWindow ? _$window : $e,
+            _nextHref = $.trim(_$next.attr('href') + ' ' + _options.contentSelector),
+
+            // Check if a loading image is defined and preload
+            _preloadImage = function() {
+                var src = $(_options.loadingHtml).filter('img').attr('src');
+                if (src) {
+                    var image = new Image();
+                    image.src = src;
+                }
+            },
+
+            // Wrap inner content, if it isn't already
+            _wrapInnerContent = function() {
+                if (!$e.find('.jscroll-inner').length) {
+                    $e.contents().wrapAll('<div class="jscroll-inner" />');
+                }
+            },
+
+            // Find the next link's parent, or add one, and hide it
+            _nextWrap = function($next) {
+                var $parent;
+                if (_options.pagingSelector) {
+                    $next.closest(_options.pagingSelector).hide();
+                } else {
+                    $parent = $next.parent().not('.jscroll-inner,.jscroll-added').addClass('jscroll-next-parent').hide();
+                    if (!$parent.length) {
+                        $next.wrap('<div class="jscroll-next-parent" />').parent().hide();
+                    }
+                }
+            },
+
+            // Remove the jscroll behavior and data from an element
+            _destroy = function() {
+                return _$scroll.unbind('.jscroll')
+                    .removeData('jscroll')
+                    .find('.jscroll-inner').children().unwrap()
+                    .filter('.jscroll-added').children().unwrap();
+            },
+
+            // Observe the scroll event for when to trigger the next load
+            _observe = function() {
+                if ($e.is(':visible')) {
+                    _wrapInnerContent();
+                    var $inner = $e.find('div.jscroll-inner').first(),
+                        data = $e.data('jscroll'),
+                        borderTopWidth = parseInt($e.css('borderTopWidth'), 10),
+                        borderTopWidthInt = isNaN(borderTopWidth) ? 0 : borderTopWidth,
+                        iContainerTop = parseInt($e.css('paddingTop'), 10) + borderTopWidthInt,
+                        iTopHeight = _isWindow ? _$scroll.scrollTop() : $e.offset().top,
+                        innerTop = $inner.length ? $inner.offset().top : 0,
+                        iTotalHeight = Math.ceil(iTopHeight - innerTop + _$scroll.height() + iContainerTop);
+
+                    if (!data.waiting && iTotalHeight + _options.padding >= $inner.outerHeight()) {
+                        //data.nextHref = $.trim(data.nextHref + ' ' + _options.contentSelector);
+                        _debug('info', 'jScroll:', $inner.outerHeight() - iTotalHeight, 'from bottom. Loading next request...');
+                        return _load();
+                    }
+                }
+            },
+
+            // Check if the href for the next set of content has been set
+            _checkNextHref = function(data) {
+                data = data || $e.data('jscroll');
+                if (!data || !data.nextHref) {
+                    _debug('warn', 'jScroll: nextSelector not found - destroying');
+                    _destroy();
+                    return false;
+                } else {
+                    _setBindings();
+                    return true;
+                }
+            },
+
+            _setBindings = function() {
+                var $next = $e.find(_options.nextSelector).first();
+                if (!$next.length) {
+                    return;
+                }
+                if (_options.autoTrigger && (_options.autoTriggerUntil === false || _options.autoTriggerUntil > 0)) {
+                    _nextWrap($next);
+                    var scrollingBodyHeight = _$body.height() - $e.offset().top,
+                        scrollingHeight = ($e.height() < scrollingBodyHeight) ? $e.height() : scrollingBodyHeight,
+                        windowHeight = ($e.offset().top - _$window.scrollTop() > 0) ? _$window.height() - ($e.offset().top - $(window).scrollTop()) : _$window.height();
+                    if (scrollingHeight <= windowHeight) {
+                        _observe();
+                    }
+                    _$scroll.unbind('.jscroll').bind('scroll.jscroll', function() {
+                        return _observe();
+                    });
+                    if (_options.autoTriggerUntil > 0) {
+                        _options.autoTriggerUntil--;
+                    }
+                } else {
+                    _$scroll.unbind('.jscroll');
+                    $next.bind('click.jscroll', function() {
+                        _nextWrap($next);
+                        _load();
+                        return false;
+                    });
+                }
+            },
+
+            // Load the next set of content, if available
+            _load = function() {
+                var $inner = $e.find('div.jscroll-inner').first(),
+                    data = $e.data('jscroll');
+
+                data.waiting = true;
+                $inner.append('<div class="jscroll-added" />')
+                    .children('.jscroll-added').last()
+                    .html('<div class="jscroll-loading" id="jscroll-loading">' + _options.loadingHtml + '</div>')
+                    .promise()
+                    .done(function() {
+                        if (_options.loadingFunction) {
+                            _options.loadingFunction();
+                        }
+                    });
+
+                return $e.animate({scrollTop: $inner.outerHeight()}, 0, function() {
+                    var nextHref = data.nextHref;
+                    $inner.find('div.jscroll-added').last().load(nextHref, function(r, status) {
+                        if (status === 'error') {
+                            return _destroy();
+                        }
+                        var $next = $(this).find(_options.nextSelector).first();
+                        data.waiting = false;
+                        data.nextHref = $next.attr('href') ? $.trim($next.attr('href') + ' ' + _options.contentSelector) : false;
+                        $('.jscroll-next-parent', $e).remove(); // Remove the previous next link now that we have a new one
+                        _checkNextHref();
+                        if (_options.callback) {
+                            _options.callback.call(this, nextHref);
+                        }
+                        _debug('dir', data);
+                    });
+                });
+            },
+
+            // Safe console debug - http://klauzinski.com/javascript/safe-firebug-console-in-javascript
+            _debug = function(m) {
+                if (_options.debug && typeof console === 'object' && (typeof m === 'object' || typeof console[m] === 'function')) {
+                    if (typeof m === 'object') {
+                        var args = [];
+                        for (var sMethod in m) {
+                            if (typeof console[sMethod] === 'function') {
+                                args = (m[sMethod].length) ? m[sMethod] : [m[sMethod]];
+                                console[sMethod].apply(console, args);
+                            } else {
+                                console.log.apply(console, args);
+                            }
+                        }
+                    } else {
+                        console[m].apply(console, Array.prototype.slice.call(arguments, 1));
+                    }
+                }
+            };
+
+        // Initialization
+        $e.data('jscroll', $.extend({}, _data, {initialized: true, waiting: false, nextHref: _nextHref}));
+        _wrapInnerContent();
+        _preloadImage();
+        _setBindings();
+
+        // Expose API methods via the jQuery.jscroll namespace, e.g. $('sel').jscroll.method()
+        $.extend($e.jscroll, {
+            destroy: _destroy
+        });
+        return $e;
+    };
+
+    // Define the jscroll plugin method and loop
+    $.fn.jscroll = function(m) {
+        return this.each(function() {
+            var $this = $(this),
+                data = $this.data('jscroll');
+
+            // Instantiate jScroll on this element if it hasn't been already
+            if (data && data.initialized) {
+                return;
+            }
+            jScroll($this, m);
+        });
+    };
+
+    return jScroll;
+
+});
+
 
 /***/ }),
 /* 146 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(147);
+
+/***/ }),
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68694,7 +68939,7 @@ module.exports = __webpack_require__(146);
 
 var utils = __webpack_require__(1);
 var bind = __webpack_require__(127);
-var Axios = __webpack_require__(148);
+var Axios = __webpack_require__(149);
 var defaults = __webpack_require__(3);
 
 /**
@@ -68729,14 +68974,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(131);
-axios.CancelToken = __webpack_require__(163);
+axios.CancelToken = __webpack_require__(164);
 axios.isCancel = __webpack_require__(130);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(164);
+axios.spread = __webpack_require__(165);
 
 module.exports = axios;
 
@@ -68745,7 +68990,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports) {
 
 /*!
@@ -68772,7 +69017,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68780,8 +69025,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(3);
 var utils = __webpack_require__(1);
-var InterceptorManager = __webpack_require__(158);
-var dispatchRequest = __webpack_require__(159);
+var InterceptorManager = __webpack_require__(159);
+var dispatchRequest = __webpack_require__(160);
 
 /**
  * Create a new instance of Axios
@@ -68858,7 +69103,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -69048,7 +69293,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69067,7 +69312,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69100,7 +69345,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69128,7 +69373,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69203,7 +69448,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69263,7 +69508,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69338,7 +69583,7 @@ module.exports = (
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69381,7 +69626,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69441,7 +69686,7 @@ module.exports = (
 
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69500,18 +69745,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(1);
-var transformData = __webpack_require__(160);
+var transformData = __webpack_require__(161);
 var isCancel = __webpack_require__(130);
 var defaults = __webpack_require__(3);
-var isAbsoluteURL = __webpack_require__(161);
-var combineURLs = __webpack_require__(162);
+var isAbsoluteURL = __webpack_require__(162);
+var combineURLs = __webpack_require__(163);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -69593,7 +69838,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69620,7 +69865,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69641,7 +69886,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69662,7 +69907,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69726,7 +69971,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69760,7 +70005,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -70268,7 +70513,7 @@ function init_sidebar() {
 });
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

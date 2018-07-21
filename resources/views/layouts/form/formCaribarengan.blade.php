@@ -2,7 +2,7 @@
 <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <form method="post" data-toogle="validator" class="form-horzontal" id="form">
+      <form method="post" data-toogle="validator" class="form-horzontal" id="form" enctype="multipart/form-data">
         {{csrf_field()}}
         {{method_field ('POST')}} 
         <div class="modal-header">

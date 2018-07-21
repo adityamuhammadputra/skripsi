@@ -89,6 +89,8 @@ class InfoController extends Controller
     {
         $info = Info::findOrFail($id);
 
+        // return $info->images;
+
         if($info->images != null)
         {
             unlink(public_path($info->images));
