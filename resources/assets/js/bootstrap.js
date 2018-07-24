@@ -14,6 +14,7 @@ try {
 } catch (e) {}
 
 require('admin-lte');
+require('iCheck');
 require('fullcalendar');
 window.swal = require('sweetalert2');
 
@@ -94,8 +95,14 @@ jQuery(document).ready(function () {
         eventColor: '#378006',
         loading: function (bool) {
             jQuery('#loading').toggle(bool);
+        },
+
+        dayClick: function(date) {
+            alert('clicked ' + date.format());
         }
     });
+
+
 
 });
 

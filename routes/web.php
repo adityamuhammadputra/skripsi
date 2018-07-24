@@ -56,6 +56,8 @@ Route::resource('/singgah','SinggahController')->except(['show','create']);
 Route::resource('/singgah/{id}/comment', 'SinggahCommentController')->only([
     'store'
 ])->names(['store'=>'singgahcomment.store']);
+Route::resource('/singgah/like','SinggahLikeController')->only(['store','show']);
+
 Route::resource('/singgahcomment', 'SinggahCommentController')->only([
     'destroy'
 ])->names(['destroy' => 'singgahcomment.destroy']);

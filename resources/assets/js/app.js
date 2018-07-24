@@ -11,6 +11,7 @@ require('./bootstrap');
 require('./activemenu');
 
 
+
 // window.Vue = require('vue');
 
 /**

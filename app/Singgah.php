@@ -17,4 +17,9 @@ class Singgah extends Model
     {
         return $this->hasMany(singgahcomment::class);
     }
+
+    public function singgahlike()
+    {
+        return $this->hasMany(SinggahLikes::class);
+    }
 }

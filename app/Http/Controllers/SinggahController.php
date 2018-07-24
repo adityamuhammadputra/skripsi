@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Singgah;
 use App\SinggahComment;
+use App\SinggahLikes;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Session;
@@ -20,8 +21,19 @@ class SinggahController extends Controller
     
     public function index()
     {
-        $singgah = Singgah::orderBy('created_at','desc')->get();
-        $singgahcomment = SinggahComment::all();
+        // $singgah = Singgah::orderBy('created_at','desc')->get();
+        // $singgahcomment = SinggahComment::all();
+
+        $singgah = Singgah::with('singgahcomment','singgahlike')->withCount('singgahlike')->orderBy('singgahlike_count', 'desc')->get();
+        // $singgah = Singgah::with('singgahcomment','singgahlike')->orderBy('singgahlike','singgah_id')->get();
+        // $singgah = singgah::->paginate(10);
+        // Order::with('company')->get()->sortBy('company.name');
+
+       
+        // $count = SinggahLikes::where('likes', 1)->where('singgah_id',1)->count();
+
+        // return $count;
+        // return $singgah;
 
         // return $singgahcomment;
         // if($request->ajax()) {
@@ -31,7 +43,7 @@ class SinggahController extends Controller
         //         ];
         // }
 
-        return view('singgah',compact('singgah','singgahcomment'));
+        return view('singgah',compact('singgah'));
     }
 
     public function store(Request $request)

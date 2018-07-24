@@ -4,7 +4,8 @@
 <div class="row">
   <div class="hidden-xs hidden-sm">
     <div class="col-md-4">
-      <div id='calendar'></div>
+      {{--  <div id='calendar'></div>  --}}
+      
     </div>
   </div>
   <div class="col-md-8">
@@ -53,11 +54,15 @@
               <div class="box-header with-border" style="padding:0px;">
                 <a class="label label-primary" title="Kota"><i class="fa fa-map-marker"></i> {{$d->lokasi }}</a>
                 <a class="label label-primary" title="Kontak"><i class="fa fa-phone-square"></i> {{$d->contact }}</a>
-  
-                <div class="pull-right">
-                  <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> 10
-                  </a>
-                </div>
+                  <table class="pull-right">
+                    <tr>
+                        <td class="mailbox-star" data-value="{{$d->id}}"><i class="fa fa-star-o text-red"></i> </td> 
+                        <td><a onclick="showlike({{ $d->id }})" id="coba">{{ $d->singgahlike->count() }} Suka</a> </td>
+                        @include('layouts.form.formLike')
+
+                        <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->singgahcomment->count() }}</td>
+                    </tr>
+                  </table>
               </div>
               <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
@@ -101,6 +106,63 @@
 @include('layouts.form.formSinggah')
 
 @push('scripts')
+
+       $(document).on('click', ".mailbox-star", function (e) {
+        e.preventDefault();
+        var singgah_id = $(this).data('value');
+          $.ajaxSetup({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+          });
+          $.ajax({
+          url: "{{ url('singgah/like') }}",
+          type: "POST",
+          data: {singgah_id:singgah_id},
+            success: function (data) {
+              $("#contact-table").load(" #contact-table");  
+              $('div.flash-message').html(data);
+            },
+            error: function () {
+              alert('Oops! error!');
+            }
+          });
+
+        var $this = $(this).find("i");
+        var fa = $this.hasClass("fa");
+        if (fa) {
+          $this.toggleClass("fa-star");
+          $this.toggleClass("fa-star-o");
+        }
+      });
+
+    function showlike(id)
+    {
+      $.ajax({
+        url: "{{ url('singgah/like')}}/" + id, //menampilkan data dari controller edit
+        type: "GET",
+        dataType: "JSON",
+        success: function (data) {
+          $('#modal-like').modal('show');
+          $('.modal-title').text('Menyukai ini');
+
+          var arrayLength = data.length;
+            var d = [];
+            $("#modal-like .modal-body").html(""); 
+            var newRowContent = [];
+            for (var i = 0; i < arrayLength; i++) {
+                newRowContent = "<tr><td><img class='img-circle' width='20px' src='{{ asset('storage') }}/"+ data[i].user.avatar + "'></td><td> "+ data[i].user.name +" </td><tr>";
+            $("#modal-like .modal-body").append(newRowContent); 
+            }
+        },
+        error: function () {
+          alert("Data tidak ada");
+        }
+  
+      });
+    }
+
+    
     //script caribarengan
     function addForm() {
       save_method = "add";
