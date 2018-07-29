@@ -47,10 +47,7 @@ Route::resource('/caribarengan/{id}/comment', 'CariBarenganCommentController')->
 Route::resource('/caribarengancomment', 'CariBarenganCommentController')->only([
     'destroy'
 ])->names(['destroy' => 'caribarengancomment.destroy']);
-Route::get('/searchBarengan',function (Request $request){
-    $result = App\Barengan::search($request->search)->get();
-    return view('result.resultBarengan',compact('result'));
-});
+Route::resource('/caribarengan/gabung','CariBarenganGabungController')->only(['store','show']);
 
 Route::resource('/singgah','SinggahController')->except(['show','create']);
 Route::resource('/singgah/{id}/comment', 'SinggahCommentController')->only([
@@ -65,6 +62,8 @@ Route::resource('/singgahcomment', 'SinggahCommentController')->only([
 Route::resource('/info', 'InfoController')->except(['create']);
 Route::resource('/info/{id}/comment','InfoCommentController')->only(['store']);
 Route::resource('/infocomment','InfoCommentController')->only(['destroy']);
+Route::resource('/info/like','InfoLikeController')->only(['store','show']);
+
 
 Route::get('/calendar', 'CalendarController@index')->name('calendar');
 Route::get('/loadCalendar', 'CalendarController@loadData')->name('calendar.load');

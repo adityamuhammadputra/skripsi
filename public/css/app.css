@@ -19081,6 +19081,11 @@ h1 {
     right: 0px;
   }
 
+  .box-hp {
+    float: left !important;
+    margin-top: 10px;
+  }
+
   .custom-search > input[type=text] {
     position: relative;
     left: 0px;
@@ -19373,8 +19378,18 @@ select:focus {
   box-shadow: unset;
 }
 
-.btn-nopadding {
+.btn-nopadding,
+.btn-nopadding a {
   padding: 0px;
+  color: #97a0b3;
+}
+
+.btn-nopadding a {
+  text-decoration: none;
+}
+
+.btn-nopadding:hover {
+  color: #97a0b3;
 }
 
 .img-info {

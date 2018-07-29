@@ -14,13 +14,14 @@
           <button class="btn btn-primary pull-right" onclick="addForm()"> <i class="fa fa-plus"></i> </button>          
         </h3>
         <div class="box-tools pull-right">
-          <form class="custom-search navbar-form navbar-left" method="GET" action="/searchBarengan">
-            <input type="text" name="search" placeholder="Cari Post ... ">
+          <form method="get" class="custom-search navbar-form navbar-left">
+            <input class="form-control" type="text" id="q" name="q" value="{{ request()->get('q') }}" placeholder="Cari Barengan">
           </form>
         </div>
       </div>
     <div>
     <div id="contact-table">
+      @if($barengan->count() > 0)
       @foreach($barengan as $d)    
       <div class="box box2">
         <div class="box-body box-body-custom">
@@ -49,14 +50,23 @@
               {{ $d->content }}            
             </p>
             <div class="box box-default box-costum-collapse">
-              <div class="box-header with-border" style="padding:0px;">
+              <div class="box-header with-border " style="padding:0px;">
                 <a class="label label-primary" title="Tempat Meeting Point"><i class="fa fa-map-marker"></i> {{$d->mepo }}</a>
                 <a class="label label-primary" title="Waktu"><i class="fa fa-calendar"></i> {{$d->mulai }} - {{$d->akhir }}</a>
-  
-                <div class="pull-right">
-                  <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> 0
-                  </a>
-                </div>
+                <table class="pull-right box-hp">
+                  <tr>                      
+                      <td class="mailbox-star" data-value="{{$d->id}}">
+                        @if(!$d->barengangabungcek->isEmpty())
+                          <i class="fa fa-user-plus text-red"></i> 
+                        @else
+                          <i class="fa fa-user-plus"></i> 
+                        @endif
+                      </td> 
+                      <td class="btn-nopadding btn btn-box-tool"><a onclick="showgabung({{ $d->id }})">{{ $d->barengangabung->count() }} Bergabung</a> </td>
+                        @include('layouts.form.formLike')
+                      <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->barengancomments->count() }} Komentar</td>
+                  </tr>
+                </table>
               </div>
               <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
@@ -94,12 +104,46 @@
         </div>
       </div>      
       @endforeach
+      @else
+      <div class="box box2">
+          <div class="box-body box-body-custom text-center">
+              <h3><i class="fa fa-warning text-info"></i> Data yang anda cari tidak ada <i class="fa fa-warning text-info"></i></h3>
+              <p>Silahkan masukan kata kunci lain</p>
+          </div>
+      </div>
+      @endif
+
     </div>
   </div>
 </div>
 @include('layouts.form.formCaribarengan')
 
 @push('scripts')
+    //gabung barengan
+    $(document).on('click', ".mailbox-star", function (e) {
+      e.preventDefault();
+      var barengan_id = $(this).data('value');
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        $.ajax({
+        url: "{{ url('caribarengan/gabung') }}",
+        type: "POST",
+        data: {barengan_id:barengan_id},
+          success: function (data) {
+            $("#contact-table").load(" #contact-table");  
+            $('div.flash-message').html(data);
+          },
+          error: function () {
+            alert('Oops! error!');
+          }
+        });
+
+     
+    });
+
     //script caribarengan
     function addForm() {
       save_method = "add";

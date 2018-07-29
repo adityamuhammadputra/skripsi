@@ -10,12 +10,12 @@
       <div class="box-header with-border">
           <h3 class="box-title">Beranda</h3>
           <div class="box-tools pull-right">
-              <form class="custom-search navbar-form navbar-left">
-                  <input type="text" name="search" placeholder="Cari Post ... ">
+              <form method="get" class="custom-search navbar-form navbar-left">
+                <input class="form-control" type="text" id="q" name="q" value="{{ request()->get('q') }}" placeholder="Cari Kiriman">
               </form>
         </div>
       </div>
-      <div id="modal-form">
+      <div id="modal-form" style="padding:10px;">
         <form method="POST">
           {{ csrf_field() }}{{ method_field('POST') }}
           <input type="hidden" name="id" id="id">          
@@ -34,6 +34,7 @@
       </div>
       <!-- /.box-header -->
       <div id="contact-table" class="infinite-scroll">
+        @if($datapost->count() > 0)
         @foreach($datapost as $d)    
         <div class="box box2">
           <div class="box-body box-body-custom">
@@ -64,12 +65,8 @@
               </p>
               <div class="box box-default box-costum-collapse">
                 <div class="box-header with-border" style="padding:0px;">
-                  
-    
                   <div class="pull-right">
-                    <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> 0
-                    </a>
-                    <a href="#" class="btn btn-box-tool"><i class="fa fa-star"></i> 5</a>
+                    <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> {{ $d->comments->count() }} Komentar</a>
                   </div>
                 </div>
                 <div class="box-body" style="padding:0px;">
@@ -108,6 +105,14 @@
           </div>
         </div>      
         @endforeach
+        @else
+        <div class="box box2">
+            <div class="box-body box-body-custom text-center">
+                <h3><i class="fa fa-warning text-info"></i> Data yang anda cari tidak ada <i class="fa fa-warning text-info"></i></h3>
+                <p>Silahkan masukan kata kunci lain</p>
+            </div>
+        </div>
+        @endif
         {{ $datapost->links() }}
       </div>
 

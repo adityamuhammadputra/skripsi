@@ -5,7 +5,37 @@
 <div class="row">
   <div class="hidden-xs hidden-sm">
     <div class="col-md-4">
-      <div id='calendar'></div>
+      <ul class="timeline timeline-inverse">
+        <!-- timeline time label -->
+        <li class="time-label">
+              <span class="bg-aqua">
+                Kiriman Anda
+              </span>
+        </li>
+        @foreach($datasaya as $ds)  
+        <li>
+          <i class="{{ $ds->icon }}"></i>
+          <div class="timeline-item" style="background:white;">
+            <span class="time"><i class="fa fa-clock-o"></i> {{ $ds->created_at->diffForHumans() }} </span>
+            <h3 class="timeline-header"><a href="{{ action('InfoController@show', $ds) }}">{{ $ds->title}}</a></h3>
+            <div class="timeline-body">
+              <p class="text-justify">
+                  {{ str_limit(strip_tags($ds->content), 300) }}
+                  @if (strlen(strip_tags($ds->content)) > 300)
+                    <a href="{{ action('InfoController@show', $ds) }}" ><i class="readmore"> Lanjutkan Membaca ...</i></a>
+                  @endif
+              </p>
+              
+            </div>
+            
+          </div>
+        </li>
+        @endforeach
+        <li>
+          <i class="fa fa-clock-o bg-gray"></i>
+        </li>
+        
+      </ul>
     </div>
   </div>
   <div class="col-md-8">
@@ -54,10 +84,21 @@
             <div class="box box-default box-costum-collapse">
               <div class="box-header with-border" style="padding:0px;">
                 <a class="label label-primary" title="Tempat Meeting Point"><i class="fa fa-map-marker"></i> {{$d->category->name }}</a>
-                <div class="pull-right">
-                  <a class="btn-nopadding btn btn-box-tool" href="#"><i class="fa fa-comment"></i> 10
-                  </a>
-                </div>
+                <table class="pull-right box-hp">
+                  <tr>
+                      <td class="mailbox-star" data-value="{{$d->id}}">
+                        @if(!$d->likecek->isEmpty())
+                          <i class="fa fa-star text-red"></i> 
+                        @else
+                          <i class="fa fa-star"></i> 
+                        @endif
+                      </td> 
+                      <td class="btn-nopadding btn btn-box-tool"><a onclick="showlike({{ $d->id }})">{{ $d->infolike->count() }} Suka</a> </td>
+                      @include('layouts.form.formLike')
+
+                      <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->infocomment->count() }} Komentar</td>
+                  </tr>
+                </table>
               </div>
               <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
@@ -101,6 +142,28 @@
 
 
 @push('scripts')
+    $(document).on('click', ".mailbox-star", function (e) {
+      e.preventDefault();
+      var info_id = $(this).data('value');
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        $.ajax({
+        url: "{{ url('info/like') }}",
+        type: "POST",
+        data: {info_id:info_id},
+          success: function (data) {
+            $("#contact-table").load(" #contact-table");  
+            $('div.flash-message').html(data);
+          },
+          error: function () {
+            alert('Oops! error!');
+          }
+        });
+    });
+
     function addForm() {
       save_method = "add";
       $('input[name=_method]').val('POST');

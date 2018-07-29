@@ -340,6 +340,10 @@ h1{
     top: 0;
     right: 0px;
 }
+.box-hp{
+    float: left !important;
+    margin-top:10px;
+}
 
 
 .custom-search > input[type=text]{
@@ -627,9 +631,18 @@ textarea:focus, select:focus { outline: 0; }
         box-shadow: unset;
     
 }
-.btn-nopadding{
+.btn-nopadding,.btn-nopadding a{
     padding: 0px;
+    color: #97a0b3;
 }
+
+.btn-nopadding a{
+    text-decoration: none;
+}
+.btn-nopadding:hover{
+    color: #97a0b3;
+}
+
 
 .img-info
 {
@@ -688,5 +701,9 @@ textarea:focus, select:focus { outline: 0; }
 {
     position: relative;
     top: 10px;
+}
+
+td {
+
 }
 

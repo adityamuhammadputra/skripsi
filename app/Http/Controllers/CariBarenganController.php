@@ -21,23 +21,13 @@ class CariBarenganController extends Controller
 
     public function index(Request $request)
     {  
-        // $barengan = Barengan::orderBy('created_at','desc')->get();
-        // $barengan = BarenganComment::with('Barengan')->where('barengan_id','!=',0)->get();
-        $barengan = Barengan::with('barengancomments')->get();
-        // 
+        $barengan = Barengan::with('barengancomments','barengangabungcek')
+        ->withCount('barengangabung')
+        ->orderBy('barengangabung_count', 'desc')
+        ->filtered()
+        ->get();
         // return $barengan;
-        // $barengancomments = BarenganComment::all();
-        // return $barengancomments;
-
-        // if($request->ajax()) {
-        //     return [
-        //         'barengan' => view('load.loadBarengan')->with(compact('barengan','barengancomments'))->render(),
-        //         'next_page' => $barengan->nextPageUrl()
-        //         ];
-        // }
-
         return view('caribarengan',compact('barengan'));
-        return view('caribarengan',compact('barengan','barengancomments'));
     }
     
 

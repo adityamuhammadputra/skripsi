@@ -23,4 +23,16 @@ class Post extends Model
     //     return $this->orderBy($column, 'desc');
     // }
 
+    public function scopeFiltered($query)
+    {
+
+        $query->when(request('q'), function ($query) {
+            $query->where(function ($query) {
+                $param = '%' . request('q') . '%';
+                $query->where('id', 'like', $param)
+                    ->orWhere('content', 'like', $param);
+            });
+        });
+    }
+
 }

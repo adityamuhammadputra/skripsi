@@ -21,29 +21,18 @@ class SinggahController extends Controller
     
     public function index()
     {
-        // $singgah = Singgah::orderBy('created_at','desc')->get();
-        // $singgahcomment = SinggahComment::all();
+        $singgah = Singgah::with('singgahcomment','singgahlike','likecek')
+        ->withCount('singgahlike')
+        ->orderBy('singgahlike_count', 'desc')
+        ->get();
 
-        $singgah = Singgah::with('singgahcomment','singgahlike')->withCount('singgahlike')->orderBy('singgahlike_count', 'desc')->get();
-        // $singgah = Singgah::with('singgahcomment','singgahlike')->orderBy('singgahlike','singgah_id')->get();
-        // $singgah = singgah::->paginate(10);
-        // Order::with('company')->get()->sortBy('company.name');
+        $rattingavg = SinggahComment::avg('ratting');
 
-       
-        // $count = SinggahLikes::where('likes', 1)->where('singgah_id',1)->count();
+        // return $rattingavg;
 
-        // return $count;
-        // return $singgah;
 
-        // return $singgahcomment;
-        // if($request->ajax()) {
-        //     return [
-        //         'barengan' => view('load.loadBarengan')->with(compact('barengan','barengancomments'))->render(),
-        //         'next_page' => $barengan->nextPageUrl()
-        //         ];
-        // }
 
-        return view('singgah',compact('singgah'));
+        return view('singgah',compact('singgah','rattingavg'));
     }
 
     public function store(Request $request)

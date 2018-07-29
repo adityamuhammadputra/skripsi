@@ -19,9 +19,14 @@ class InfoController extends Controller
 
     public function index()
     {
-        $data = Info::orderBy('created_at','desc')->get();
+        $data = Info::with('infocomment','infolike','likecek')->withCount('infolike')->orderBy('infolike_count', 'desc')->get();
         
-        return view('info',compact('data'));
+
+        $datasaya = Info::where('user_id',auth()->id())->get();
+
+        // return $datasaya;
+
+        return view('info',compact('data','datasaya'));
     }
 
     public function store(Request $request)
@@ -46,7 +51,10 @@ class InfoController extends Controller
     public function show($id)
     {
         $d = Info::find($id);
-        return view('info-detail',compact('d'));
+
+        $datasaya = Info::where('user_id',auth()->id())->get();
+
+        return view('info-detail',compact('d','datasaya'));
     }
 
    

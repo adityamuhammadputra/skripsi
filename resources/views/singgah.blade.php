@@ -4,7 +4,44 @@
 <div class="row">
   <div class="hidden-xs hidden-sm">
     <div class="col-md-4">
-      {{--  <div id='calendar'></div>  --}}
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Rumah Singgaah Anda</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+
+          <p class="text-muted">
+            B.S. in Computer Science from the University of Tennessee at Knoxville
+          </p>
+
+          <hr>
+
+          <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+
+          <p class="text-muted">Malibu, California</p>
+
+          <hr>
+
+          <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+
+          <p>
+            <span class="label label-danger">UI Design</span>
+            <span class="label label-success">Coding</span>
+            <span class="label label-info">Javascript</span>
+            <span class="label label-warning">PHP</span>
+            <span class="label label-primary">Node.js</span>
+          </p>
+
+          <hr>
+
+          <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+        </div>
+        <!-- /.box-body -->
+      </div>
       
     </div>
   </div>
@@ -56,11 +93,20 @@
                 <a class="label label-primary" title="Kontak"><i class="fa fa-phone-square"></i> {{$d->contact }}</a>
                   <table class="pull-right">
                     <tr>
-                        <td class="mailbox-star" data-value="{{$d->id}}"><i class="fa fa-star-o text-red"></i> </td> 
+                        <td class="mailbox-star" data-value="{{$d->id}}">
+                            @if(!$d->likecek->isEmpty())
+                              <i class="fa fa-star text-red"></i> 
+                            @else
+                              <i class="fa fa-star"></i> 
+                            @endif
+                        </td> 
                         <td><a onclick="showlike({{ $d->id }})" id="coba">{{ $d->singgahlike->count() }} Suka</a> </td>
                         @include('layouts.form.formLike')
 
-                        <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->singgahcomment->count() }}</td>
+                        <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->singgahcomment->count() }} </td>
+                        <td>
+                          {{ $d->rattingavg }}
+                        </td>
                     </tr>
                   </table>
               </div>
@@ -87,9 +133,14 @@
                             </ul>
                           </div>
                         </span>
-                        <span class="description descriptionkoment"><i class="fa fa-clock-o"></i> {{$c->created_at->diffForHumans()}}</span>
+                        <span class="description descriptionkoment"> <p>{!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $c->ratting) !!}
+                          {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $c->ratting) !!}
+                          
+                        </p></span>
                       </div>                 
                       <p>{{ $c->comment }}</p>
+                      
+                        
                     </div>
                   @endforeach
                   </div>
@@ -128,12 +179,7 @@
             }
           });
 
-        var $this = $(this).find("i");
-        var fa = $this.hasClass("fa");
-        if (fa) {
-          $this.toggleClass("fa-star");
-          $this.toggleClass("fa-star-o");
-        }
+        
       });
 
     function showlike(id)
@@ -151,7 +197,12 @@
             $("#modal-like .modal-body").html(""); 
             var newRowContent = [];
             for (var i = 0; i < arrayLength; i++) {
-                newRowContent = "<tr><td><img class='img-circle' width='20px' src='{{ asset('storage') }}/"+ data[i].user.avatar + "'></td><td> "+ data[i].user.name +" </td><tr>";
+                newRowContent = "<tr>";
+                newRowContent += "<td style='padding:8px 4px'>";
+                newRowContent += "<a href='{{ url('profile') }}/"+data[i].user.email+"'>";
+                newRowContent += "<img class='img-circle' width='30px' height='30px' src='{{ asset('storage') }}/"+ data[i].user.avatar + "'></td>";
+                newRowContent += "<td><b>"+ data[i].user.name +"</b></a></td>";
+                newRowContent += "<tr>";
             $("#modal-like .modal-body").append(newRowContent); 
             }
         },
