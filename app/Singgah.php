@@ -8,7 +8,7 @@ class Singgah extends Model
 {
     protected $fillable = ['user_id','lokasi','content','contact','category'];
 
-    protected $appends = ['total_ratting'];
+    // protected $appends = ['total_ratting'];
 
     public function user()
     {
@@ -30,19 +30,23 @@ class Singgah extends Model
         return $this->hasMany(SinggahLikes::class)->where('user_id',auth()->id());
     }
 
-    public function getTotalRattingAttribute()
-    {
-        $total = $this->singgahcomment->filter(function ($value, $key) {
-            return $value->ratting;
+    
 
-            // $collection->pull('name');
-        });
+    // public function getTotalRattingAttribute()
+    // {
+    //     return $this->singgahcomment->attributes['ratting'];
 
-        // return $this->attributes['mulai'] = (new Carbon($value))->format('d M Y');
+    //     $total = $this->singgahcomment->filter(function ($value, $key) {
+    //         return $value->ratting;
+
+    //         // $collection->pull('name');
+    //     });
+
+    //     // return $this->attributes['mulai'] = (new Carbon($value))->format('d M Y');
 
         
-        return $total;
-    }
+    //     return $total;
+    // }
 
     
 }

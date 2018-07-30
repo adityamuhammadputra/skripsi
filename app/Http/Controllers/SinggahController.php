@@ -25,13 +25,7 @@ class SinggahController extends Controller
         ->withCount('singgahlike')
         ->orderBy('singgahlike_count', 'desc')
         ->get();
-
-        $rattingavg = SinggahComment::avg('ratting');
-
-        // return $rattingavg;
-
-
-
+        
         return view('singgah',compact('singgah','rattingavg'));
     }
 

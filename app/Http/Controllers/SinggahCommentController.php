@@ -20,10 +20,12 @@ class SinggahCommentController extends Controller
 
     public function store(Request $request,Singgah $id)
     {
+        // return $request;
         $data = [
             'user_id' => auth()->id(),               
             'singgah_id' => $id->id,
             'comment' => $request->comment,
+            'ratting' => $request->star
         ];
 
         SinggahComment::create($data);

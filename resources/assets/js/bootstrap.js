@@ -14,7 +14,7 @@ try {
 } catch (e) {}
 
 require('admin-lte');
-require('iCheck');
+// require('iCheck');
 require('fullcalendar');
 window.swal = require('sweetalert2');
 

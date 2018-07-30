@@ -105,14 +105,16 @@
 
                         <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->singgahcomment->count() }} </td>
                         <td>
-                          {{ $d->rattingavg }}
+                          {!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $d->singgahcomment->pluck('ratting')->avg() ) !!}
+                          {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $d->singgahcomment->pluck('ratting')->avg() ) !!}
+                          {{$d->singgahcomment->pluck('ratting')->avg()}}
                         </td>
                     </tr>
                   </table>
               </div>
               <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
-                  @include('layouts.form.formComment')
+                  @include('layouts.form.formRatting')
                   <div id="box-komentar">
                   @foreach($d->singgahcomment as $c)
                     <div class="komentar-post"> 
@@ -133,10 +135,12 @@
                             </ul>
                           </div>
                         </span>
-                        <span class="description descriptionkoment"> <p>{!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $c->ratting) !!}
-                          {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $c->ratting) !!}
-                          
-                        </p></span>
+                        <span class="description descriptionkoment"> 
+                          <p>
+                            {!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $c->ratting) !!}
+                            {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $c->ratting) !!}
+                          </p>
+                        </span>
                       </div>                 
                       <p>{{ $c->comment }}</p>
                       
