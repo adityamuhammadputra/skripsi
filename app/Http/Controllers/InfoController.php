@@ -19,7 +19,11 @@ class InfoController extends Controller
 
     public function index()
     {
-        $data = Info::with('infocomment','infolike','likecek')->withCount('infolike')->orderBy('infolike_count', 'desc')->get();
+        $data = Info::with('infocomment','infolike','likecek')
+        ->withCount('infolike')
+        ->orderBy('infolike_count', 'desc')
+        ->filtered()
+        ->get();
         
 
         $datasaya = Info::where('user_id',auth()->id())->get();

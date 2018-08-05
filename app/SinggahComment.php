@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SinggahComment extends Model
 {
+    protected $table = 'singgah_reviews';
     protected $fillable = ['user_id','singgah_id','comment','ratting'];
 
     public function user()
@@ -17,5 +18,4 @@ class SinggahComment extends Model
     {
         return $this->belongsTo(Singgah::class);
     }
-                                                          
 }

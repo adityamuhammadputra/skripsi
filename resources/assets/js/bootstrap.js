@@ -22,6 +22,8 @@ require('bootstrap-validator');
 
 require('jquery-jscroll');
 
+require('jquery-bar-rating');
+
 
 
 /**

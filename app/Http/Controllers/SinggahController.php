@@ -24,9 +24,19 @@ class SinggahController extends Controller
         $singgah = Singgah::with('singgahcomment','singgahlike','likecek')
         ->withCount('singgahlike')
         ->orderBy('singgahlike_count', 'desc')
+        ->filtered()
         ->get();
+
+        $singgahsaya = Singgah::with('singgahcomment', 'singgahlike', 'likecek')
+            ->withCount('singgahlike')
+            ->orderBy('singgahlike_count', 'desc')
+            ->where('user_id',auth()->id())
+            ->get();
+
+        // return $singgahsaya;
+
         
-        return view('singgah',compact('singgah','rattingavg'));
+        return view('singgah',compact('singgah', 'singgahsaya'));
     }
 
     public function store(Request $request)

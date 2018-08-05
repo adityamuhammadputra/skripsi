@@ -44,8 +44,8 @@
           <button class="btn btn-primary pull-right" onclick="addForm()"> <i class="fa fa-plus"></i> </button>          
         </h3>
         <div class="box-tools pull-right">
-          <form class="custom-search navbar-form navbar-left" method="GET" action="/searchBarengan">
-            <input type="text" name="search" placeholder="Cari Post ... ">
+          <form method="get" class="custom-search navbar-form navbar-left">
+            <input class="form-control" type="text" id="q" name="q" value="{{ request()->get('q') }}" placeholder="Cari Info Wisata">
           </form>
         </div>
       </div>

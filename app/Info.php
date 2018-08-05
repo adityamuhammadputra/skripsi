@@ -58,6 +58,15 @@ class Info extends Model
         }
     }
 
-    
+    public function scopeFiltered($query)
+    {
+        $query->when(request('q'), function ($query) {
+            $query->where(function ($query) {
+                $param = '%' . request('q') . '%';
+                $query->where('title', 'like', $param)
+                    ->orWhere('content', 'like', $param);
+            });
+        });
+    }
    
 }

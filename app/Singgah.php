@@ -30,23 +30,18 @@ class Singgah extends Model
         return $this->hasMany(SinggahLikes::class)->where('user_id',auth()->id());
     }
 
-    
-
-    // public function getTotalRattingAttribute()
-    // {
-    //     return $this->singgahcomment->attributes['ratting'];
-
-    //     $total = $this->singgahcomment->filter(function ($value, $key) {
-    //         return $value->ratting;
-
-    //         // $collection->pull('name');
-    //     });
-
-    //     // return $this->attributes['mulai'] = (new Carbon($value))->format('d M Y');
-
-        
-    //     return $total;
-    // }
+    public function scopeFiltered($query)
+    {
+        $query->when(request('q'), function ($query) {
+            $query->where(function ($query) {
+                $param = '%' . request('q') . '%';
+                $query->where('id', 'like', $param)
+                    ->orWhere('lokasi', 'like', $param)
+                    ->orWhere('category', 'like', $param)
+                    ->orWhere('content', 'like', $param);
+            });
+        });
+    }
 
     
 }

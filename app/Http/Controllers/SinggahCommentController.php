@@ -25,7 +25,7 @@ class SinggahCommentController extends Controller
             'user_id' => auth()->id(),               
             'singgah_id' => $id->id,
             'comment' => $request->comment,
-            'ratting' => $request->star
+            'ratting' => $request->ratting
         ];
 
         SinggahComment::create($data);

@@ -8,40 +8,44 @@
         <div class="box-header with-border">
           <h3 class="box-title">Rumah Singgaah Anda</h3>
         </div>
-        <!-- /.box-header -->
+        @foreach($singgahsaya as $s)
         <div class="box-body">
-          <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+          <strong><i class="fa fa-book margin-r-5"></i> Deskripsi</strong>
 
           <p class="text-muted">
-            B.S. in Computer Science from the University of Tennessee at Knoxville
+            {{$s->content}}
           </p>
 
-          <hr>
-
-          <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
-
-          <p class="text-muted">Malibu, California</p>
+        
 
           <hr>
 
-          <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+          <strong><i class="fa fa-map-marker margin-r-5"></i> Lokasi</strong>
+
+          <p class="text-muted">{{$s->lokasi}}</p>
+
+          <hr>
+
+          <strong><i class="fa fa-star margin-r-5"></i> Ratting Ulasan</strong>
 
           <p>
-            <span class="label label-danger">UI Design</span>
-            <span class="label label-success">Coding</span>
-            <span class="label label-info">Javascript</span>
-            <span class="label label-warning">PHP</span>
-            <span class="label label-primary">Node.js</span>
+              {!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $s->singgahcomment->pluck('ratting')->avg() ) !!}
+              {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $s->singgahcomment->pluck('ratting')->avg() ) !!}
+              {{$s->singgahcomment->pluck('ratting')->avg()}}
           </p>
 
           <hr>
 
-          <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+          <strong><i class="fa fa-file-text-o margin-r-5"></i> Ulasan</strong>
+          @foreach($s->singgahcomment as $sc)
+          <p>
+            {{$sc->comment}}
+          </p>
+          @endforeach
         </div>
         <!-- /.box-body -->
       </div>
+      @endforeach
       
     </div>
   </div>
@@ -52,8 +56,8 @@
           <button class="btn btn-primary pull-right" onclick="addForm()"> <i class="fa fa-plus"></i> </button>          
         </h3>
         <div class="box-tools pull-right">
-          <form class="custom-search navbar-form navbar-left" method="GET" action="/searchBarengan">
-            <input type="text" name="search" placeholder="Cari Rumah Singgah ... ">
+          <form method="get" class="custom-search navbar-form navbar-left">
+            <input class="form-control" type="text" id="q" name="q" value="{{ request()->get('q') }}" placeholder="Cari Rumah Singgah">
           </form>
         </div>
       </div>
