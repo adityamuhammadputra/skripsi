@@ -93,17 +93,17 @@
                 <a class="label label-primary" title="Kontak"><i class="fa fa-phone-square"></i> {{$d->contact }}</a>
                   <table class="pull-right">
                     <tr>
-                        <td class="mailbox-star" data-value="{{$d->id}}">
+                        {{-- <td class="mailbox-star" data-value="{{$d->id}}">
                             @if(!$d->likecek->isEmpty())
                               <i class="fa fa-star text-red"></i> 
                             @else
                               <i class="fa fa-star"></i> 
                             @endif
-                        </td> 
-                        <td><a onclick="showlike({{ $d->id }})" id="coba">{{ $d->singgahlike->count() }} Suka</a> </td>
-                        @include('layouts.form.formLike')
+                        </td>  --}}
+                        {{-- <td><a onclick="showlike({{ $d->id }})" id="coba">{{ $d->singgahlike->count() }} Suka</a> </td> --}}
+                        {{-- @include('layouts.form.formLike') --}}
 
-                        <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->singgahcomment->count() }} </td>
+                        {{-- <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->singgahcomment->count() }} </td> --}}
                         <td>
                           {!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $d->singgahcomment->pluck('ratting')->avg() ) !!}
                           {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $d->singgahcomment->pluck('ratting')->avg() ) !!}
