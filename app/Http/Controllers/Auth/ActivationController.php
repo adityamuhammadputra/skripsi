@@ -20,6 +20,6 @@ class ActivationController extends Controller
 
         Auth::loginUsingId($user->id);
 
-        return redirect()->route('profile')->withSuccess('Selamat bergabung, Akun anda berhasil diaktivasi');
+        return redirect()->route('home')->withSuccess('Selamat bergabung, Akun anda berhasil diaktivasi');
     }
 }

@@ -55,4 +55,11 @@ class TentangController extends Controller
 
         return view('post.edit', compact('id', 'datakategori'));
     }
+
+    public function getUserImage($filename)
+    {
+        $myFile = Storage::disk('public')->get($filename);
+
+        return view('layouts.master', compact('myFile'));
+    }
 }

@@ -215,6 +215,13 @@ h1{
     opacity: 0.7;
     /* background: orange; */
 }
+.alert-light
+{
+    position: inherit !important;
+    bottom: unset !important;
+    opacity: 10 !important;
+    z-index: 0 !important;
+}
 
 .widget-user .widget-user-username {
 
@@ -707,3 +714,232 @@ td {
 
 }
 
+
+//halaman depan login
+.red
+{
+	background-color: red;
+	border-color: red;
+	color: red;
+}
+.blue
+{
+	background-color: blue;
+	color: blue;
+	border-color: blue;
+}
+/*!
+ * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 2px 0;
+        -webkit-transition: background .20s ease-in-out,padding .20s ease-in-out;
+        -moz-transition: background .20s ease-in-out,padding .20s ease-in-out;
+        transition: background .20s ease-in-out,padding .20s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+.intro-section {
+    height: 100%;
+    padding-top: 235px;
+    padding-bottom: 235px;
+    text-align: center;
+	background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8) ), url('/images/head.jpg');
+    background-size: 100% 100%;
+    
+}
+.about-section,.galery-section {
+    height: auto;
+    text-align: center;
+    padding-top:30px;
+}
+.about-section{
+    padding-top: 50px;
+}
+
+.galery-section {
+    background:white;
+    padding-bottom: 50px;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color:#fb503b !important;
+    background-color: transparent;
+}
+.btn-transparant
+{
+	background-color: transparent;
+	border-radius: 1px;
+	border:1px white solid;
+	color: white;
+}
+
+.opaque-navbar {
+	background-color: transparent;
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+}
+
+.opaque-navbar.opaque {
+    background-color:white;
+    height: 50px;
+    transition: background-color .5s ease 0s;
+    border-bottom: 1px solid grey; 
+}
+
+ul.dropdown-menu {
+    background-color: white;
+}
+
+
+@media (max-width: 992px) {
+  body
+  {
+    // background:red;
+  }
+  .opaque-navbar {
+    background-color: transparent;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+}
+.p1
+{
+	color: #fb503b;
+}
+.p1:hover
+{
+	color: #fb503b;
+}
+.white
+{
+	color: white;
+}
+.p2
+{
+	color: #fb503b;
+    font:35px candara;
+    position: relative;
+    bottom:10px;
+}
+.p3 , .p4
+{
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	padding: 10px;
+	font:30px calibri;
+	left: 20px;
+	position: relative;
+}
+.p3:hover, .p4:hover
+{
+	position: relative;
+	letter-spacing: 5px;
+	transition: 4s;
+	left: 50px;
+	font-size: 24px;
+}
+.p4
+{
+	position: relative;
+	left: 80px;
+}
+.p5, .p6
+{
+	color: rgb(80,80,80);
+	font:40px calibri;
+}
+.p6
+{
+	color: rgb(200,200,200);
+}
+.btn1
+{
+	padding-top: 20px;
+	background-color: transparent;
+	border-left: none;border-right:none;border-top: none;
+}
+
+.transparent
+{
+	background-color: rgba(0,0,0,0.6);
+}
+.hr
+{
+	border-top: 2px solid #fb503b;
+	width: 40px;
+	position: relative;
+	top: -15px;
+}
+.img-thumbnail
+{
+	border:1px red orange;
+	margin:  10px;
+	background-color: transparent;
+}
+.bgthead
+{
+	background: rgb(233,236,242);
+}
+.bgtbody td:hover
+{
+	background-color: white;
+	color: black;
+}
+.info
+{
+	background-color: white;
+	padding-top: 1em;
+	text-align: center;
+	font: 14px calibri;
+}
+.bgsidebar
+{
+	background-color: rgb(233,236,242);
+}
+.pname
+{
+	color: #fb503b;
+	font:bold 16px calibri;
+	padding-top: 2px;
+	margin-bottom: -0.009em;
+}
+.textabout
+{
+	text-align: justify;
+	color: rgb(140,140,140);
+    font: 20px calibri;
+    padding: 0px 30px;
+}
+.p7
+{
+	color: #fb503b;
+	font: 28px calibri;
+	text-align: center;
+}
+.icon-custom
+{
+    font-size: 80px;
+    color: #fb503b;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}

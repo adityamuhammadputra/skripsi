@@ -23,7 +23,10 @@ class InfoController extends Controller
         ->withCount('infolike')
         ->orderBy('infolike_count', 'desc')
         ->filtered()
-        ->get();
+        ->get()
+        ->sortByDesc('rekomendasi');
+
+        // return $data;
         
 
         $datasaya = Info::where('user_id',auth()->id())->get();

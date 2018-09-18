@@ -24,6 +24,7 @@
         "icheck": "^1.0.2",
         "jquery-bar-rating": "^1.2.2",
         "jquery-jscroll": "0.0.2",
+        "startbootstrap-scrolling-nav": "^4.1.1",
         "sweetalert": "^2.1.0",
         "sweetalert2": "^7.22.2",
         "validator": "^10.3.0"

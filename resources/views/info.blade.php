@@ -11,6 +11,7 @@
                 Kiriman Anda
               </span>
         </li>
+        @if ($datasaya->count() > 0)
         @foreach($datasaya as $ds)  
         <li>
           <i class="{{ $ds->icon }}"></i>
@@ -30,6 +31,13 @@
           </div>
         </li>
         @endforeach
+        @else
+          <div class="alert alert-info alert-light" role="">
+            <i class="icon fa fa-info"></i>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+              Anda tidak memiliki kiriman di halaman ini, Silahkan buat kiriman anda.
+          </div>
+        @endif
         <li>
           <i class="fa fa-clock-o bg-gray"></i>
         </li>
@@ -87,21 +95,21 @@
             <div class="box box-default box-costum-collapse">
               <div class="box-header with-border" style="padding:0px;">
                 <a class="label label-primary" title="Tempat Meeting Point"><i class="fa fa-map-marker"></i> {{$d->category->name }}</a>
-                <table class="pull-right box-hp">
+                
+                <a href="{{ action('InfoController@show', $d) }}">
+                <table class="pull-right">
                   <tr>
-                      <td class="mailbox-star" data-value="{{$d->id}}">
-                        @if(!$d->likecek->isEmpty())
-                          <i class="fa fa-star text-red"></i> 
-                        @else
-                          <i class="fa fa-star"></i> 
-                        @endif
-                      </td> 
-                      <td class="btn-nopadding btn btn-box-tool"><a onclick="showlike({{ $d->id }})">{{ $d->infolike->count() }} Suka</a> </td>
-                      @include('layouts.form.formLike')
+                      <td>
+                        {!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $d->infocomment->pluck('ratting')->avg() ) !!}
+                        {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $d->infocomment->pluck('ratting')->avg() ) !!}
+                        {{$d->infocomment->pluck('ratting')->avg()}}
 
-                      <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->infocomment->count() }} Komentar</td>
+                        | <i class="fa fa-comment"></i> {{ $d->infocomment->count() }} ulasan</td>
+
+                      </td>
                   </tr>
                 </table>
+                </a>
               </div>
             </div>
           </div>                            
@@ -115,7 +123,7 @@
 @include('layouts.form.formInfo')
 
 @push('scripts')
-
+      
     $(document).on('click', ".mailbox-star", function (e) {
       e.preventDefault();
       var info_id = $(this).data('value');

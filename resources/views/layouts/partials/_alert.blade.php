@@ -8,7 +8,7 @@
 </style>
 
 @if(session('success'))
-<div class="alert alert-success alert-dismissible fixed" role="alert">
+<div class="alert alert-success alert-dismissible fixed alerthide" role="alert">
 	<i class="icon fa fa-check"></i>
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 	{{session('success')}}
@@ -16,7 +16,7 @@
 @endif
 
 @if(session('info'))
-<div class="alert alert-info alert-dismissible fixed" role="alert">
+<div class="alert alert-info alert-dismissible fixed alerthide" role="alert">
 	<i class="icon fa fa-info"></i>
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 	{{session('info')}}
@@ -24,7 +24,7 @@
 @endif
 
 @if(session('danger'))
-<div class="alert alert-danger alert-dismissible" role="alert">
+<div class="alert alert-danger alert-dismissible alerthide" role="alert">
 		<i class="icon fa fa-info"></i>
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
 	{{session('danger')}}
@@ -33,7 +33,7 @@
 
 <script>	
 	window.setTimeout(function() {
-    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+    $(".alerthide").fadeTo(500, 0).slideUp(500, function(){
         $(this).remove(); 
     });
 }, 5000);

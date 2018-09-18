@@ -32,13 +32,17 @@ Route::post('auth/activate/resend', 'Auth\ActivationResendController@resend')->n
 
 // Route::post('/{id}/comment', 'HomeCommentController@store')->name('home.comment.store');
 // Route::delete('/{id}/comment/delete', 'HomeCommentController@destroy')->name('home.comment.destroy');
-
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/beranda', function () {
+    return view('layouts.beranda');
+});
 
 Route::resource('/home/{id}/comment','HomeCommentController')->only(['store']);
 Route::resource('/homecomment','HomeCommentController')->only(['destroy']);
 
 Route::resource('/home', 'HomeController')->except(['show','create']);
+Route::resource('/home/like', 'HomeLikeController')->only(['store', 'show']);
 
 Route::resource('/caribarengan','CariBarenganController')->except(['show','create']);
 Route::resource('/caribarengan/{id}/comment', 'CariBarenganCommentController')->only([
@@ -49,7 +53,7 @@ Route::resource('/caribarengancomment', 'CariBarenganCommentController')->only([
 ])->names(['destroy' => 'caribarengancomment.destroy']);
 Route::resource('/caribarengan/gabung','CariBarenganGabungController')->only(['store','show']);
 
-Route::resource('/singgah','SinggahController')->except(['show','create']);
+Route::resource('/singgah','SinggahController')->except(['create']);
 Route::resource('/singgah/{id}/comment', 'SinggahCommentController')->only([
     'store'
 ])->names(['store'=>'singgahcomment.store']);
@@ -70,6 +74,26 @@ Route::get('/loadCalendar', 'CalendarController@loadData')->name('calendar.load'
 
 Route::get('/tentang', 'TentangController@index')->name('tentang');
 Route::post('tentang', 'TentangController@update');
+Route::get('/userimage/{filename}', [
+    'uses' => 'TentangController@getUserImage',
+    'as' => 'account.image',
+]);
+
+Route::get('storage/avatars/{filename}', function ($filename) {
+    $path = storage_path('app/public/avatars/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
 
 Route::resource('/profile', 'ProfileController')->only(['show']);
 

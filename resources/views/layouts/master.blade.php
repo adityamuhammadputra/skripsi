@@ -150,6 +150,8 @@
                   <a href="{{ route('tentang') }}"><i class="fa fa-user-circle-o"></i>Profile</a>
                 </li> -->
                 <li class="hidden-md hidden-lg"><a href="{{route('calendar')}}"><i class="fa fa-calendar"></i>Jadwal Kamu</a></li>
+                <li class="hidden-md hidden-lg"><a href="{{url('singgahme')}}"><i class="fa fa-home"></i>Rumah Singgah Kamu</a></li>
+                <li class="hidden-md hidden-lg"><a href="{{url('infome')}}"><i class="fa fa-info-circle"></i>Info Wisata Kamu</a></li>
                 <!-- menu mobile -->
                 <li class="divider hidden-md hidden-lg"></li>
                 <li class="">

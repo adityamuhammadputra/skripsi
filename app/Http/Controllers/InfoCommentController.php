@@ -24,10 +24,11 @@ class InfoCommentController extends Controller
             'user_id' => auth()->id(),               
             'info_id' => $id->id,
             'comment' => $request->comment,
+            'ratting' => $request->ratting
         ];
 
         InfoComment::create($data);
-        Session::flash('success', 'Komentar Ditambah');
+        Session::flash('success', 'Ulasan Ditambah');
         return View::make('layouts/partials/_alertajax');
     }
 
@@ -35,7 +36,7 @@ class InfoCommentController extends Controller
     {
         InfoComment::destroy($id);
 
-        Session::flash('error', 'Komentar Dihapus');
+        Session::flash('error', 'Ulasan Dihapus');
         return View::make('layouts/partials/_alertajax');
     }
 }

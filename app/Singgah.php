@@ -3,12 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Singgah extends Model
 {
     protected $fillable = ['user_id','lokasi','content','contact','category'];
-
-    // protected $appends = ['total_ratting'];
+    protected $appends = ['rekomendasi'];
 
     public function user()
     {
@@ -28,6 +28,14 @@ class Singgah extends Model
     public function likecek()
     {
         return $this->hasMany(SinggahLikes::class)->where('user_id',auth()->id());
+    }
+
+    public function getRekomendasiAttribute()
+    {
+        $ratting = $this->singgahcomment->pluck('perhitungan')->sum();
+        $user = User::all()->pluck('id')->count();
+        $ratinguserlain = $user - 1;
+        return $ratting/$ratinguserlain;
     }
 
     public function scopeFiltered($query)
