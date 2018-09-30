@@ -59,14 +59,14 @@
 
         </div>
 
-        <div class="collapse navbar-collapse pull-left f-color1">
+        <div class="collapse navbar-collapse pull-left f-color1" style="display: block!important;">
           <div id="sidebar-menu">
             <ul class="f-color1 nav navbar-nav active-menu hidden-xs">
               <li><a href="{{route('caribarengan.index')}}"><i class="fa fa-users fa-size-15"></i> Barengan</a></li>
               <li><a href="{{ route('singgah.index') }}"><i class="fa fa-home fa-size-15"></i> Singgah</a></li>
               <li><a href="{{ route('info.index') }}"><i class="fa fa-info-circle fa-size-15"></i> Info</a></li>
             </ul>
-            <nav class="icon-bar nav active-menu visible-xs bottom">
+            <nav class="icon-bar nav active-menu visible-xs bottom" >
               <li><a href="{{route('home')}}"><i class="fa fa-globe"></i></a></li>
               <li><a href="{{route('caribarengan.index')}}"><i class="fa fa-users"></i></a> </li>
               <li><a href="{{ route('singgah.index') }}"><i class="fa fa-home"></i></a> </li>

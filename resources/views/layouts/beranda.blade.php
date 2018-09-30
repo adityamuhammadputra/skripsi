@@ -14,6 +14,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    
     <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
 	  <div class="container">
 	    <div class="navbar-header">
