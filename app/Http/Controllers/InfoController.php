@@ -8,6 +8,9 @@ use App\Info;
 use App\User;
 use Session;
 use View;
+use Intervention\Image\ImageManagerStatic as Image;
+
+use Input;
 
 
 class InfoController extends Controller
@@ -44,8 +47,13 @@ class InfoController extends Controller
         $input['user_id'] = auth()->id();
 
         if ($request->hasFile('images')){
-            $input['images'] = '/upload/photo/'.str_slug($input['title'],'-').'.'.$request->images->getClientOriginalExtension();
-            $request->images->move(public_path('/upload/photo/'), $input['images']);
+            $input['images'] = 'upload/photo/' . str_slug($input['title'], '-') . '.' . $request->images->getClientOriginalExtension();
+
+            $pathfoto = Image::make($request->file('images'))->resize(350, 210)->save(public_path('/') . $input['images']);
+
+
+            // $input['images'] = '/upload/photo/'.str_slug($input['title'],'-').'.'.$request->images->getClientOriginalExtension();
+            // $request->images->move(public_path('/upload/photo/'), $input['images']);
         }
 
         Info::create($input);

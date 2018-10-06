@@ -36,7 +36,7 @@
     $(".alerthide").fadeTo(500, 0).slideUp(500, function(){
         $(this).remove(); 
     });
-}, 5000);
+}, 8000);
 
 </script>
 

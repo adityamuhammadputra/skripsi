@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Storage;
-
+use Intervention\Image\ImageManagerStatic as Image;
+use Input;
 class TentangController extends Controller
 {
     public function __construct()
@@ -21,16 +22,20 @@ class TentangController extends Controller
 
     public function update(Request $request)
     {
-       
 
+      
         if ($request->file('avatar')) {
             if ($request->user()->avatar) {
                 Storage::delete($request->user()->avatar);		//menghapus file yang diupdate diganti yang baru
             }
-            $pathfoto = $request->file('avatar')->store('avatars');
+            $filename = 'avatars/'.str_slug($request->user()->email, '') . '.' . $request->avatar->getClientOriginalExtension();
+
+            $pathfoto = Image::make($request->file('avatar'))->resize(200,200)->save(storage_path('/app/public/') . $filename);
+
+            // return $pathfoto;
 
             $request->user()->update([
-                'avatar' => $pathfoto
+                'avatar' => $filename
             ]);
 
         } else {

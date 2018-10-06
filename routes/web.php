@@ -23,7 +23,7 @@ Route::get('auth/activate', 'Auth\ActivationController@activate')->name('auth.ac
 
 Route::get('auth/activate/resend', 'Auth\ActivationResendController@showResendForm')->name('auth.activate.resend');
 
-Route::post('auth/activate/resend', 'Auth\ActivationResendController@resend')->name('auth.activate.resend');;
+Route::post('auth/activate/resend', 'Auth\ActivationResendController@resend')->name('auth.activate.resend');
 
 
 // Route::get('/', 'HomeController@index')->name('home');
@@ -99,7 +99,7 @@ Route::resource('/profile', 'ProfileController')->only(['show']);
 
 Route::get('/search','ProfileController@search')->name('seacrh');
 Route::get('/profileuser/{id}','ProfileController@showuser')->name('showuser');
-// Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::get('/profile', 'TentangController@index')->name('profile');
 // Route::post('/profile', 'ProfileController@update');
 // Route::delete('/profile', 'ProfileController@destroy')->name('user.destroy');
 
