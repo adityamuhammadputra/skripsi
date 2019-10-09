@@ -46,7 +46,14 @@
                 <div class="styled-input">
                   <input type="file" class="input" name="images" id="images" required/>
                   <label>Gambar</label>
-                  <span></span> 
+                  <div class="wrapimgaes">
+                      <img id="blah" src="#" alt="ukuran foto 3x4"/>
+                  </div>
+                  <label for="file-upload" class="custom-file-upload">
+                      <i class="fa fa-cloud-upload"></i> Masukan Foto Anda
+                  </label>
+                  <input id="file-upload" type="file" name="images" class="input" id="images" accept=".png, .jpg, .jpeg" required/>
+                           
                   <span class="help-block with-errors"></span>
                 </div>          
               </div>

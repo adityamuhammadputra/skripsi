@@ -24,6 +24,8 @@ require('jquery-jscroll');
 
 require('jquery-bar-rating');
 
+require('jquery.easing');
+
 
 
 /**

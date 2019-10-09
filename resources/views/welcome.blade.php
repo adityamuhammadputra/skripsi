@@ -65,9 +65,20 @@
               </p>
               <div class="box box-default box-costum-collapse">
                 <div class="box-header with-border" style="padding:0px;">
-                  <div class="pull-right">
-                    <a class="btn-nopadding btn btn-box-tool" data-widget="collapse"><i class="fa fa-comment"></i> {{ $d->comments->count() }} Komentar</a>
-                  </div>
+                  <table class="pull-right box-hp">
+                     <tr>
+                      <td class="mailbox-star" data-value="{{$d->id}}">
+                        @if(!$d->likes->isEmpty())
+                          <i class="fa fa-star text-red"></i> 
+                        @else
+                          <i class="fa fa-star"></i> 
+                        @endif
+                      </td> 
+                      <td class="btn-nopadding btn btn-box-tool"><a onclick="showlike({{ $d->id }})">{{ $d->likes->count() }} Menyukai</a> </td>
+                      @include('layouts.form.formLike')
+                      <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->comments->count() }} Komentar</td>
+                  </tr>
+                  </table>
                 </div>
                 <div class="box-body" style="padding:0px;">
                   <div class="box-komentar">
@@ -137,6 +148,30 @@ $('ul.pagination').hide();
                 $('ul.pagination').remove();
             }
         });
+    });
+
+    $(document).on('click', ".mailbox-star", function (e) {
+      e.preventDefault();
+      var post_id = $(this).data('value');
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        $.ajax({
+        url: "{{ url('home/like') }}",
+        type: "POST",
+        data: {post_id:post_id},
+          success: function (data) {
+            $("#contact-table").load(" #contact-table");  
+            $('div.flash-message').html(data);
+          },
+          error: function () {
+            alert('Oops! error!');
+          }
+        });
+
+     
     });
 
   function addForm() {

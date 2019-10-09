@@ -30,7 +30,7 @@ class SinggahCommentController extends Controller
 
         SinggahComment::create($data);
 
-        Session::flash('success', 'Komentar Ditambah');
+        Session::flash('success', 'Ulasan Ditambah');
         return View::make('layouts/partials/_alertajax');
     }
 
@@ -38,7 +38,7 @@ class SinggahCommentController extends Controller
     {
         SinggahComment::destroy($id);
 
-        Session::flash('error', 'Komentar Dihapus');
+        Session::flash('error', 'Ulasan Dihapus');
         return View::make('layouts/partials/_alertajax');
     }
 }

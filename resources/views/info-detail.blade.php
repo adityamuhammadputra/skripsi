@@ -84,7 +84,7 @@
             <div class="box box-default box-costum-collapse">
               <div class="box-header with-border" style="padding:0px;">
                 <a class="label label-primary" title="Tempat Meeting Point"><i class="fa fa-map-marker"></i> {{$d->category->name }}</a>
-                <table class="pull-right box-hp">
+                {{-- <table class="pull-right box-hp">
                   <tr>
                       <td class="mailbox-star" data-value="{{$d->id}}">
                         @if(!$d->likecek->isEmpty())
@@ -98,11 +98,23 @@
 
                       <td class="btn-nopadding btn btn-box-tool" data-widget="collapse"> | <i class="fa fa-comment"></i> {{ $d->infocomment->count() }} Komentar</td>
                   </tr>
+                </table> --}}
+                <table class="pull-right">
+                  <tr>
+                      <td>
+                        {!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $d->infocomment->pluck('ratting')->avg() ) !!}
+                        {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $d->infocomment->pluck('ratting')->avg() ) !!}
+                        {{$d->infocomment->pluck('ratting')->avg()}}
+                        | <i class="fa fa-comment"></i> {{ $d->infocomment->count() }} ulasan</td>
+                      </td>
+                  </tr>
+                </table>
                 </table>
               </div>
               <div class="box-body" style="padding:0px;">
                 <div class="box-komentar">
-                  @include('layouts.form.formComment')
+                  @include('layouts.form.formRatting')
+                  {{-- @include('layouts.form.formComment') --}}
                   <div id="box-komentar">
                   @foreach($d->infocomment()->get() as $c)
                     <div class="komentar-post"> 
@@ -116,15 +128,21 @@
                             </button>
                             <ul class="dropdown-menu">
                               @if(Auth::user()->name ==$c->user->name )
-                              <li><a onclick="deleteComment('{{$c->id }}')" data-i="{{ $d->id }}" class="pointer-jempol"><i class="fa fa-times-circle"></i> Hapus Komentar</a></a></li>
+                              <li><a onclick="deleteComment('{{$c->id }}')" data-i="{{ $d->id }}" class="pointer-jempol"><i class="fa fa-times-circle"></i> Hapus Ulasan</a></a></li>
                               <li role="separator" class="divider"></li>
                               @endif
-                              <li><a href="#" class="pointer-jempol"><i class="fa fa-exclamation-circle"></i> Laporkan komentar</a></li>
+                              <li><a href="#" class="pointer-jempol"><i class="fa fa-exclamation-circle"></i> Laporkan Ulasan</a></li>
                             </ul>
                           </div>
                         </span>
                         <span class="description descriptionkoment"><i class="fa fa-clock-o"></i> {{$c->created_at->diffForHumans()}}</span>
-                      </div>                 
+                      </div> 
+                      {{-- <span class="description descriptionkoment">  --}}
+                          <p>
+                            {!! str_repeat('<i class="fa fa-star text-red" aria-hidden="true"></i>', $c->ratting) !!}
+                            {!! str_repeat('<i class="fa fa-star-o text-red" aria-hidden="true"></i>', 5 - $c->ratting) !!}
+                          </p>
+                      {{-- </span>                 --}}
                       <p>{{ $c->comment }}</p>
                     </div>
                     @endforeach
@@ -294,7 +312,8 @@
                 type: "POST",
                 data: $(this).serialize(),                                      
                 success: function (data) {
-                  $("#contact-table").load(" #contact-table");
+                  $("#contact-table").load(document.URL + " #contact-table");
+                  $("#form").load(" #form");
                   $('div.flash-message').html(data);
                 },
                 error: function () {
@@ -309,8 +328,8 @@
   function deleteComment(id) {
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     swal({
-      title: 'Hapus Komentar',
-      text: "Apakah Anda Yakin Akan Menghapus Komentar Ini ?",
+      title: 'Hapus Ulasan',
+      text: "Apakah Anda Yakin Akan Menghapus Ulasan Ini ?",
       type:'warning',
       showCancelButton:true,
       cancelButtonColor:'#d33',

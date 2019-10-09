@@ -59,14 +59,14 @@
 
         </div>
 
-        <div class="collapse navbar-collapse pull-left f-color1">
+        <div class="collapse navbar-collapse pull-left f-color1" style="display: block!important;">
           <div id="sidebar-menu">
             <ul class="f-color1 nav navbar-nav active-menu hidden-xs">
               <li><a href="{{route('caribarengan.index')}}"><i class="fa fa-users fa-size-15"></i> Barengan</a></li>
               <li><a href="{{ route('singgah.index') }}"><i class="fa fa-home fa-size-15"></i> Singgah</a></li>
               <li><a href="{{ route('info.index') }}"><i class="fa fa-info-circle fa-size-15"></i> Info</a></li>
             </ul>
-            <nav class="icon-bar nav active-menu visible-xs bottom">
+            <nav class="icon-bar nav active-menu visible-xs bottom" >
               <li><a href="{{route('home')}}"><i class="fa fa-globe"></i></a></li>
               <li><a href="{{route('caribarengan.index')}}"><i class="fa fa-users"></i></a> </li>
               <li><a href="{{ route('singgah.index') }}"><i class="fa fa-home"></i></a> </li>
@@ -150,6 +150,8 @@
                   <a href="{{ route('tentang') }}"><i class="fa fa-user-circle-o"></i>Profile</a>
                 </li> -->
                 <li class="hidden-md hidden-lg"><a href="{{route('calendar')}}"><i class="fa fa-calendar"></i>Jadwal Kamu</a></li>
+                <li class="hidden-md hidden-lg"><a href="{{url('singgahme')}}"><i class="fa fa-home"></i>Rumah Singgah Kamu</a></li>
+                <li class="hidden-md hidden-lg"><a href="{{url('infome')}}"><i class="fa fa-info-circle"></i>Info Wisata Kamu</a></li>
                 <!-- menu mobile -->
                 <li class="divider hidden-md hidden-lg"></li>
                 <li class="">

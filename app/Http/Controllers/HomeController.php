@@ -19,9 +19,13 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+
     public function index()
     {
-        $datapost = Post::latest()->filtered()->paginate(10);
+
+        $datapost = Post::with('likes')->latest()->filtered()->paginate(10);
+
+        // return $datapost;
 
         return view('welcome',compact('datapost'));
         

@@ -30,16 +30,15 @@ class SinggahLikeController extends Controller
                 'likes' => 1
             ];
             SinggahLikes::create($data);
-            Session::flash('info', 'Anda menyukai kiriman ini');
+            Session::flash('info', 'Anda Begabung dengan barengan ini');
         }
         else{
        
             SinggahLikes::destroy($checklike->id);
 
-            Session::flash('error', 'Anda batal menyukai kiriman ini');
+            Session::flash('error', 'Anda batal bergabung dengan barengan ini');
 
         }
-
        
         return View::make('layouts/partials/_alertajax');
     }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Info extends Model
 {
     protected $fillable = ['user_id','category_id','title','content','images'];
-    protected $appends = ['icon'];
+    protected $appends = ['icon','rekomendasi'];
 
     public function user()
     {
@@ -32,6 +32,14 @@ class Info extends Model
     public function likecek()
     {
         return $this->hasMany(InfoLikes::class)->where('user_id',auth()->id());
+    }
+
+    public function getRekomendasiAttribute()
+    {
+        $ratting = $this->infocomment->pluck('perhitungan')->sum();
+        $user = User::all()->pluck('id')->count();
+        $ratinguserlain = $user - 1;
+        return $ratting / $ratinguserlain;
     }
 
     public function getIconAttribute($value)

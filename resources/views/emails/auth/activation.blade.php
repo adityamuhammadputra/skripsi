@@ -1,5 +1,5 @@
 @component('mail::message')
-# Activasi Akun kamu
+# Hay {{$user->name}}
 
 Terimakasih telah bergabung, Silahkan klik tombol dibawah ini untuk aktivasi akun.
 
@@ -11,6 +11,6 @@ Terimakasih telah bergabung, Silahkan klik tombol dibawah ini untuk aktivasi aku
     Klik Tombol ini untuk Aktivasi
 @endcomponent
 
-Thanks,<br>
-Selamat bahagia
+Terimakasih,<br>
+Salam Bahagia
 @endcomponent

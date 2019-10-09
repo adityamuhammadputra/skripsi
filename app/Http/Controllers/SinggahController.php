@@ -20,21 +20,18 @@ class SinggahController extends Controller
     }
     
     public function index()
-    {
+    {      
         $singgah = Singgah::with('singgahcomment','singgahlike','likecek')
         ->withCount('singgahlike')
-        ->orderBy('singgahlike_count', 'desc')
         ->filtered()
-        ->get();
+        ->get()
+        ->sortByDesc('rekomendasi');
 
         $singgahsaya = Singgah::with('singgahcomment', 'singgahlike', 'likecek')
             ->withCount('singgahlike')
             ->orderBy('singgahlike_count', 'desc')
             ->where('user_id',auth()->id())
             ->get();
-
-        // return $singgahsaya;
-
         
         return view('singgah',compact('singgah', 'singgahsaya'));
     }
@@ -60,6 +57,20 @@ class SinggahController extends Controller
         $singgah = Singgah::find($id);
 
         return $singgah;
+    }
+
+    public function show($id)
+    {
+        $d = Singgah::find($id);
+
+        // $datasaya = Singgah::where('user_id', auth()->id())->get();
+        $datasaya = Singgah::with('singgahcomment', 'singgahlike', 'likecek')
+            ->withCount('singgahlike')
+            ->orderBy('singgahlike_count', 'desc')
+            ->where('user_id', auth()->id())
+            ->get();
+
+        return view('singgah-detail', compact('d', 'datasaya'));
     }
    
     public function update(Request $request, $id)
